@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<title>Nix Reproducible Builds</title>
+<link rel="stylesheet" href="styles/index.css">
+<style>
+body {
+  padding: 3em;
+}
+</style>
+</head>
+<body>
+<h1>Nix Reproducible Builds</h1>
+<p>
+Because a Nix derivation has deterministic references to all
+of its dependencies, and the build is being ran in a sandbox,
+Nix is an excellent starting point for achieving bit-by-bit
+<a href="https://reproducible-builds.org/">Reproducible Builds</a>.
+</p>
+
+<p>
+However, this is not sufficient in itself: builds may still include
+timestamps or have other nondeterminisms. Such problems are tracked
+in the <a href="https://github.com/NixOS/nixpkgs/issues?q=is%3Aopen+is%3Aissue+label%3A%226.topic%3A+reproducible+builds%22">'reproducible builds' issue tag</a>.
+You can report a new issue using the <a href="https://github.com/NixOS/nixpkgs/issues/new?assignees=&labels=0.kind%3A+enhancement%2C6.topic%3A+reproducible+builds&template=unreproducible_package.md&title=">issue template</a>.
+</p>
+
+<p>
+To check whether you can reproduce a package on your machine,
+you can use <code>nix-build '&lt;nixpkgs&gt;' -A hello --check --keep-failed</code>.
+On failures, you can use <a href="https://diffoscope.org">diffoscope</a>
+to analyze the differences in the outputs of the two builds. To view
+the build log of the build that produced the artifact in the binary cache you can use <code>nix-store --read-log $(nix-instantiate '&lt;nixpkgs&gt;' -A hello)</code>.
+</p>
+
+<p>
+As a general health check, we are producing reports on the
+reproducibility of the packages that make up the build closure
+of our minimal installation ISO, and the Gnome one. Note that
+this not only includes all packages that make it into the ISO,
+but also all build-time dependencies of those packages:
+</p>
+<ul>
+<li><a href="nixos-iso-minimal-r13y">Minimal ISO</a>
+<li><a href="nixos-iso-gnome-r13y">Gnome ISO</a>
+</ul>
+</body>
+</html>
