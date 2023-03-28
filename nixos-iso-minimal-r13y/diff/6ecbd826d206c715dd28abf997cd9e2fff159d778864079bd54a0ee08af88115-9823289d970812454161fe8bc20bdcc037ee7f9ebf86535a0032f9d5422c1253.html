@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/nix/store/93f4jb42shab554pxmmrcf3p3fymbnic-diffoscope-233/bin/diffoscope --html - aqa8jk76hvqnf3dx986mhp0krv5jbzgz-python3.10-distlib-0.3.6/A aqa8jk76hvqnf3dx986mhp0krv5jbzgz-python3.10-distlib-0.3.6/B</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">6.28 KB</span></div>
+  <div><span class="source">aqa8jk76hvqnf3dx986mhp0krv5jbzgz-python3.10-distlib-0.3.6/A</span> vs.</div>
+  <div id="top"><span class="source">aqa8jk76hvqnf3dx986mhp0krv5jbzgz-python3.10-distlib-0.3.6/B</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">6.16 KB</span></div>
+    <div><span class="source">aqa8jk76hvqnf3dx986mhp0krv5jbzgz-python3.10-distlib-0.3.6/A/lib</span> vs.</div>
+    <div id="aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib"><span class="source">aqa8jk76hvqnf3dx986mhp0krv5jbzgz-python3.10-distlib-0.3.6/B/lib</span>
+      <a class="anchor" href="#aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">6.04 KB</span></div>
+      <div><span class="source">aqa8jk76hvqnf3dx986mhp0krv5jbzgz-python3.10-distlib-0.3.6/A/lib/python3.10</span> vs.</div>
+      <div id="aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.--"><span class="source">aqa8jk76hvqnf3dx986mhp0krv5jbzgz-python3.10-distlib-0.3.6/B/lib/python3.10</span>
+        <a class="anchor" href="#aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.--">¶</a>
+      </div>
+      </div>
+      <div class="difference">
+        <div class="diffheader">
+        <div class="diffcontrol diffcontrol-double">⊟</div>
+        <div><span class="diffsize">5.9 KB</span></div>
+        <div><span class="source">aqa8jk76hvqnf3dx986mhp0krv5jbzgz-python3.10-distlib-0.3.6/A/lib/python3.10/site-packages</span> vs.</div>
+        <div id="aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.-----aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages"><span class="source">aqa8jk76hvqnf3dx986mhp0krv5jbzgz-python3.10-distlib-0.3.6/B/lib/python3.10/site-packages</span>
+          <a class="anchor" href="#aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.-----aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages">¶</a>
+        </div>
+        </div>
+        <div class="difference">
+          <div class="diffheader">
+          <div class="diffcontrol diffcontrol-double">⊟</div>
+          <div><span class="diffsize">5.72 KB</span></div>
+          <div><span class="source">aqa8jk76hvqnf3dx986mhp0krv5jbzgz-python3.10-distlib-0.3.6/A/lib/python3.10/site-packages/distlib</span> vs.</div>
+          <div id="aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.-----aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib"><span class="source">aqa8jk76hvqnf3dx986mhp0krv5jbzgz-python3.10-distlib-0.3.6/B/lib/python3.10/site-packages/distlib</span>
+            <a class="anchor" href="#aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.-----aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib">¶</a>
+          </div>
+          </div>
+          <div class="difference">
+            <div class="diffheader">
+            <div class="diffcontrol diffcontrol-double">⊟</div>
+            <div><span class="diffsize">1.7 KB</span></div>
+            <div><span class="source">aqa8jk76hvqnf3dx986mhp0krv5jbzgz-python3.10-distlib-0.3.6/A/lib/python3.10/site-packages/distlib/t32.exe</span> vs.</div>
+            <div id="aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.-----aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib-t--.exe"><span class="source">aqa8jk76hvqnf3dx986mhp0krv5jbzgz-python3.10-distlib-0.3.6/B/lib/python3.10/site-packages/distlib/t32.exe</span>
+              <a class="anchor" href="#aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.-----aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib-t--.exe">¶</a>
+            </div>
+            </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 2, 20 lines modified</td><td colspan="2">Offset 2, 20 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000010:<span class="dp">·</span>b800<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>4000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>........@.......</td><td colspan="2" class="diffpresent">00000010:<span class="dp">·</span>b800<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>4000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>........@.......</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000020:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td><td colspan="2" class="diffpresent">00000020:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000030:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>8000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td><td colspan="2" class="diffpresent">00000030:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>8000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000040:<span class="dp">·</span>0e1f<span class="dp">·</span>ba0e<span class="dp">·</span>00b4<span class="dp">·</span>09cd<span class="dp">·</span>21b8<span class="dp">·</span>014c<span class="dp">·</span>cd21<span class="dp">·</span>5468<span class="dp">·</span><span class="dp">·</span>........!..L.!Th</td><td colspan="2" class="diffpresent">00000040:<span class="dp">·</span>0e1f<span class="dp">·</span>ba0e<span class="dp">·</span>00b4<span class="dp">·</span>09cd<span class="dp">·</span>21b8<span class="dp">·</span>014c<span class="dp">·</span>cd21<span class="dp">·</span>5468<span class="dp">·</span><span class="dp">·</span>........!..L.!Th</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000050:<span class="dp">·</span>6973<span class="dp">·</span>2070<span class="dp">·</span>726f<span class="dp">·</span>6772<span class="dp">·</span>616d<span class="dp">·</span>2063<span class="dp">·</span>616e<span class="dp">·</span>6e6f<span class="dp">·</span><span class="dp">·</span>is<span class="dp">·</span>program<span class="dp">·</span>canno</td><td colspan="2" class="diffpresent">00000050:<span class="dp">·</span>6973<span class="dp">·</span>2070<span class="dp">·</span>726f<span class="dp">·</span>6772<span class="dp">·</span>616d<span class="dp">·</span>2063<span class="dp">·</span>616e<span class="dp">·</span>6e6f<span class="dp">·</span><span class="dp">·</span>is<span class="dp">·</span>program<span class="dp">·</span>canno</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000060:<span class="dp">·</span>7420<span class="dp">·</span>6265<span class="dp">·</span>2072<span class="dp">·</span>756e<span class="dp">·</span>2069<span class="dp">·</span>6e20<span class="dp">·</span>444f<span class="dp">·</span>5320<span class="dp">·</span><span class="dp">·</span>t<span class="dp">·</span>be<span class="dp">·</span>run<span class="dp">·</span>in<span class="dp">·</span>DOS<span class="dp">·</span></td><td colspan="2" class="diffpresent">00000060:<span class="dp">·</span>7420<span class="dp">·</span>6265<span class="dp">·</span>2072<span class="dp">·</span>756e<span class="dp">·</span>2069<span class="dp">·</span>6e20<span class="dp">·</span>444f<span class="dp">·</span>5320<span class="dp">·</span><span class="dp">·</span>t<span class="dp">·</span>be<span class="dp">·</span>run<span class="dp">·</span>in<span class="dp">·</span>DOS<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000070:<span class="dp">·</span>6d6f<span class="dp">·</span>6465<span class="dp">·</span>2e0d<span class="dp">·</span>0d0a<span class="dp">·</span>2400<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>mode....$.......</td><td colspan="2" class="diffpresent">00000070:<span class="dp">·</span>6d6f<span class="dp">·</span>6465<span class="dp">·</span>2e0d<span class="dp">·</span>0d0a<span class="dp">·</span>2400<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>mode....$.......</td></tr>
+<tr class="diffchanged"><td colspan="2" class="diffpresent">00000080:<span class="dp">·</span>5045<span class="dp">·</span>0000<span class="dp">·</span>4c01<span class="dp">·</span>0500<span class="dp">·</span><del>f1ef</del><span class="dp">·</span><del>0</del>264<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>PE..L...<del>.</del>.<del>.</del>d....</td><td colspan="2" class="diffpresent">00000080:<span class="dp">·</span>5045<span class="dp">·</span>0000<span class="dp">·</span>4c01<span class="dp">·</span>0500<span class="dp">·</span><ins>4db9</ins><span class="dp">·</span><ins>2</ins>264<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>PE..L...<ins>M</ins>.<ins>&quot;</ins>d....</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000090:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>e000<span class="dp">·</span>0e03<span class="dp">·</span>0b01<span class="dp">·</span>0a00<span class="dp">·</span>00d8<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td><td colspan="2" class="diffpresent">00000090:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>e000<span class="dp">·</span>0e03<span class="dp">·</span>0b01<span class="dp">·</span>0a00<span class="dp">·</span>00d8<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">000000a0:<span class="dp">·</span>00a2<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>e93b<span class="dp">·</span>0000<span class="dp">·</span>0010<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>.........;......</td><td colspan="2" class="diffpresent">000000a0:<span class="dp">·</span>00a2<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>e93b<span class="dp">·</span>0000<span class="dp">·</span>0010<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>.........;......</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">000000b0:<span class="dp">·</span>0020<span class="dp">·</span>0100<span class="dp">·</span>0000<span class="dp">·</span>4000<span class="dp">·</span>0010<span class="dp">·</span>0000<span class="dp">·</span>0002<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>.<span class="dp">·</span>....@.........</td><td colspan="2" class="diffpresent">000000b0:<span class="dp">·</span>0020<span class="dp">·</span>0100<span class="dp">·</span>0000<span class="dp">·</span>4000<span class="dp">·</span>0010<span class="dp">·</span>0000<span class="dp">·</span>0002<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>.<span class="dp">·</span>....@.........</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">000000c0:<span class="dp">·</span>0500<span class="dp">·</span>0100<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0500<span class="dp">·</span>0100<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td><td colspan="2" class="diffpresent">000000c0:<span class="dp">·</span>0500<span class="dp">·</span>0100<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0500<span class="dp">·</span>0100<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td></tr>
+<tr class="diffchanged"><td colspan="2" class="diffpresent">000000d0:<span class="dp">·</span>00d0<span class="dp">·</span>0100<span class="dp">·</span>0004<span class="dp">·</span>0000<span class="dp">·</span><del>6f86</del><span class="dp">·</span>0<del>1</del>00<span class="dp">·</span>0300<span class="dp">·</span>4081<span class="dp">·</span><span class="dp">·</span>........<del>o.</del>....@.</td><td colspan="2" class="diffpresent">000000d0:<span class="dp">·</span>00d0<span class="dp">·</span>0100<span class="dp">·</span>0004<span class="dp">·</span>0000<span class="dp">·</span><ins>ea4f</ins><span class="dp">·</span>0<ins>2</ins>00<span class="dp">·</span>0300<span class="dp">·</span>4081<span class="dp">·</span><span class="dp">·</span>........<ins>.O</ins>....@.</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">000000e0:<span class="dp">·</span>0000<span class="dp">·</span>1000<span class="dp">·</span>0010<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>1000<span class="dp">·</span>0010<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td><td colspan="2" class="diffpresent">000000e0:<span class="dp">·</span>0000<span class="dp">·</span>1000<span class="dp">·</span>0010<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>1000<span class="dp">·</span>0010<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">000000f0:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>1000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td><td colspan="2" class="diffpresent">000000f0:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>1000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000100:<span class="dp">·</span>6c14<span class="dp">·</span>0100<span class="dp">·</span>3c00<span class="dp">·</span>0000<span class="dp">·</span>0060<span class="dp">·</span>0100<span class="dp">·</span>f453<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>l...&lt;....`...S..</td><td colspan="2" class="diffpresent">00000100:<span class="dp">·</span>6c14<span class="dp">·</span>0100<span class="dp">·</span>3c00<span class="dp">·</span>0000<span class="dp">·</span>0060<span class="dp">·</span>0100<span class="dp">·</span>f453<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>l...&lt;....`...S..</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000110:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td><td colspan="2" class="diffpresent">00000110:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000120:<span class="dp">·</span>00c0<span class="dp">·</span>0100<span class="dp">·</span>280f<span class="dp">·</span>0000<span class="dp">·</span>a0f1<span class="dp">·</span>0000<span class="dp">·</span>1c00<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>....(...........</td><td colspan="2" class="diffpresent">00000120:<span class="dp">·</span>00c0<span class="dp">·</span>0100<span class="dp">·</span>280f<span class="dp">·</span>0000<span class="dp">·</span>a0f1<span class="dp">·</span>0000<span class="dp">·</span>1c00<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>....(...........</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000130:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td><td colspan="2" class="diffpresent">00000130:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000140:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>980f<span class="dp">·</span>0100<span class="dp">·</span>4000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>............@...</td><td colspan="2" class="diffpresent">00000140:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>980f<span class="dp">·</span>0100<span class="dp">·</span>4000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>............@...</td></tr>
+</table>          </div>
+          <div class="difference">
+            <div class="diffheader">
+            <div class="diffcontrol diffcontrol-double">⊟</div>
+            <div><span class="diffsize">1.07 KB</span></div>
+            <div><span class="source">aqa8jk76hvqnf3dx986mhp0krv5jbzgz-python3.10-distlib-0.3.6/A/lib/python3.10/site-packages/distlib/t64.exe</span> vs.</div>
+            <div id="aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.-----aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib-t--.exe-1"><span class="source">aqa8jk76hvqnf3dx986mhp0krv5jbzgz-python3.10-distlib-0.3.6/B/lib/python3.10/site-packages/distlib/t64.exe</span>
+              <a class="anchor" href="#aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.-----aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib-t--.exe-1">¶</a>
+            </div>
+            </div>
+            <div class="difference">
+              <div class="diffheader">
+              <div class="diffcontrol">⊟</div>
+              <div><span class="diffsize">883 B</span></div>
+              <div id="aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.-----aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib-t--.exe---objdump"><span class="source">objdump</span>
+                <a class="anchor" href="#aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.-----aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib-t--.exe---objdump">¶</a>
+              </div>
+              </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 6, 15 lines modified</td><td colspan="2">Offset 6, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Characteristics<span class="dp">·</span>0x22e</td><td class="diffline">6 </td><td class="diffpresent">Characteristics<span class="dp">·</span>0x22e</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">»</span>       executable</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">»</span>       executable</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">»</span>       line<span class="dp">·</span>numbers<span class="dp">·</span>stripped</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">»</span>       line<span class="dp">·</span>numbers<span class="dp">·</span>stripped</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">»</span>       symbols<span class="dp">·</span>stripped</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">»</span>       symbols<span class="dp">·</span>stripped</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">»</span>       large<span class="dp">·</span>address<span class="dp">·</span>aware</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">»</span>       large<span class="dp">·</span>address<span class="dp">·</span>aware</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">»</span>       debugging<span class="dp">·</span>information<span class="dp">·</span>removed</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">»</span>       debugging<span class="dp">·</span>information<span class="dp">·</span>removed</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">Time/Date<span class="dp">»</span>      <span class="dp">»</span>      <del>Sat</del><span class="dp">·</span>Mar<span class="dp">·</span><del><span class="dp">·</span>4</del><span class="dp">·</span>0<del>7</del>:<del>1</del>4:<del>57</del><span class="dp">·</span>2023</td><td class="diffline">12 </td><td class="diffpresent">Time/Date<span class="dp">»</span>      <span class="dp">»</span>      <ins>Tue</ins><span class="dp">·</span>Mar<span class="dp">·</span><ins>28</ins><span class="dp">·</span>0<ins>9</ins>:<ins>5</ins>4:<ins>21</ins><span class="dp">·</span>2023</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">Magic<span class="dp">»</span>  <span class="dp">»</span>  <span class="dp">»</span>  020b<span class="dp">»</span>      (PE32+)</td><td class="diffline">13 </td><td class="diffpresent">Magic<span class="dp">»</span>  <span class="dp">»</span>  <span class="dp">»</span>  020b<span class="dp">»</span>      (PE32+)</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">MajorLinkerVersion<span class="dp">»</span>     10</td><td class="diffline">14 </td><td class="diffpresent">MajorLinkerVersion<span class="dp">»</span>     10</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">MinorLinkerVersion<span class="dp">»</span>     0</td><td class="diffline">15 </td><td class="diffpresent">MinorLinkerVersion<span class="dp">»</span>     0</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">SizeOfCode<span class="dp">»</span>     <span class="dp">»</span>     000000000000f000</td><td class="diffline">16 </td><td class="diffpresent">SizeOfCode<span class="dp">»</span>     <span class="dp">»</span>     000000000000f000</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">SizeOfInitializedData<span class="dp">»</span>  000000000000b200</td><td class="diffline">17 </td><td class="diffpresent">SizeOfInitializedData<span class="dp">»</span>  000000000000b200</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">SizeOfUninitializedData<span class="dp">»</span>0000000000000000</td><td class="diffline">18 </td><td class="diffpresent">SizeOfUninitializedData<span class="dp">»</span>0000000000000000</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">AddressOfEntryPoint<span class="dp">»</span>    000000000000427c</td><td class="diffline">19 </td><td class="diffpresent">AddressOfEntryPoint<span class="dp">»</span>    000000000000427c</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 27, 15 lines modified</td><td colspan="2">Offset 27, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">MajorImageVersion<span class="dp">»</span>      0</td><td class="diffline">27 </td><td class="diffpresent">MajorImageVersion<span class="dp">»</span>      0</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">MinorImageVersion<span class="dp">»</span>      0</td><td class="diffline">28 </td><td class="diffpresent">MinorImageVersion<span class="dp">»</span>      0</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">MajorSubsystemVersion<span class="dp">»</span>  5</td><td class="diffline">29 </td><td class="diffpresent">MajorSubsystemVersion<span class="dp">»</span>  5</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">MinorSubsystemVersion<span class="dp">»</span>  2</td><td class="diffline">30 </td><td class="diffpresent">MinorSubsystemVersion<span class="dp">»</span>  2</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">Win32Version<span class="dp">»</span>   <span class="dp">»</span>   00000000</td><td class="diffline">31 </td><td class="diffpresent">Win32Version<span class="dp">»</span>   <span class="dp">»</span>   00000000</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">SizeOfImage<span class="dp">»</span>    <span class="dp">»</span>    00021000</td><td class="diffline">32 </td><td class="diffpresent">SizeOfImage<span class="dp">»</span>    <span class="dp">»</span>    00021000</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">SizeOfHeaders<span class="dp">»</span>  <span class="dp">»</span>  00000400</td><td class="diffline">33 </td><td class="diffpresent">SizeOfHeaders<span class="dp">»</span>  <span class="dp">»</span>  00000400</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">CheckSum<span class="dp">»</span>       <span class="dp">»</span>       0002<del>6bb1</del></td><td class="diffline">34 </td><td class="diffpresent">CheckSum<span class="dp">»</span>       <span class="dp">»</span>       0002<ins>352d</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">Subsystem<span class="dp">»</span>      <span class="dp">»</span>      00000003<span class="dp">»</span>      (Windows<span class="dp">·</span>CUI)</td><td class="diffline">35 </td><td class="diffpresent">Subsystem<span class="dp">»</span>      <span class="dp">»</span>      00000003<span class="dp">»</span>      (Windows<span class="dp">·</span>CUI)</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">DllCharacteristics<span class="dp">»</span>     00008140</td><td class="diffline">36 </td><td class="diffpresent">DllCharacteristics<span class="dp">»</span>     00008140</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       DYNAMIC_BASE</td><td class="diffline">37 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       DYNAMIC_BASE</td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       NX_COMPAT</td><td class="diffline">38 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       NX_COMPAT</td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       TERMINAL_SERVICE_AWARE</td><td class="diffline">39 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       TERMINAL_SERVICE_AWARE</td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent">SizeOfStackReserve<span class="dp">»</span>     0000000000100000</td><td class="diffline">40 </td><td class="diffpresent">SizeOfStackReserve<span class="dp">»</span>     0000000000100000</td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent">SizeOfStackCommit<span class="dp">»</span>      0000000000001000</td><td class="diffline">41 </td><td class="diffpresent">SizeOfStackCommit<span class="dp">»</span>      0000000000001000</td></tr>
+</table>            </div>
+          </div>
+          <div class="difference">
+            <div class="diffheader">
+            <div class="diffcontrol diffcontrol-double">⊟</div>
+            <div><span class="diffsize">1.7 KB</span></div>
+            <div><span class="source">aqa8jk76hvqnf3dx986mhp0krv5jbzgz-python3.10-distlib-0.3.6/A/lib/python3.10/site-packages/distlib/w32.exe</span> vs.</div>
+            <div id="aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.-----aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib-w--.exe"><span class="source">aqa8jk76hvqnf3dx986mhp0krv5jbzgz-python3.10-distlib-0.3.6/B/lib/python3.10/site-packages/distlib/w32.exe</span>
+              <a class="anchor" href="#aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.-----aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib-w--.exe">¶</a>
+            </div>
+            </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 2, 20 lines modified</td><td colspan="2">Offset 2, 20 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000010:<span class="dp">·</span>b800<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>4000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>........@.......</td><td colspan="2" class="diffpresent">00000010:<span class="dp">·</span>b800<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>4000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>........@.......</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000020:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td><td colspan="2" class="diffpresent">00000020:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000030:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>8000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td><td colspan="2" class="diffpresent">00000030:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>8000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000040:<span class="dp">·</span>0e1f<span class="dp">·</span>ba0e<span class="dp">·</span>00b4<span class="dp">·</span>09cd<span class="dp">·</span>21b8<span class="dp">·</span>014c<span class="dp">·</span>cd21<span class="dp">·</span>5468<span class="dp">·</span><span class="dp">·</span>........!..L.!Th</td><td colspan="2" class="diffpresent">00000040:<span class="dp">·</span>0e1f<span class="dp">·</span>ba0e<span class="dp">·</span>00b4<span class="dp">·</span>09cd<span class="dp">·</span>21b8<span class="dp">·</span>014c<span class="dp">·</span>cd21<span class="dp">·</span>5468<span class="dp">·</span><span class="dp">·</span>........!..L.!Th</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000050:<span class="dp">·</span>6973<span class="dp">·</span>2070<span class="dp">·</span>726f<span class="dp">·</span>6772<span class="dp">·</span>616d<span class="dp">·</span>2063<span class="dp">·</span>616e<span class="dp">·</span>6e6f<span class="dp">·</span><span class="dp">·</span>is<span class="dp">·</span>program<span class="dp">·</span>canno</td><td colspan="2" class="diffpresent">00000050:<span class="dp">·</span>6973<span class="dp">·</span>2070<span class="dp">·</span>726f<span class="dp">·</span>6772<span class="dp">·</span>616d<span class="dp">·</span>2063<span class="dp">·</span>616e<span class="dp">·</span>6e6f<span class="dp">·</span><span class="dp">·</span>is<span class="dp">·</span>program<span class="dp">·</span>canno</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000060:<span class="dp">·</span>7420<span class="dp">·</span>6265<span class="dp">·</span>2072<span class="dp">·</span>756e<span class="dp">·</span>2069<span class="dp">·</span>6e20<span class="dp">·</span>444f<span class="dp">·</span>5320<span class="dp">·</span><span class="dp">·</span>t<span class="dp">·</span>be<span class="dp">·</span>run<span class="dp">·</span>in<span class="dp">·</span>DOS<span class="dp">·</span></td><td colspan="2" class="diffpresent">00000060:<span class="dp">·</span>7420<span class="dp">·</span>6265<span class="dp">·</span>2072<span class="dp">·</span>756e<span class="dp">·</span>2069<span class="dp">·</span>6e20<span class="dp">·</span>444f<span class="dp">·</span>5320<span class="dp">·</span><span class="dp">·</span>t<span class="dp">·</span>be<span class="dp">·</span>run<span class="dp">·</span>in<span class="dp">·</span>DOS<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000070:<span class="dp">·</span>6d6f<span class="dp">·</span>6465<span class="dp">·</span>2e0d<span class="dp">·</span>0d0a<span class="dp">·</span>2400<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>mode....$.......</td><td colspan="2" class="diffpresent">00000070:<span class="dp">·</span>6d6f<span class="dp">·</span>6465<span class="dp">·</span>2e0d<span class="dp">·</span>0d0a<span class="dp">·</span>2400<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>mode....$.......</td></tr>
+<tr class="diffchanged"><td colspan="2" class="diffpresent">00000080:<span class="dp">·</span>5045<span class="dp">·</span>0000<span class="dp">·</span>4c01<span class="dp">·</span>0500<span class="dp">·</span><del>f1ef</del><span class="dp">·</span><del>0</del>264<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>PE..L...<del>.</del>.<del>.</del>d....</td><td colspan="2" class="diffpresent">00000080:<span class="dp">·</span>5045<span class="dp">·</span>0000<span class="dp">·</span>4c01<span class="dp">·</span>0500<span class="dp">·</span><ins>4db9</ins><span class="dp">·</span><ins>2</ins>264<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>PE..L...<ins>M</ins>.<ins>&quot;</ins>d....</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000090:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>e000<span class="dp">·</span>0e03<span class="dp">·</span>0b01<span class="dp">·</span>0a00<span class="dp">·</span>00c0<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td><td colspan="2" class="diffpresent">00000090:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>e000<span class="dp">·</span>0e03<span class="dp">·</span>0b01<span class="dp">·</span>0a00<span class="dp">·</span>00c0<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">000000a0:<span class="dp">·</span>00a2<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>493e<span class="dp">·</span>0000<span class="dp">·</span>0010<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>........I&gt;......</td><td colspan="2" class="diffpresent">000000a0:<span class="dp">·</span>00a2<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>493e<span class="dp">·</span>0000<span class="dp">·</span>0010<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>........I&gt;......</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">000000b0:<span class="dp">·</span>0000<span class="dp">·</span>0100<span class="dp">·</span>0000<span class="dp">·</span>4000<span class="dp">·</span>0010<span class="dp">·</span>0000<span class="dp">·</span>0002<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>......@.........</td><td colspan="2" class="diffpresent">000000b0:<span class="dp">·</span>0000<span class="dp">·</span>0100<span class="dp">·</span>0000<span class="dp">·</span>4000<span class="dp">·</span>0010<span class="dp">·</span>0000<span class="dp">·</span>0002<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>......@.........</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">000000c0:<span class="dp">·</span>0500<span class="dp">·</span>0100<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0500<span class="dp">·</span>0100<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td><td colspan="2" class="diffpresent">000000c0:<span class="dp">·</span>0500<span class="dp">·</span>0100<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0500<span class="dp">·</span>0100<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td></tr>
+<tr class="diffchanged"><td colspan="2" class="diffpresent">000000d0:<span class="dp">·</span>00b0<span class="dp">·</span>0100<span class="dp">·</span>0004<span class="dp">·</span>0000<span class="dp">·</span><del>c</del><del>f</del>b8<span class="dp">·</span>0100<span class="dp">·</span>0200<span class="dp">·</span>4081<span class="dp">·</span><span class="dp">·</span>........<del>.</del>.....@.</td><td colspan="2" class="diffpresent">000000d0:<span class="dp">·</span>00b0<span class="dp">·</span>0100<span class="dp">·</span>0004<span class="dp">·</span>0000<span class="dp">·</span><ins>4</ins>b8<ins>2</ins><span class="dp">·</span>0100<span class="dp">·</span>0200<span class="dp">·</span>4081<span class="dp">·</span><span class="dp">·</span>........<ins>K</ins>.....@.</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">000000e0:<span class="dp">·</span>0000<span class="dp">·</span>1000<span class="dp">·</span>0010<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>1000<span class="dp">·</span>0010<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td><td colspan="2" class="diffpresent">000000e0:<span class="dp">·</span>0000<span class="dp">·</span>1000<span class="dp">·</span>0010<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>1000<span class="dp">·</span>0010<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">000000f0:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>1000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td><td colspan="2" class="diffpresent">000000f0:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>1000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000100:<span class="dp">·</span>9cf4<span class="dp">·</span>0000<span class="dp">·</span>5000<span class="dp">·</span>0000<span class="dp">·</span>0040<span class="dp">·</span>0100<span class="dp">·</span>f453<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>....P....@...S..</td><td colspan="2" class="diffpresent">00000100:<span class="dp">·</span>9cf4<span class="dp">·</span>0000<span class="dp">·</span>5000<span class="dp">·</span>0000<span class="dp">·</span>0040<span class="dp">·</span>0100<span class="dp">·</span>f453<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>....P....@...S..</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000110:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td><td colspan="2" class="diffpresent">00000110:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000120:<span class="dp">·</span>00a0<span class="dp">·</span>0100<span class="dp">·</span>1a0f<span class="dp">·</span>0000<span class="dp">·</span>c0d1<span class="dp">·</span>0000<span class="dp">·</span>1c00<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td><td colspan="2" class="diffpresent">00000120:<span class="dp">·</span>00a0<span class="dp">·</span>0100<span class="dp">·</span>1a0f<span class="dp">·</span>0000<span class="dp">·</span>c0d1<span class="dp">·</span>0000<span class="dp">·</span>1c00<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000130:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td><td colspan="2" class="diffpresent">00000130:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>................</td></tr>
+<tr class="diffunmodified"><td colspan="2" class="diffpresent">00000140:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>00f0<span class="dp">·</span>0000<span class="dp">·</span>4000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>............@...</td><td colspan="2" class="diffpresent">00000140:<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>0000<span class="dp">·</span>00f0<span class="dp">·</span>0000<span class="dp">·</span>4000<span class="dp">·</span>0000<span class="dp">·</span><span class="dp">·</span>............@...</td></tr>
+</table>          </div>
+          <div class="difference">
+            <div class="diffheader">
+            <div class="diffcontrol diffcontrol-double">⊟</div>
+            <div><span class="diffsize">1.07 KB</span></div>
+            <div><span class="source">aqa8jk76hvqnf3dx986mhp0krv5jbzgz-python3.10-distlib-0.3.6/A/lib/python3.10/site-packages/distlib/w64.exe</span> vs.</div>
+            <div id="aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.-----aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib-w--.exe-1"><span class="source">aqa8jk76hvqnf3dx986mhp0krv5jbzgz-python3.10-distlib-0.3.6/B/lib/python3.10/site-packages/distlib/w64.exe</span>
+              <a class="anchor" href="#aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.-----aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib-w--.exe-1">¶</a>
+            </div>
+            </div>
+            <div class="difference">
+              <div class="diffheader">
+              <div class="diffcontrol">⊟</div>
+              <div><span class="diffsize">883 B</span></div>
+              <div id="aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.-----aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib-w--.exe---objdump"><span class="source">objdump</span>
+                <a class="anchor" href="#aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.-----aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib---aqa-jk--hvqnf-dx---mhp-krv-jbzgz-python-.---distlib--.-.--A-lib-python-.---site-packages-distlib-w--.exe---objdump">¶</a>
+              </div>
+              </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 6, 15 lines modified</td><td colspan="2">Offset 6, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Characteristics<span class="dp">·</span>0x22e</td><td class="diffline">6 </td><td class="diffpresent">Characteristics<span class="dp">·</span>0x22e</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">»</span>       executable</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">»</span>       executable</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">»</span>       line<span class="dp">·</span>numbers<span class="dp">·</span>stripped</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">»</span>       line<span class="dp">·</span>numbers<span class="dp">·</span>stripped</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">»</span>       symbols<span class="dp">·</span>stripped</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">»</span>       symbols<span class="dp">·</span>stripped</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">»</span>       large<span class="dp">·</span>address<span class="dp">·</span>aware</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">»</span>       large<span class="dp">·</span>address<span class="dp">·</span>aware</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">»</span>       debugging<span class="dp">·</span>information<span class="dp">·</span>removed</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">»</span>       debugging<span class="dp">·</span>information<span class="dp">·</span>removed</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">Time/Date<span class="dp">»</span>      <span class="dp">»</span>      <del>Sat</del><span class="dp">·</span>Mar<span class="dp">·</span><del><span class="dp">·</span>4</del><span class="dp">·</span>0<del>7</del>:<del>1</del>4:<del>57</del><span class="dp">·</span>2023</td><td class="diffline">12 </td><td class="diffpresent">Time/Date<span class="dp">»</span>      <span class="dp">»</span>      <ins>Tue</ins><span class="dp">·</span>Mar<span class="dp">·</span><ins>28</ins><span class="dp">·</span>0<ins>9</ins>:<ins>5</ins>4:<ins>21</ins><span class="dp">·</span>2023</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">Magic<span class="dp">»</span>  <span class="dp">»</span>  <span class="dp">»</span>  020b<span class="dp">»</span>      (PE32+)</td><td class="diffline">13 </td><td class="diffpresent">Magic<span class="dp">»</span>  <span class="dp">»</span>  <span class="dp">»</span>  020b<span class="dp">»</span>      (PE32+)</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">MajorLinkerVersion<span class="dp">»</span>     10</td><td class="diffline">14 </td><td class="diffpresent">MajorLinkerVersion<span class="dp">»</span>     10</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">MinorLinkerVersion<span class="dp">»</span>     0</td><td class="diffline">15 </td><td class="diffpresent">MinorLinkerVersion<span class="dp">»</span>     0</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">SizeOfCode<span class="dp">»</span>     <span class="dp">»</span>     000000000000d800</td><td class="diffline">16 </td><td class="diffpresent">SizeOfCode<span class="dp">»</span>     <span class="dp">»</span>     000000000000d800</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">SizeOfInitializedData<span class="dp">»</span>  000000000000b200</td><td class="diffline">17 </td><td class="diffpresent">SizeOfInitializedData<span class="dp">»</span>  000000000000b200</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">SizeOfUninitializedData<span class="dp">»</span>0000000000000000</td><td class="diffline">18 </td><td class="diffpresent">SizeOfUninitializedData<span class="dp">»</span>0000000000000000</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">AddressOfEntryPoint<span class="dp">»</span>    000000000000460c</td><td class="diffline">19 </td><td class="diffpresent">AddressOfEntryPoint<span class="dp">»</span>    000000000000460c</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 27, 15 lines modified</td><td colspan="2">Offset 27, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">MajorImageVersion<span class="dp">»</span>      0</td><td class="diffline">27 </td><td class="diffpresent">MajorImageVersion<span class="dp">»</span>      0</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">MinorImageVersion<span class="dp">»</span>      0</td><td class="diffline">28 </td><td class="diffpresent">MinorImageVersion<span class="dp">»</span>      0</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">MajorSubsystemVersion<span class="dp">»</span>  5</td><td class="diffline">29 </td><td class="diffpresent">MajorSubsystemVersion<span class="dp">»</span>  5</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">MinorSubsystemVersion<span class="dp">»</span>  2</td><td class="diffline">30 </td><td class="diffpresent">MinorSubsystemVersion<span class="dp">»</span>  2</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">Win32Version<span class="dp">»</span>   <span class="dp">»</span>   00000000</td><td class="diffline">31 </td><td class="diffpresent">Win32Version<span class="dp">»</span>   <span class="dp">»</span>   00000000</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">SizeOfImage<span class="dp">»</span>    <span class="dp">»</span>    00020000</td><td class="diffline">32 </td><td class="diffpresent">SizeOfImage<span class="dp">»</span>    <span class="dp">»</span>    00020000</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">SizeOfHeaders<span class="dp">»</span>  <span class="dp">»</span>  00000400</td><td class="diffline">33 </td><td class="diffpresent">SizeOfHeaders<span class="dp">»</span>  <span class="dp">»</span>  00000400</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">CheckSum<span class="dp">»</span>       <span class="dp">»</span>       0002<del>3fac</del></td><td class="diffline">34 </td><td class="diffpresent">CheckSum<span class="dp">»</span>       <span class="dp">»</span>       0002<ins>0928</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">Subsystem<span class="dp">»</span>      <span class="dp">»</span>      00000002<span class="dp">»</span>      (Windows<span class="dp">·</span>GUI)</td><td class="diffline">35 </td><td class="diffpresent">Subsystem<span class="dp">»</span>      <span class="dp">»</span>      00000002<span class="dp">»</span>      (Windows<span class="dp">·</span>GUI)</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">DllCharacteristics<span class="dp">»</span>     00008140</td><td class="diffline">36 </td><td class="diffpresent">DllCharacteristics<span class="dp">»</span>     00008140</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       DYNAMIC_BASE</td><td class="diffline">37 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       DYNAMIC_BASE</td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       NX_COMPAT</td><td class="diffline">38 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       NX_COMPAT</td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       TERMINAL_SERVICE_AWARE</td><td class="diffline">39 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       TERMINAL_SERVICE_AWARE</td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent">SizeOfStackReserve<span class="dp">»</span>     0000000000100000</td><td class="diffline">40 </td><td class="diffpresent">SizeOfStackReserve<span class="dp">»</span>     0000000000100000</td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent">SizeOfStackCommit<span class="dp">»</span>      0000000000001000</td><td class="diffline">41 </td><td class="diffpresent">SizeOfStackCommit<span class="dp">»</span>      0000000000001000</td></tr>
+</table>            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 233
+</div>
+</body>
+</html>
+

@@ -1,0 +1,183 @@
+<html>
+<head>
+<title>Is NixOS Reproducible?</title>
+<meta name="description" content="nixos-unstable's nixos.iso_minimal.x86_64-linux build is 99.18% reproducible!" />
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" value="summary">
+
+<!-- Open Graph data -->
+<meta property="og:title" content="Is NixOS Reproducible?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://r13y.com/" />
+<meta property="og:image" content="https://nixos.org/logo/nixos-logo-only-hires.png" />
+<meta property="og:description" content="nixos-unstable's nixos.iso_minimal.x86_64-linux build is 99.18% reproducible!" />
+<style>
+body {
+    max-width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo__letter {
+  font-size: 200%;
+  align-self: flex-end;
+}
+
+.logo__middle {
+  display: flex;
+  flex-direction: column;
+  padding-left: 3px;
+  margin-right: -5px;
+}
+
+.logo__count {
+  text-align: center;
+  padding-top: 6px;
+}
+
+.logo__text {
+  font-variant: small-caps;
+  border-top: 1px solid black;
+  font-size: 50%;
+}
+</style>
+</head>
+<body>
+<h1 class="logo">
+  <span class="logo__letter logo__letter--start">R</span>
+  <span class="logo__middle">
+    <span class="logo__count">13</span>
+    <span class="logo__text">eproducibilit</span>
+  </span>
+  <span class="logo__letter logo__letter--end">Y: NixOS</span>
+</h1>
+<h1>Is NixOS Reproducible?</h1>
+<h2>Tracking: <code>nixos-unstable</code>'s
+    <code>nixos.iso_minimal.x86_64-linux</code> job for <code>x86_64-linux</code>.</h2>
+<p>Build via:</p>
+<pre>
+git clone https://github.com/nixos/nixpkgs.git
+cd nixpkgs
+git checkout 5f9d1bb572e08ec432ae46c78581919d837a90f6
+nix-build ./nixos/release-combined.nix -A nixos.nixos.iso_minimal.x86_64-linux
+</pre>
+
+<h1 style="color: green">2190 out of 2208 (99.18%) paths in the nixos.iso_minimal.x86_64-linux installation image are reproducible!</h1>
+<p>10 unchecked</p>
+<hr>
+<h3>unreproduced paths</h3>
+<ul>
+<li><code>/nix/store/nkp5m0nnxli8m0cdmj9yznm9p838gz72-python3.10-distlib-0.3.6.drv</code></li>
+<li><a href="./diff/6ecbd826d206c715dd28abf997cd9e2fff159d778864079bd54a0ee08af88115-9823289d970812454161fe8bc20bdcc037ee7f9ebf86535a0032f9d5422c1253.html">(diffoscope)</a> out</li>
+</ul></li>
+<li><code>/nix/store/n0sbjpws9jac4gv2si021sfp24gnnj36-zfs-kernel-2.1.9-6.1.21.drv</code></li>
+<li><a href="./diff/6874eb9f282464a4e88f9f82d7a4811a39e948368dc6c6b6785dfd8b5c0923fb-b2d9165d0b0adefdfb68f327cbbed33c51ecfa5027d397619145b10914ee2a93.html">(diffoscope)</a> out</li>
+</ul></li>
+<li><code>/nix/store/bwx2i8r7439xss47ffyr5rzmr3n2lh6d-grub-2.06.drv</code></li>
+<li><a href="./diff/cc8c91d5a31256a2844d26db568f5ed742b84b1248db68ba4d917922debacc48-b488d38e2a1e076aba57e4d4b5bf2287228093a503a9e3662727e702887571ae.html">(diffoscope)</a> debug</li>
+</ul></li>
+<li><code>/nix/store/sp8dl21r1hz3qsh4dy29wf30vc9l82dw-python3-3.10.10.drv</code></li>
+<li><a href="./diff/2522eac2c373300cb4c76148d1fca09f650461d6dc1cef113bae96c4150fd2ab-f53f47481debc46b8d43ef072aead3e45c72c292dd7bbc7b01adc6c27f0ae25c.html">(diffoscope)</a> out</li>
+</ul></li>
+<li><code>/nix/store/mlcjmrbdzbh5fm3kh9fx2xspq6gvwrsp-python3.10-bootstrapped-pip-23.0.1.drv</code></li>
+<li><a href="./diff/00be8623a65c9eefccf9868124ee74e1ffd4de1a17569d53ccaf2606e751bf3b-5d125dd79051089051c5217931c2b935fa4b664613c403bfaa1295ec4a9260af.html">(diffoscope)</a> out</li>
+</ul></li>
+<li><code>/nix/store/1zj9s2a24q32rpxqddhfsqrnp5wy42g9-python3.10-testpath-0.6.0.drv</code></li>
+<li><a href="./diff/4eb0780eb9ac917ad442e9244f5df0d36c988e39a7dadded7535fef1a644bfb4-336e009f51748cefd522e2dfb2066d6998bb394738ddf969355522b9d47ff437.html">(diffoscope)</a> out</li>
+</ul></li>
+<li><code>/nix/store/w8gvq0j5h5mnci8w7dj7friv082dg9sv-python3.10-bootstrapped-pip-23.0.1.drv</code></li>
+<li><a href="./diff/2757021d47495ade4d9b3a185ae961f45c4e89e10739b45d623ce3a6060c9dec-8b39fd9f5b800e2a77451d14247dfba11ab15e3223bb8ccbf4ee4bfa9b1508be.html">(diffoscope)</a> out</li>
+</ul></li>
+<li><code>/nix/store/48wijd473i9qwls3l3hh6mhw167hk2z4-texlive-combined-basic-2022.20221227.drv</code></li>
+<li><a href="./diff/b2ad2120e62b48b94d6fabc4c0464904c05095a27bad622e231d93c794df2024-c56884197bebfd4fb1552ffdebd81183bcab8bd466e4072388c25123205f07fc.html">(diffoscope)</a> out</li>
+</ul></li>
+</ul>
+<hr>
+<h3>unchecked paths</h3>
+<ul>
+<li><code>/nix/store/97x24zmnalk071nnvmmd0a5rbs11qwjc-python3.10-babel-2.12.1.drv</code></li>
+<li><code>/nix/store/z285vmqxjy927mmyzjxkx498g7by04kn-libedit-20210910-3.1.tar.gz.drv</code></li>
+<li><code>/nix/store/329ghgwd38k9nkv0vicm2qmlrn0hm21b-squashfs.img.drv</code></li>
+<li><code>/nix/store/85k4fbcbnwmcym4lj4xy32csb64lfn2x-mpfr-4.2.0.drv</code></li>
+<li><code>/nix/store/3zb8w87pdvxi1wdlnxy0r7xy793b9r5q-clang-11.1.0.drv</code></li>
+<li><code>/nix/store/d3b83pkgdayinhxix8sf4bac9s4hclsb-rustc-1.67.1.drv</code></li>
+<li><code>/nix/store/i3kg063vnkcfnw1b5m8qn5fl5isb2cpd-gcc-12.2.0.drv</code></li>
+<li><code>/nix/store/mspjk9hnd5ra7j5di619a330i24gf61l-llvm-15.0.7.drv</code></li>
+<li><code>/nix/store/4iqc2yy4y6qj81jba4imda12pqzjf5ig-linux-6.1.21.drv</code></li>
+<li><code>/nix/store/2yxh5zs4psq4maqnf4dxhfmdmcj0cds3-llvm-11.1.0.drv</code></li>
+</ul>
+
+<hr />
+<h3 id="test-circumstance">How are these tested?</h3>
+<p>Each build is run twice, at different times, on different hardware
+
+running different kernels.</p>
+
+<h3 id="result-confidence">How confident can we be in the results?</h3>
+
+<p>Fairly. We don't currently inject randomness at the filesystem
+layer, but many of the reproducibility issues are being exercised
+already. It isn't possible to <em>guarantee</em> a package is
+reproducible, just like it isn't possible to prove software is
+bug-free. It is possible there is nondeterminism in a package source,
+waiting for some specific circumstance.</p>
+
+<p>This is why we run these tests: to track how we are doing over
+time, to submit bug fixes for nondeterminism when we find them.</p>
+
+<h3 id="help">How can I help?</h3>
+
+<ul>
+<li>Look at <a href="https://github.com/NixOS/nixpkgs/issues?q=is%3Aopen+is%3Aissue+label%3A%226.topic%3A+reproducible+builds%22">issues</a> and <a href="https://github.com/NixOS/nixpkgs/pulls?q=is%3Aopen+is%3Apr+label%3A%226.topic%3A+reproducible+builds%22">pull requests</a> with the 'reproducible builds' label.</li>
+<li>Open new issues/PR's for reproducibility problems (like the ones reported above)</li>
+<li>Join the <a href="https://matrix.to/#/#reproducible-builds:nixos.org">#reproducible-builds:nixos.org</a> room on Matrix</li>
+</ul>
+
+<h3 id="next-steps">How can we do better?</h3>
+
+<p>There are further steps we could take. For example, the next likely
+step is using
+<a href="https://salsa.debian.org/reproducible-builds/disorderfs">disorderfs</a>
+which injects additional nondeterminism by reordering directory entries.
+</p>
+
+<h3 id="how-do-i-check">How can I test my patches?</h3>
+<p>Nix has built-in support for checking a path is reproducible. There
+are two routes.</p>
+
+<p>Pretending you are debugging a nondeterminism bug in
+<code>hello</code>. To check it, you build the package, and then
+build it again with <code>--check --keep-failed</code>. This will
+provide the differing output in a separate directory which you can
+use <code>diffoscope</code> on.</p>
+
+<pre>
+$ nix-build . -A hello
+$ nix-build . -A hello --check --keep-failed
+[...snip...]
+error: derivation '/nix/store/...hello.drv' may not be deterministic:
+output '/nix/store/...-hello' differs from '/nix/store/...hello.check'
+$ diffoscope /nix/store/...hello /nix/store/...hello.check
+</pre>
+
+<p>Note: the <code>.check</code> output is not a valid store path, and
+will automatically be deleted on the next run of the Nix garbage
+collector.</p>
+
+<p><small>There is support for an automatic <code>diff-hook</code> in
+Nix 2, but it is much more complicated to set up. If you would like to
+work on this, or need help setting it up,
+<a href="https://matrix.to/#/!LemuOOvbWqRXodtSsw:nixos.org?via=nixos.org&via=matrix.org">contact us on Matrix.</a>
+We can work together to write docs on how to use it.</small>
+</p>
+
+<hr />
+
+<small>Generated at 2023-03-28 13:38:45.101043950 UTC from <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>.</small>
+<center><img style="max-width: 100px" src="https://nixos.org/logo/nixos-logo-only-hires.png" /></center>
+</body></html>
