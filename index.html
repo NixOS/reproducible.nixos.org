@@ -14,13 +14,13 @@ body {
 <h1>Nix Reproducible Builds</h1>
 <p>
 Because a Nix derivation has deterministic references to all
-of its dependencies, and the build is being ran in a sandbox,
+of its dependencies, and the build happens in a sandbox,
 Nix is an excellent starting point for achieving
 <a href="https://reproducible-builds.org/">Reproducible Builds</a>.
 </p>
 
 <p>
-However, this is not sufficient in itself: builds may still include
+However, this alone is not sufficient: builds may still leak
 timestamps or have other nondeterminisms. For nixpkgs, such problems are tracked
 with the <a href="https://github.com/NixOS/nixpkgs/issues?q=is%3Aopen+is%3Aissue+label%3A%226.topic%3A+reproducible+builds%22">'reproducible builds' issue tag</a>.
 You can report a new issue using the <a href="https://github.com/NixOS/nixpkgs/issues/new?assignees=&labels=0.kind%3A+enhancement%2C6.topic%3A+reproducible+builds&template=unreproducible_package.md&title=">issue template</a>.
