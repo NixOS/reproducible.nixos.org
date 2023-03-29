@@ -15,14 +15,14 @@ body {
 <p>
 Because a Nix derivation has deterministic references to all
 of its dependencies, and the build is being ran in a sandbox,
-Nix is an excellent starting point for achieving bit-by-bit
+Nix is an excellent starting point for achieving
 <a href="https://reproducible-builds.org/">Reproducible Builds</a>.
 </p>
 
 <p>
 However, this is not sufficient in itself: builds may still include
-timestamps or have other nondeterminisms. Such problems are tracked
-in the <a href="https://github.com/NixOS/nixpkgs/issues?q=is%3Aopen+is%3Aissue+label%3A%226.topic%3A+reproducible+builds%22">'reproducible builds' issue tag</a>.
+timestamps or have other nondeterminisms. For nixpkgs, such problems are tracked
+with the <a href="https://github.com/NixOS/nixpkgs/issues?q=is%3Aopen+is%3Aissue+label%3A%226.topic%3A+reproducible+builds%22">'reproducible builds' issue tag</a>.
 You can report a new issue using the <a href="https://github.com/NixOS/nixpkgs/issues/new?assignees=&labels=0.kind%3A+enhancement%2C6.topic%3A+reproducible+builds&template=unreproducible_package.md&title=">issue template</a>.
 </p>
 
@@ -46,7 +46,7 @@ but also all build-time dependencies of those packages:
 <li><a href="nixos-iso-gnome-r13y">Gnome ISO</a>
 </ul>
 <p>
-For an overview of issues see this <a href="https://github.com/orgs/NixOS/projects/30">Project</a>.
+For an overview of issues for those milestones see this <a href="https://github.com/orgs/NixOS/projects/30">Project</a>.
 If anything seems wrong/incomplete ping <a href="https://merveilles.town/@raboof">raboof</a>.
 </p>
 <p>
