@@ -25,15 +25,29 @@ timestamps or have other nondeterminisms. For nixpkgs, such problems are tracked
 with the <a href="https://github.com/NixOS/nixpkgs/issues?q=is%3Aopen+is%3Aissue+label%3A%226.topic%3A+reproducible+builds%22">'reproducible builds' issue tag</a>.
 You can report a new issue using the <a href="https://github.com/NixOS/nixpkgs/issues/new?assignees=&labels=0.kind%3A+enhancement%2C6.topic%3A+reproducible+builds&template=unreproducible_package.md&title=">issue template</a>.
 </p>
-
+<h2>Checking reproducibility</h2>
+<p>
+Building a package twice can't prove it is reproducible: you might simply have gotten lucky. However, it is a useful first step.
+</p>
 <p>
 To check whether you can reproduce a package on your machine,
-you can use <code>nix-build '&lt;nixpkgs&gt;' -A hello --check --keep-failed</code>.
+you can use <code>nix-build '&lt;nixpkgs&gt;' -A hello --check --keep-failed</code> or <code>nix build nixpkgs#hello --rebuild --keep-failed</code>.
+</p>
+<p>
+For fixed-output derivations, run the build four times:
+<ul>
+<li>With an empty <code>outputHash</code>
+<li>With the <code>outputHash</code> produced in the previous build, saving the <code>result</code>
+<li>With an empty <code>outputHash</code> again
+<li>With the <code>outputHash</code> produced in the previous build
+</ul>
+</p>
+<p>
 On failures, you can use <a href="https://diffoscope.org">diffoscope</a>
 to analyze the differences in the outputs of the two builds. To view
 the build log of the build that produced the artifact in the binary cache you can use <code>nix-store --read-log $(nix-instantiate '&lt;nixpkgs&gt;' -A hello)</code>.
 </p>
-
+<h2>Reports</h2>
 <p>
 As a general health check, we are producing reports on the
 reproducibility of the packages that make up the build closure
@@ -45,6 +59,7 @@ but also all build-time dependencies of those packages:
 <li><a href="nixos-iso-minimal-r13y">Minimal ISO</a>
 <li><a href="nixos-iso-gnome-r13y">Gnome ISO</a>
 </ul>
+<h2>Participate</h2>
 <p>
 For an overview of issues for those milestones see this <a href="https://github.com/orgs/NixOS/projects/30">Project</a>.
 If anything seems wrong/incomplete ping <a href="https://merveilles.town/@raboof">raboof</a>.
