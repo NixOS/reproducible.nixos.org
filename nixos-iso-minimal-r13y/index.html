@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>Is NixOS Reproducible?</title>
-<meta name="description" content="nixos-unstable's nixos.iso_minimal.x86_64-linux build is 99.18% reproducible!" />
+<meta name="description" content="nixos-unstable's nixos.iso_minimal.x86_64-linux build is 99.47% reproducible!" />
 
 <!-- Twitter Card data -->
 <meta name="twitter:card" value="summary">
@@ -11,7 +11,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://r13y.com/" />
 <meta property="og:image" content="https://nixos.org/logo/nixos-logo-only-hires.png" />
-<meta property="og:description" content="nixos-unstable's nixos.iso_minimal.x86_64-linux build is 99.18% reproducible!" />
+<meta property="og:description" content="nixos-unstable's nixos.iso_minimal.x86_64-linux build is 99.47% reproducible!" />
 <style>
 body {
     max-width: 50em;
@@ -63,53 +63,41 @@ body {
 <pre>
 git clone https://github.com/nixos/nixpkgs.git
 cd nixpkgs
-git checkout 5f9d1bb572e08ec432ae46c78581919d837a90f6
+git checkout 645bc49f34fa8eff95479f0345ff57e55b53437e
 nix-build ./nixos/release-combined.nix -A nixos.nixos.iso_minimal.x86_64-linux
 </pre>
 
-<h1 style="color: green">2190 out of 2208 (99.18%) paths in the nixos.iso_minimal.x86_64-linux installation image are reproducible!</h1>
-<p>10 unchecked</p>
+<h1 style="color: green">1884 out of 1894 (99.47%) paths in the nixos.iso_minimal.x86_64-linux installation image are reproducible!</h1>
+<p>4 unchecked</p>
 <hr>
 <h3>unreproduced paths</h3>
 <ul>
-<li><code>/nix/store/nkp5m0nnxli8m0cdmj9yznm9p838gz72-python3.10-distlib-0.3.6.drv</code></li>
-<li><a href="./diff/6ecbd826d206c715dd28abf997cd9e2fff159d778864079bd54a0ee08af88115-9823289d970812454161fe8bc20bdcc037ee7f9ebf86535a0032f9d5422c1253.html">(diffoscope)</a> out</li>
+<li><code>/nix/store/7wr4fdldas7f7mhkc9sc78gp1k70kvzl-python3.10-bootstrapped-pip-23.0.1.drv</code></li>
+<li><a href="./diff/b4af05424ee12350d53b4e4e723c7d4473a54c2266a4371b7a48784670f4f24a-312ba2e00c6f5180f2eae18989ffe735d88ff29070d04012e68826eb617c3eaf.html">(diffoscope)</a> out</li>
 </ul></li>
-<li><code>/nix/store/n0sbjpws9jac4gv2si021sfp24gnnj36-zfs-kernel-2.1.9-6.1.21.drv</code></li>
-<li><a href="./diff/6874eb9f282464a4e88f9f82d7a4811a39e948368dc6c6b6785dfd8b5c0923fb-b2d9165d0b0adefdfb68f327cbbed33c51ecfa5027d397619145b10914ee2a93.html">(diffoscope)</a> out</li>
+<li><code>/nix/store/2c90ffkrq6hlqsngarsdbnvns391xsk9-terminus-font-4.49.1.drv</code></li>
+<li><a href="./diff/c61a88970ef589bbff4b644a66dcdc331945f214b257b583fc8ca750aa105481-85f30fa4169bb2563bc8d09d5167c05c58ff635f1168c41c473fa682d59ed887.html">(diffoscope)</a> out</li>
 </ul></li>
-<li><code>/nix/store/bwx2i8r7439xss47ffyr5rzmr3n2lh6d-grub-2.06.drv</code></li>
-<li><a href="./diff/cc8c91d5a31256a2844d26db568f5ed742b84b1248db68ba4d917922debacc48-b488d38e2a1e076aba57e4d4b5bf2287228093a503a9e3662727e702887571ae.html">(diffoscope)</a> debug</li>
+<li><code>/nix/store/0hkhpqfcr91njchdajl1b2wxzjjzaaip-grub-2.06.drv</code></li>
+<li><a href="./diff/60b8506385a796453830c8ae355f24610faacc661c5762ec52309d3c2817198c-3d4b854cf14530abd128a9abc6921537f10433bfdbdde30b3587ce8e0dae8e26.html">(diffoscope)</a> debug</li>
 </ul></li>
-<li><code>/nix/store/sp8dl21r1hz3qsh4dy29wf30vc9l82dw-python3-3.10.10.drv</code></li>
-<li><a href="./diff/2522eac2c373300cb4c76148d1fca09f650461d6dc1cef113bae96c4150fd2ab-f53f47481debc46b8d43ef072aead3e45c72c292dd7bbc7b01adc6c27f0ae25c.html">(diffoscope)</a> out</li>
+<li><code>/nix/store/qa4p4k2p8g6v4y1r8nsqb6j4p52bq0rl-zfs-kernel-2.1.9-6.1.24.drv</code></li>
+<li><a href="./diff/de9b68b8b796081cfa72bfe65347f86ba5920900e2772e99858518548556e662-4bd106f3fc03aa56e28c8d311ebfa67725a74a360cd5c29e4a9e3fe098bb8a7c.html">(diffoscope)</a> out</li>
 </ul></li>
-<li><code>/nix/store/mlcjmrbdzbh5fm3kh9fx2xspq6gvwrsp-python3.10-bootstrapped-pip-23.0.1.drv</code></li>
-<li><a href="./diff/00be8623a65c9eefccf9868124ee74e1ffd4de1a17569d53ccaf2606e751bf3b-5d125dd79051089051c5217931c2b935fa4b664613c403bfaa1295ec4a9260af.html">(diffoscope)</a> out</li>
+<li><code>/nix/store/irgv7494gmj42bx10qwg9al7n60y9dg3-python3.10-bootstrapped-pip-23.0.1.drv</code></li>
+<li><a href="./diff/3b5654f23e585dcf0e40f54ef87ad5c6241e247756783cf56c7c56937b327247-116f4b7dc4c0903c31474f4d7733c8f0cbd3dfbbe08d4c86eef3dcd259c9c7f4.html">(diffoscope)</a> out</li>
 </ul></li>
-<li><code>/nix/store/1zj9s2a24q32rpxqddhfsqrnp5wy42g9-python3.10-testpath-0.6.0.drv</code></li>
-<li><a href="./diff/4eb0780eb9ac917ad442e9244f5df0d36c988e39a7dadded7535fef1a644bfb4-336e009f51748cefd522e2dfb2066d6998bb394738ddf969355522b9d47ff437.html">(diffoscope)</a> out</li>
-</ul></li>
-<li><code>/nix/store/w8gvq0j5h5mnci8w7dj7friv082dg9sv-python3.10-bootstrapped-pip-23.0.1.drv</code></li>
-<li><a href="./diff/2757021d47495ade4d9b3a185ae961f45c4e89e10739b45d623ce3a6060c9dec-8b39fd9f5b800e2a77451d14247dfba11ab15e3223bb8ccbf4ee4bfa9b1508be.html">(diffoscope)</a> out</li>
-</ul></li>
-<li><code>/nix/store/48wijd473i9qwls3l3hh6mhw167hk2z4-texlive-combined-basic-2022.20221227.drv</code></li>
-<li><a href="./diff/b2ad2120e62b48b94d6fabc4c0464904c05095a27bad622e231d93c794df2024-c56884197bebfd4fb1552ffdebd81183bcab8bd466e4072388c25123205f07fc.html">(diffoscope)</a> out</li>
+<li><code>/nix/store/2fv8vyr60xgpg7wv3bj69s43qx4g2pkp-vim-9.0.1441.drv</code></li>
+<li><a href="./diff/bc0e9b9f9d738d251da968a18b73dabbc480192f9dd879c81620cbd49b3f2d9c-a078b92d52fa0f7c283d14a0602977947c7ae7ddda02f07b0999e5d50d9c58c7.html">(diffoscope)</a> out</li>
 </ul></li>
 </ul>
 <hr>
 <h3>unchecked paths</h3>
 <ul>
-<li><code>/nix/store/97x24zmnalk071nnvmmd0a5rbs11qwjc-python3.10-babel-2.12.1.drv</code></li>
-<li><code>/nix/store/z285vmqxjy927mmyzjxkx498g7by04kn-libedit-20210910-3.1.tar.gz.drv</code></li>
-<li><code>/nix/store/329ghgwd38k9nkv0vicm2qmlrn0hm21b-squashfs.img.drv</code></li>
-<li><code>/nix/store/85k4fbcbnwmcym4lj4xy32csb64lfn2x-mpfr-4.2.0.drv</code></li>
-<li><code>/nix/store/3zb8w87pdvxi1wdlnxy0r7xy793b9r5q-clang-11.1.0.drv</code></li>
-<li><code>/nix/store/d3b83pkgdayinhxix8sf4bac9s4hclsb-rustc-1.67.1.drv</code></li>
-<li><code>/nix/store/i3kg063vnkcfnw1b5m8qn5fl5isb2cpd-gcc-12.2.0.drv</code></li>
-<li><code>/nix/store/mspjk9hnd5ra7j5di619a330i24gf61l-llvm-15.0.7.drv</code></li>
-<li><code>/nix/store/4iqc2yy4y6qj81jba4imda12pqzjf5ig-linux-6.1.21.drv</code></li>
-<li><code>/nix/store/2yxh5zs4psq4maqnf4dxhfmdmcj0cds3-llvm-11.1.0.drv</code></li>
+<li><code>/nix/store/rfyw7473g7kl43xi3l59iwbzf7lnj554-testdisk-7.1.tar.bz2.drv</code></li>
+<li><code>/nix/store/lw9vfdwdxj9f7yv4654vv2xs1nlb7j49-CVE-2021-3695.CVE-2021-3696.CVE-2021-3697.CVE-2022-28733.CVE-2022-28734.CVE-2022-28735.CVE-2022-28736.CVE-2022-28737.15.patch.drv</code></li>
+<li><code>/nix/store/hcgb17zvdm4fj9vhdp3gi4b9b2vi6rix-openresolv-3.12.0.tar.xz.drv</code></li>
+<li><code>/nix/store/xl0446l3fik97ghmbfijr3hhnx0xcyrb-dhcpcd-9.4.1.tar.xz.drv</code></li>
 </ul>
 
 <hr />
@@ -178,6 +166,6 @@ We can work together to write docs on how to use it.</small>
 
 <hr />
 
-<small>Generated at 2023-03-28 13:38:45.101043950 UTC from <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>.</small>
+<small>Generated at 2023-04-22 11:21:59.258626242 UTC from <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>.</small>
 <center><img style="max-width: 100px" src="https://nixos.org/logo/nixos-logo-only-hires.png" /></center>
 </body></html>
