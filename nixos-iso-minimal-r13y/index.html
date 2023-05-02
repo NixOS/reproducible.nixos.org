@@ -21,15 +21,21 @@ body {
 </head>
 <body>
 <h1>Is nixos.iso_minimal.x86_64-linux Reproducible?</h1>
-<i>Tracking: <code>nixos-unstable</code>'s
-    <code>nixos.iso_minimal.x86_64-linux</code> job for <code>x86_64-linux</code>.</i>
-<!--p>Build via:</p>
+<i>Tracking the build closure for <code>nixos.iso_minimal.x86_64-linux</code> in the <code>nixos-unstable</code>
+    branch on <code>x86_64-linux</code>.</i>
+<p>
+To run the check build manually:
+<pre>
+nix-build /nix/store/???.drv --check --keep-failed
+</pre>
+<!--nix-build ./nixos/release-combined.nix -A nixos.iso_minimal.x86_64-linux-->
+And to find out why a derivation is part of the build closure, use: 
 <pre>
 git clone https://github.com/nixos/nixpkgs.git
 cd nixpkgs
 git checkout da45bf6ec7bbcc5d1e14d3795c025199f28e0de0
-nix-build ./nixos/release-combined.nix -A nixos.nixos.iso_minimal.x86_64-linux
-</pre-->
+nix-store -q --tree $(nix-instantiate nixos/release-combined.nix) -A nixos.iso_minimal.x86_64-linux
+</pre>
 
 <h2>1849 out of 1878 (98.46%)</h2>
 <p>paths in the nixos.iso_minimal.x86_64-linux build closure are reproducible! 22 paths remained unchecked</p>
@@ -151,6 +157,6 @@ We can work together to write docs on how to use it.</small>
 
 <hr />
 
-<small>Generated at 2023-05-01 20:51:31.043050459 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
+<small>Generated at 2023-05-02 07:38:30.659406227 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
 <center><img style="max-width: 100px" src="https://nixos.org/logo/nixos-logo-only-hires.png" /></center>
 </body></html>
