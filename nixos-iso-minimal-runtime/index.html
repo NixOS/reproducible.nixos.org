@@ -1,0 +1,135 @@
+<html>
+<head>
+<title>Is nixos.iso_minimal.x86_64-linux reproducible?</title>
+<meta name="description" content="nixos-unstable's nixos.iso_minimal.x86_64-linux build is 99.02% reproducible!" />
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" value="summary">
+
+<!-- Open Graph data -->
+<meta property="og:title" content="Is nixos.iso_minimal.x86_64-linux Reproducible?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://reproducible.nixos.org/" />
+<meta property="og:image" content="https://nixos.org/logo/nixos-logo-only-hires.png" />
+<meta property="og:description" content="nixos-unstable's nixos.iso_minimal.x86_64-linux build is 99.02% reproducible!" />
+<link rel="stylesheet" href="../styles/index.css">
+<style>
+body {
+      padding: 3em;
+}
+</style>
+</head>
+<body>
+<h1>Is nixos.iso_minimal.x86_64-linux Reproducible?</h1>
+<i>Tracking the build closure for <code>nixos.iso_minimal.x86_64-linux</code> in the <code>nixos-unstable</code>
+    branch on <code>x86_64-linux</code>.</i>
+<p>
+To run the check build manually:
+<pre>
+nix-build /nix/store/???.drv --check --keep-failed
+</pre>
+<!--nix-build ./nixos/release-combined.nix -A nixos.iso_minimal.x86_64-linux-->
+And to find out why a derivation is part of the build closure, use:
+<pre>
+git clone https://github.com/nixos/nixpkgs.git
+cd nixpkgs
+git checkout da45bf6ec7bbcc5d1e14d3795c025199f28e0de0
+nix-store -q --tree $(nix-instantiate nixos/release-combined.nix) -A nixos.iso_minimal.x86_64-linux
+</pre>
+
+<h2>503 out of 508 (99.02%)</h2>
+<p>paths in the nixos.iso_minimal.x86_64-linux build closure are reproducible! 0 paths remained unchecked</p>
+<h3>unreproduced paths</h3>
+<p>These derivations produced a different result compared to the official cache, revealing a reproducibility problem. See the <a href="https://github.com/orgs/NixOS/projects/30/views/1">Project</a> for progress on fixing those, or <a href="https://github.com/NixOS/nixpkgs/issues/new?assignees=&labels=0.kind%3A+enhancement%2C6.topic%3A+reproducible+builds&template=unreproducible_package.md&title=">add an issue</a> for those that are not tracked yet.</p>
+<ul>
+<li><code>/nix/store/wi8xy6mdsndhy91q61fh5j503xk8dmjr-libnvme-1.4.drv</code></li>
+<li><a href="./diff/c969941ffd2426fcbc28ef309f1a3ba484abc66e402885d91eb0d19b217ce0cb-9b9902cee7a42228439973472f4a03f3f9416876b6b5dfeb4bb29dae62f046d1.html">(diffoscope)</a> man</li>
+</ul></li>
+<li><code>/nix/store/c45nrwwpy780kp2mdvf0zrw77cy1380q-grub-2.06.drv</code></li>
+<li><a href="./diff/33370744890797ff135e9933e30ddb01c82766cd4c4c8c79e2f8d9adf38ae7eb-7bcd495087bdd474684853794332a6bc5761e820c359e22136578cd83f51c5e7.html">(diffoscope)</a> debug</li>
+</ul></li>
+<li><code>/nix/store/gr20b9jxynvr6xby4wacayl0nwcx8fax-zfs-kernel-2.1.11-6.1.26.drv</code></li>
+<li><a href="./diff/3a749c01245e8c6287351b713b703a284e5965e23f10ea3c5478c2f36895d1cf-cf027242196eb09d5a815858ee17911e95ef2a2bf5f6a72df259dd4074da3a78.html">(diffoscope)</a> out</li>
+</ul></li>
+<li><code>/nix/store/kyj4nxyyxw5wkywnjsh6cs1gzrbmwl7c-python3-3.10.11.drv</code></li>
+<li><a href="./diff/74cd31756a531c1a5d66df9040866e7d70882d3a6198b6d976f2bcecf7aee313-0016c11215d26e84611a8e8979a2f6528f21d2b355a1dd00dc8b524d2220a800.html">(diffoscope)</a> out</li>
+</ul></li>
+<li><code>/nix/store/jpav1n17357magd1wr41k3ha98c1hknx-linux-6.1.26.drv</code></li>
+<li><a href="./diff/093a1ece8809345f57026327179065d704d0ce027905745fa6687f6b0e49cbd0-17a957b070985a20ad00296b279828b180c5651bdca81d83eec4eccbe2c25a16.html">(diffoscope)</a> out</li>
+</ul></li>
+</ul>
+<hr>
+<h3>unchecked paths</h3>
+<ul>
+
+</ul>
+
+<hr />
+<h3 id="test-circumstance">How are these tested?</h3>
+<p>Each build is run twice, at different times, on different hardware
+
+running different kernels.</p>
+
+<h3 id="result-confidence">How confident can we be in the results?</h3>
+
+<p>Fairly. We don't currently inject randomness at the filesystem
+layer, but many of the reproducibility issues are being exercised
+already. It isn't possible to <em>guarantee</em> a package is
+reproducible, just like it isn't possible to prove software is
+bug-free. It is possible there is nondeterminism in a package source,
+waiting for some specific circumstance.</p>
+
+<p>This is why we run these tests: to track how we are doing over
+time, to submit bug fixes for nondeterminism when we find them.</p>
+
+<h3 id="help">How can I help?</h3>
+
+<ul>
+<li>Look at the <a href="https://github.com/orgs/NixOS/projects/30">project page</a>, <a href="https://github.com/NixOS/nixpkgs/issues?q=is%3Aopen+is%3Aissue+label%3A%226.topic%3A+reproducible+builds%22">issues</a> and <a href="https://github.com/NixOS/nixpkgs/pulls?q=is%3Aopen+is%3Apr+label%3A%226.topic%3A+reproducible+builds%22">pull requests</a> with the 'reproducible builds' label.</li>
+<li>Open new issues/PR's for reproducibility problems (like the ones reported above)</li>
+<li>Join the <a href="https://matrix.to/#/#reproducible-builds:nixos.org">#reproducible-builds:nixos.org</a> room on Matrix</li>
+</ul>
+
+<h3 id="next-steps">How can we do better?</h3>
+
+<p>There are further steps we could take. For example, the next likely
+step is using
+<a href="https://salsa.debian.org/reproducible-builds/disorderfs">disorderfs</a>
+which injects additional nondeterminism by reordering directory entries.
+</p>
+
+<h3 id="how-do-i-check">How can I test my patches?</h3>
+<p>Nix has built-in support for checking a path is reproducible. There
+are two routes.</p>
+
+<p>Pretending you are debugging a nondeterminism bug in
+<code>hello</code>. To check it, you build the package, and then
+build it again with <code>--check --keep-failed</code>. This will
+provide the differing output in a separate directory which you can
+use <code>diffoscope</code> on.</p>
+
+<pre>
+$ nix-build . -A hello
+$ nix-build . -A hello --check --keep-failed
+[...snip...]
+error: derivation '/nix/store/...hello.drv' may not be deterministic:
+output '/nix/store/...-hello' differs from '/nix/store/...hello.check'
+$ diffoscope /nix/store/...hello /nix/store/...hello.check
+</pre>
+
+<p>Note: the <code>.check</code> output is not a valid store path, and
+will automatically be deleted on the next run of the Nix garbage
+collector.</p>
+
+<p><small>There is support for an automatic <code>diff-hook</code> in
+Nix 2, but it is much more complicated to set up. If you would like to
+work on this, or need help setting it up,
+<a href="https://matrix.to/#/!LemuOOvbWqRXodtSsw:nixos.org?via=nixos.org&via=matrix.org">contact us on Matrix.</a>
+We can work together to write docs on how to use it.</small>
+</p>
+
+<hr />
+
+<small>Generated at 2023-05-04 20:35:36.486889326 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
+<center><img style="max-width: 100px" src="https://nixos.org/logo/nixos-logo-only-hires.png" /></center>
+</body></html>

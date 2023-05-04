@@ -1,0 +1,16 @@
+
+# HELP r13y_check_revision Check's nixpkgs revision
+# TYPE r13y_check_revision counter
+r13y_check_revision{revision="da45bf6ec7bbcc5d1e14d3795c025199f28e0de0"} 1
+# HELP r13y_check_time_seconds Time of the latest check
+# TYPE r13y_check_time_seconds counter
+r13y_check_time_seconds 1683232536
+# HELP r13y_paths_checked Number of paths checked in the latest check
+# TYPE r13y_paths_checked gauge
+r13y_paths_count 508
+# HELP r13y_path_status_counts Number of paths in each status
+# TYPE r13y_path_status_counts gauge
+r13y_path_status_count{status="reproducible"} 503
+r13y_path_status_count{status="unreproducible"} 5
+r13y_path_status_count{status="unchecked"} 0
+
