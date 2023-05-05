@@ -1,0 +1,203 @@
+<html>
+<head>
+<title>Is nixos.iso_gnome.x86_64-linux reproducible?</title>
+<meta name="description" content="nixos-unstable's nixos.iso_gnome.x86_64-linux build is 96.52% reproducible!" />
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" value="summary">
+
+<!-- Open Graph data -->
+<meta property="og:title" content="Is nixos.iso_gnome.x86_64-linux Reproducible?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://reproducible.nixos.org/" />
+<meta property="og:image" content="https://nixos.org/logo/nixos-logo-only-hires.png" />
+<meta property="og:description" content="nixos-unstable's nixos.iso_gnome.x86_64-linux build is 96.52% reproducible!" />
+<link rel="stylesheet" href="../styles/index.css">
+<style>
+body {
+      padding: 3em;
+}
+</style>
+</head>
+<body>
+<h1>Is nixos.iso_gnome.x86_64-linux Reproducible?</h1>
+<i>Tracking the build closure for <code>nixos.iso_gnome.x86_64-linux</code> in the <code>nixos-unstable</code>
+    branch on <code>x86_64-linux</code>.</i>
+<p>
+To run the check build manually:
+<pre>
+nix-build /nix/store/???.drv --check --keep-failed
+</pre>
+<!--nix-build ./nixos/release-combined.nix -A nixos.iso_gnome.x86_64-linux-->
+And to find out why a derivation is part of the build closure, use:
+<pre>
+git clone https://github.com/nixos/nixpkgs.git
+cd nixpkgs
+git checkout da45bf6ec7bbcc5d1e14d3795c025199f28e0de0
+nix-store -q --tree $(nix-instantiate nixos/release-combined.nix) -A nixos.iso_gnome.x86_64-linux
+</pre>
+
+<h2>1276 out of 1322 (96.52%)</h2>
+<p>paths in the nixos.iso_gnome.x86_64-linux build closure are reproducible! 27 paths remained unchecked</p>
+<h3>unreproduced paths</h3>
+<p>These derivations produced a different result compared to the official cache, revealing a reproducibility problem. See the <a href="https://github.com/orgs/NixOS/projects/30/views/1">Project</a> for progress on fixing those, or <a href="https://github.com/NixOS/nixpkgs/issues/new?assignees=&labels=0.kind%3A+enhancement%2C6.topic%3A+reproducible+builds&template=unreproducible_package.md&title=">add an issue</a> for those that are not tracked yet.</p>
+<ul>
+<li><code>/nix/store/wi8xy6mdsndhy91q61fh5j503xk8dmjr-libnvme-1.4.drv</code></li>
+<li><a href="./diff/c969941ffd2426fcbc28ef309f1a3ba484abc66e402885d91eb0d19b217ce0cb-9b9902cee7a42228439973472f4a03f3f9416876b6b5dfeb4bb29dae62f046d1.html">(diffoscope)</a> man</li>
+</ul></li>
+<li><code>/nix/store/c45nrwwpy780kp2mdvf0zrw77cy1380q-grub-2.06.drv</code></li>
+<li><a href="./diff/33370744890797ff135e9933e30ddb01c82766cd4c4c8c79e2f8d9adf38ae7eb-7bcd495087bdd474684853794332a6bc5761e820c359e22136578cd83f51c5e7.html">(diffoscope)</a> debug</li>
+</ul></li>
+<li><code>/nix/store/gr20b9jxynvr6xby4wacayl0nwcx8fax-zfs-kernel-2.1.11-6.1.26.drv</code></li>
+<li><a href="./diff/3a749c01245e8c6287351b713b703a284e5965e23f10ea3c5478c2f36895d1cf-cf027242196eb09d5a815858ee17911e95ef2a2bf5f6a72df259dd4074da3a78.html">(diffoscope)</a> out</li>
+</ul></li>
+<li><code>/nix/store/kyj4nxyyxw5wkywnjsh6cs1gzrbmwl7c-python3-3.10.11.drv</code></li>
+<li><a href="./diff/74cd31756a531c1a5d66df9040866e7d70882d3a6198b6d976f2bcecf7aee313-0016c11215d26e84611a8e8979a2f6528f21d2b355a1dd00dc8b524d2220a800.html">(diffoscope)</a> out</li>
+</ul></li>
+<li><code>/nix/store/jpav1n17357magd1wr41k3ha98c1hknx-linux-6.1.26.drv</code></li>
+<li><a href="./diff/093a1ece8809345f57026327179065d704d0ce027905745fa6687f6b0e49cbd0-17a957b070985a20ad00296b279828b180c5651bdca81d83eec4eccbe2c25a16.html">(diffoscope)</a> out</li>
+</ul></li>
+<li><code>/nix/store/wh7sg7sr9dg5zss5paf28p6l2sixa6m6-xserver.conf.drv</code></li>
+<li><a href="./diff/1b946de547f2dc7eccd488be56646bb2d0b58af01efacb27cd1b388d7c6b625a-aeb7ac86854ec89bd5b155c4b76492900d2c43f09b7feca4f838d73133e88de2.html">(diffoscope)</a> out</li>
+</ul></li>
+<li><code>/nix/store/k91mii00hays5hzybdwwmgbcihgdrj15-gtk+-2.24.33.drv</code></li>
+<li><a href="./diff/4253e83195b26d33cafd908507d2aea8a8c88a4f289a6c26644263525d2d95bc-e4df370b5f127ad224c9b22073efe50a89aed8cd0df0b020fd6730cf8156d45f.html">(diffoscope)</a> out</li>
+</ul></li>
+<li><code>/nix/store/lipd5ffwp5khchsk2a7kdpsakf0qk03k-gegl-0.4.44.drv</code></li>
+<li><a href="./diff/772365d091bf360014e12d75ccec1356f69d324132a54164d35a6236e3a3efa9-535322532b56cd5259c9a401fdc672857575fe9eb4a8ce8cb7008edf8aeee0c5.html">(diffoscope)</a> dev</li>
+</ul></li>
+<li><code>/nix/store/i56wll14xcfpvi152x3654nwa9b6n8i9-pipewire-0.3.70.drv</code></li>
+<li><a href="./diff/a362c2bcd1fe8aafccd19dacff2ad3e6031a6f4750ab9e08623ea854fcbd64ef-f72c10ba084a98d3dac5e9a651bee1a0f3e07964d3e973288b66ae0e907cea5b.html">(diffoscope)</a> doc</li>
+</ul></li>
+<li><code>/nix/store/zjwqzkiw92xis1mqjgrfq83pf7hfx9dv-gnome-session-44.0.drv</code></li>
+<li><a href="./diff/7e066b3e0a9e41d38e5dda32f2bef66c64059667317775343b19bc383f64b920-944aae10257b53d61eed0269a72038e1d57ec3d9c5a5a1e5ca0694d3e6b4cb5e.html">(diffoscope)</a> out</li>
+</ul></li>
+<li><code>/nix/store/plpdf71f577v3v7hzyx7xzwlb072i715-kio-5.105.0.drv</code></li>
+<li><a href="./diff/d172aaa0b7bae08a0ec9666120592144aada1bf1fa3c72c6d8c06815d96371f4-f606d33a7f833868fe34fb951c6f04993c6d9f1849b4100a597c827610cbd036.html">(diffoscope)</a> out</li>
+</ul></li>
+<li><code>/nix/store/a67lnjbxbxmx7mg9jgi3s9zdyk61s6ll-libtiff-4.5.0.drv</code></li>
+<li><a href="./diff/e0d89c3c9c4c52083c726a2c0bdcc6166e48c9b11f23d08c7aa544e585050917-5609f1850fa5ee67250ed23fd4ac56065e0f51e850e07f6b2460ba19973c9a42.html">(diffoscope)</a> doc</li>
+</ul></li>
+<li><code>/nix/store/i1pvbwn51l714lfgyv94935785pa32cr-phonenumber-8.12.37.drv</code></li>
+<li><a href="./diff/22c9fc621b9ec99a8bb3304ff32e84a8eefa9124b15650034bab2a3645436744-67f15293c4b16bfe4c60a582a13b59d500234f9fa5155318400a67d4d1fe2ecd.html">(diffoscope)</a> out</li>
+</ul></li>
+<li><code>/nix/store/7kdnqm4dkzmmzl2hz4rmyg6z824hjjdk-libadwaita-1.3.2.drv</code></li>
+<li><a href="./diff/0fcaa3844d17df3564934a584ba9fe101a3beaad1c51a10f21daab670e657621-299b4d503512ce3770913ea64e9315c82eb3f1f5539e77e0701cceb2fb87699f.html">(diffoscope)</a> out</li>
+</ul></li>
+<li><code>/nix/store/q2wjq9awnjk113k9i0zc6pfg8vx6j13h-qtwayland-6.5.0.drv</code></li>
+<li><a href="./diff/3fec16198e875804f9a6dec96e70835df5d5dc0c8015a3a26564085d83a0e2e3-352654859b870247c80cd19b8b089a9257383d31a0f62ab9b7abbc88863a2b67.html">(diffoscope)</a> out</li>
+</ul></li>
+<li><code>/nix/store/6i07vfw6zlcwfl55a44vay8y1csqsd5v-wireplumber-0.4.14.drv</code></li>
+<li><a href="./diff/d7f0f42d0db129f8197defa76cf9fd40f69fcfa01449ca46f4df9a38919b0ab5-6984cac50ea82bf9cd5e5e83924e1e8d1ce62f3d3a23abb7ecc62ce5605e1d11.html">(diffoscope)</a> doc</li>
+</ul></li>
+<li><code>/nix/store/1s1fvj9r27sx93qigdzrz9j37pymibwd-libcamera-0.0.3.drv</code></li>
+<li><a href="./diff/e3370041f59a02db5c543d979d6f42504d4888ea910b3a7e7d2fd6fedfb7e0ee-bfbad524b3c98478f42f9fe83080c17d3485373971a7df970c3a32e0e524c67d.html">(diffoscope)</a> out</li>
+</ul></li>
+<li><code>/nix/store/kfd8hj3qq0jwgx3vc0751s46k2vagnaf-ibus-1.5.28.drv</code></li>
+<li><a href="./diff/04da98f125e870a6e64e22abddfb0c8a1efad28ac88a405a5542288493ba0cb5-7fd954c900f9201647b92c93c6a211adbc117d2d132b8eaebd73a8d0d5e6cbc1.html">(diffoscope)</a> out</li>
+</ul></li>
+<li><code>/nix/store/1bn5iwzfk81n8bv92jpglxq2i2bg9sb4-qtdeclarative-6.5.0.drv</code></li>
+<li><a href="./diff/a1c9c89fb3168282d64c64feff4b1114a7baf686bbaf93be3559d08c1cf2b238-ba6832ff08079ae4ec355297f0e39f4114b11a77eb22315c2e5eed514494ec34.html">(diffoscope)</a> out</li>
+</ul></li>
+</ul>
+<hr>
+<h3>unchecked paths</h3>
+<ul>
+<li><code>/nix/store/5rnf3cv32rgkj76bicqlj1f9dxkasnf3-breeze-icons-5.105.0.drv</code></li>
+<li><code>/nix/store/p1g2qrk988jg4ywa83kzx3djjmq1plbd-libsoup-2.74.3.drv</code></li>
+<li><code>/nix/store/z0njmv63k15bcr6kn3hg8aig4308q20f-ffmpeg-headless-5.1.2.drv</code></li>
+<li><code>/nix/store/c4224p5zzf71mc18hdq2hg71gfp7h96k-evolution-data-server-3.48.1.drv</code></li>
+<li><code>/nix/store/ynvsx0hdr8lyfwsv9gq9bjzi5f21wwgl-openblas-0.3.21.drv</code></li>
+<li><code>/nix/store/5dxh7yvdb3nhkbnbyhmpv2qsh8f3faqp-snappy-1.1.10.drv</code></li>
+<li><code>/nix/store/fflrsk2xszpz8sbj73m0p0rlq1m2pzf6-ffmpeg-5.1.2.drv</code></li>
+<li><code>/nix/store/a3z9xm7snc86kqkhijz2s3m8810y1vkb-rav1e-0.6.4.drv</code></li>
+<li><code>/nix/store/bjljsbg1zn9acfxrm458kgdfknv21vs6-xdg-utils-unstable-2020-10-21.drv</code></li>
+<li><code>/nix/store/qkfahzvfjvc88v7jwidcbkyqr70fwgcy-dleyna-renderer-0.7.2.drv</code></li>
+<li><code>/nix/store/fcl0qaicrsjfq4z7k5qxv2rf17f56wy6-gnome-text-editor-44.0.drv</code></li>
+<li><code>/nix/store/7614acqn9cf0hx1irb3q03yfndrr2g66-bubblewrap-0.8.0.drv</code></li>
+<li><code>/nix/store/bcg6616454fmiprrzqw0nc52mfcad6ad-gpart-0.3.drv</code></li>
+<li><code>/nix/store/2vmdml0jhhxds57zyjrr3gakvgn84dss-apr-1.7.2.drv</code></li>
+<li><code>/nix/store/sdcw5y66ql24ffysh0mmb0fqi7rgn279-gnome-autoar-0.4.4.drv</code></li>
+<li><code>/nix/store/ryxl6ls5anmfjsqyawqy05a0kghwsyc5-rtkit-0.13.drv</code></li>
+<li><code>/nix/store/89slcr96drwwf5vk452j6jysl05v0m9d-seahorse-43.0.drv</code></li>
+<li><code>/nix/store/wn8x4cpw3byz9iihfhrvh1f79bzj664f-libpsl-0.21.2.drv</code></li>
+<li><code>/nix/store/kpqm53lh3hfwqrqjdkqzvzljam53rfc3-kconfig-5.105.0.drv</code></li>
+<li><code>/nix/store/iafll8gpmfa9a2aaqxgxz9v1gczp1hvk-texinfo-interactive-7.0.3.drv</code></li>
+<li><code>/nix/store/sd6gqva4pdj08nm70529mhj3gr8wmhgd-cantarell-fonts-0.303.1.drv</code></li>
+<li><code>/nix/store/k9i64891whd5xymfm1ijimgzgqy74ksl-texlive-bin-2022.drv</code></li>
+<li><code>/nix/store/qf2dq5bqclnmjc5ckacpcyn075js8gaj-gnome-user-docs-44.1.drv</code></li>
+<li><code>/nix/store/j5md6v638s1z50wh6mwr0xrl0lmjwn79-libvmaf-2.3.1.drv</code></li>
+<li><code>/nix/store/v8z106vjbvydsk68q91jz3zm3s7az3n8-webp-pixbuf-loader-0.0.7.drv</code></li>
+<li><code>/nix/store/8xm39nsjwpsaq1ybn5yb9887chznd64m-unit-generate-shutdown-ramfs.service.drv</code></li>
+<li><code>/nix/store/b66j6k8zk94rm9z0zj15fls3yca3ikps-qtbase-6.5.0.drv</code></li>
+</ul>
+
+<hr />
+<h3 id="test-circumstance">How are these tested?</h3>
+<p>Each build is run twice, at different times, on different hardware
+
+running different kernels.</p>
+
+<h3 id="result-confidence">How confident can we be in the results?</h3>
+
+<p>Fairly. We don't currently inject randomness at the filesystem
+layer, but many of the reproducibility issues are being exercised
+already. It isn't possible to <em>guarantee</em> a package is
+reproducible, just like it isn't possible to prove software is
+bug-free. It is possible there is nondeterminism in a package source,
+waiting for some specific circumstance.</p>
+
+<p>This is why we run these tests: to track how we are doing over
+time, to submit bug fixes for nondeterminism when we find them.</p>
+
+<h3 id="help">How can I help?</h3>
+
+<ul>
+<li>Look at the <a href="https://github.com/orgs/NixOS/projects/30">project page</a>, <a href="https://github.com/NixOS/nixpkgs/issues?q=is%3Aopen+is%3Aissue+label%3A%226.topic%3A+reproducible+builds%22">issues</a> and <a href="https://github.com/NixOS/nixpkgs/pulls?q=is%3Aopen+is%3Apr+label%3A%226.topic%3A+reproducible+builds%22">pull requests</a> with the 'reproducible builds' label.</li>
+<li>Open new issues/PR's for reproducibility problems (like the ones reported above)</li>
+<li>Join the <a href="https://matrix.to/#/#reproducible-builds:nixos.org">#reproducible-builds:nixos.org</a> room on Matrix</li>
+</ul>
+
+<h3 id="next-steps">How can we do better?</h3>
+
+<p>There are further steps we could take. For example, the next likely
+step is using
+<a href="https://salsa.debian.org/reproducible-builds/disorderfs">disorderfs</a>
+which injects additional nondeterminism by reordering directory entries.
+</p>
+
+<h3 id="how-do-i-check">How can I test my patches?</h3>
+<p>Nix has built-in support for checking a path is reproducible. There
+are two routes.</p>
+
+<p>Pretending you are debugging a nondeterminism bug in
+<code>hello</code>. To check it, you build the package, and then
+build it again with <code>--check --keep-failed</code>. This will
+provide the differing output in a separate directory which you can
+use <code>diffoscope</code> on.</p>
+
+<pre>
+$ nix-build . -A hello
+$ nix-build . -A hello --check --keep-failed
+[...snip...]
+error: derivation '/nix/store/...hello.drv' may not be deterministic:
+output '/nix/store/...-hello' differs from '/nix/store/...hello.check'
+$ diffoscope /nix/store/...hello /nix/store/...hello.check
+</pre>
+
+<p>Note: the <code>.check</code> output is not a valid store path, and
+will automatically be deleted on the next run of the Nix garbage
+collector.</p>
+
+<p><small>There is support for an automatic <code>diff-hook</code> in
+Nix 2, but it is much more complicated to set up. If you would like to
+work on this, or need help setting it up,
+<a href="https://matrix.to/#/!LemuOOvbWqRXodtSsw:nixos.org?via=nixos.org&via=matrix.org">contact us on Matrix.</a>
+We can work together to write docs on how to use it.</small>
+</p>
+
+<hr />
+
+<small>Generated at 2023-05-05 13:44:14.599779195 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
+<center><img style="max-width: 100px" src="https://nixos.org/logo/nixos-logo-only-hires.png" /></center>
+</body></html>
