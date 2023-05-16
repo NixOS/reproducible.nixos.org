@@ -74,10 +74,8 @@ the build log of the build that produced the artifact in the binary cache you ca
 <h2>Reports</h2>
 <p>
 As a general health check, we are producing reports on the
-reproducibility of the packages that make up the build closure
-of our minimal installation ISO, and the Gnome one. Note that
-this not only includes all packages that make it into the ISO,
-but also all build-time dependencies of those packages:
+reproducibility of the packages that make up our minimal and
+Gnome installation ISO's:
 </p>
 <ul>
 <li><a href="nixos-iso-minimal-runtime">Minimal ISO (runtime dependencies)</a>
@@ -85,6 +83,9 @@ but also all build-time dependencies of those packages:
 <li><a href="nixos-iso-gnome-runtime">Gnome ISO (runtime dependencies)</a>
 <li><a href="nixos-iso-gnome-r13y">Gnome ISO (build-time dependencies)</a>
 </ul>
+<p>
+The 'build-time dependencies' reports include all packages that are needed to build the ISO. The 'runtime dependencies' reports only include the packages that 'make it into' the ISO, meaning they contain much less noise, but also might miss relevant build-time unreproducibilities.
+</p>
 <h2>Get involved!</h2>
 <p>
 For an overview of issues for those milestones see this <a href="https://github.com/orgs/NixOS/projects/30">Project</a>.
