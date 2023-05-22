@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>Is nixos.iso_minimal.x86_64-linux reproducible?</title>
-<meta name="description" content="nixos-unstable's nixos.iso_minimal.x86_64-linux build is 98.46% reproducible!" />
+<meta name="description" content="nixos-unstable's nixos.iso_minimal.x86_64-linux build is 99.58% reproducible!" />
 
 <!-- Twitter Card data -->
 <meta name="twitter:card" value="summary">
@@ -11,7 +11,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://reproducible.nixos.org/" />
 <meta property="og:image" content="https://nixos.org/logo/nixos-logo-only-hires.png" />
-<meta property="og:description" content="nixos-unstable's nixos.iso_minimal.x86_64-linux build is 98.46% reproducible!" />
+<meta property="og:description" content="nixos-unstable's nixos.iso_minimal.x86_64-linux build is 99.58% reproducible!" />
 <link rel="stylesheet" href="../styles/index.css">
 <style>
 body {
@@ -29,66 +29,37 @@ To run the check build manually:
 nix-build /nix/store/???.drv --check --keep-failed
 </pre>
 <!--nix-build ./nixos/release-combined.nix -A nixos.iso_minimal.x86_64-linux-->
-And to find out why a derivation is part of the build closure, use: 
+And to find out why a derivation is part of the build closure, use:
 <pre>
 git clone https://github.com/nixos/nixpkgs.git
 cd nixpkgs
-git checkout da45bf6ec7bbcc5d1e14d3795c025199f28e0de0
-nix-store -q --tree $(nix-instantiate nixos/release-combined.nix) -A nixos.iso_minimal.x86_64-linux
+git checkout 3005f20ce0aaa58169cdee57c8aa12e5f1b6e1b3
+nix-store -q --tree $(nix-instantiate nixos/release-combined.nix -A nixos.iso_minimal.x86_64-linux)
 </pre>
 
-<h2>1849 out of 1878 (98.46%)</h2>
-<p>paths in the nixos.iso_minimal.x86_64-linux build closure are reproducible! 22 paths remained unchecked</p>
+<h2>1885 out of 1893 (99.58%)</h2>
+<p>paths in the nixos.iso_minimal.x86_64-linux build closure are reproducible! 5 paths remained unchecked</p>
 <h3>unreproduced paths</h3>
 <p>These derivations produced a different result compared to the official cache, revealing a reproducibility problem. See the <a href="https://github.com/orgs/NixOS/projects/30/views/1">Project</a> for progress on fixing those, or <a href="https://github.com/NixOS/nixpkgs/issues/new?assignees=&labels=0.kind%3A+enhancement%2C6.topic%3A+reproducible+builds&template=unreproducible_package.md&title=">add an issue</a> for those that are not tracked yet.</p>
 <ul>
-<li><code>/nix/store/xbnzws1aj9rxfh47xx3yayybw984kv1d-python3.10-bootstrapped-pip-23.0.1.drv</code></li>
-<li><a href="./diff/7a0206b08320fbab839fa4af1e61db22f9a047e2e72b8def8dcb1249b683ffa0-aee3e6f1200ac503c3cb28813564a57739b7bf732c68e750a2408839c31b83e7.html">(diffoscope)</a> out</li>
+<li><code>/nix/store/x7h1y9s0x0wb4jhpn4j77mxdfmx6645g-python3-3.10.11.drv</code></li>
+<li><a href="./diff/b1f7ecfbe2df811be565785b57ce3e2518e7b86a5123298eb27b7d670ad787cc-bbf32e561f125f05bd53c994985cc65a0bec381532552d920a11a3f208076260.html">(diffoscope)</a> out</li>
 </ul></li>
-<li><code>/nix/store/c45nrwwpy780kp2mdvf0zrw77cy1380q-grub-2.06.drv</code></li>
-<li><a href="./diff/33370744890797ff135e9933e30ddb01c82766cd4c4c8c79e2f8d9adf38ae7eb-7bcd495087bdd474684853794332a6bc5761e820c359e22136578cd83f51c5e7.html">(diffoscope)</a> debug</li>
+<li><code>/nix/store/iga7sql4as24gy0f07qyx1qpgx9w0zsn-python3.10-bootstrapped-pip-23.0.1.drv</code></li>
+<li><a href="./diff/03f20362c3a58bcb8c3c49047361900f5c0bad8f934308ecedac071a3f630e83-5d529f3bdb4934adc53ccdd5af06d81f399489bc48e43938b805dfb54f4cf931.html">(diffoscope)</a> out</li>
 </ul></li>
-<li><code>/nix/store/z12rjrnchgx1dn5afi68mw6l35alybgi-python3.10-bootstrapped-pip-23.0.1.drv</code></li>
-<li><a href="./diff/ec3dbc22049e73793589e83083c732ecffc796c7bfcd021e07f306866b0195ed-8882cbdcec8b89df5f18b721bc36a2745eff1de035577baeedbf436a44f4b445.html">(diffoscope)</a> out</li>
-</ul></li>
-<li><code>/nix/store/wi8xy6mdsndhy91q61fh5j503xk8dmjr-libnvme-1.4.drv</code></li>
-<li><a href="./diff/c969941ffd2426fcbc28ef309f1a3ba484abc66e402885d91eb0d19b217ce0cb-9b9902cee7a42228439973472f4a03f3f9416876b6b5dfeb4bb29dae62f046d1.html">(diffoscope)</a> man</li>
-</ul></li>
-<li><code>/nix/store/4rll8l0q3ycfpykwn1wqk93x1jqayqkl-x86_64-unknown-linux-musl-stage-static-gcc-12.2.0.drv</code></li>
-<li><a href="./diff/a7ca61e3544ed4d048e59882fae1eb24dbc04f0f5e7b832202581193b2eeca67-ee6aa0602d40df3930bb7192c44be53c703d9b49512904e39ee93b7b09333eb7.html">(diffoscope)</a> info</li>
-</ul></li>
-<li><code>/nix/store/kyj4nxyyxw5wkywnjsh6cs1gzrbmwl7c-python3-3.10.11.drv</code></li>
-<li><a href="./diff/74cd31756a531c1a5d66df9040866e7d70882d3a6198b6d976f2bcecf7aee313-0016c11215d26e84611a8e8979a2f6528f21d2b355a1dd00dc8b524d2220a800.html">(diffoscope)</a> out</li>
-</ul></li>
-<li><code>/nix/store/gr20b9jxynvr6xby4wacayl0nwcx8fax-zfs-kernel-2.1.11-6.1.26.drv</code></li>
-<li><a href="./diff/3a749c01245e8c6287351b713b703a284e5965e23f10ea3c5478c2f36895d1cf-1cc09d3f3e1b9801afeb173b9502aa6e1bfd0ee655ae39eef79b752b9cd43c24.html">(diffoscope)</a> out</li>
+<li><code>/nix/store/j40nnaiv7i6412vjf1ri5vr4fd1lkack-python3.10-bootstrapped-pip-23.0.1.drv</code></li>
+<li><a href="./diff/db99d8524f03feadc1df2f8bfe2be29d8dd67ac0b8094052fd01d04e6f32885f-bab9dcf9b792fb8eb8e2199eff28fdd8b02120a8d9368dfb47c5d2815043dc3d.html">(diffoscope)</a> out</li>
 </ul></li>
 </ul>
 <hr>
 <h3>unchecked paths</h3>
 <ul>
-<li><code>/nix/store/b6gv3s89q6iiwsz6c0bvj90h32nwadnn-dhcpcd-9.4.1.tar.xz.drv</code></li>
-<li><code>/nix/store/897ccbcikpwb26khz2hm2g7r03ipvbix-glibc-2.37-8.drv</code></li>
-<li><code>/nix/store/z7wsl0k8ygnyiv4rvyzkbrgd99dq6cgw-readline-8.2p1.drv</code></li>
-<li><code>/nix/store/bisa6lrqr9n1bw00j94pxvkdk8ry6dk1-samba-4.17.7.drv</code></li>
-<li><code>/nix/store/x1l5qkdns6862brviiby4j7r4659273q-sudoers.drv</code></li>
-<li><code>/nix/store/m22gywwi6lkvj7ibyn0xc5s0xcbcdr4m-source.drv</code></li>
-<li><code>/nix/store/0snfksk52cdgnw2q1y3x1zc4jgbyvfx8-openresolv-3.12.0.tar.xz.drv</code></li>
-<li><code>/nix/store/72kq78lj8p77ay450pgvyw1jdavlnh64-syslinux-b404870.drv</code></li>
-<li><code>/nix/store/mjys1wq3mgl123j793xifk87h16vb4mn-aws-sdk-cpp-1.11.37.drv</code></li>
-<li><code>/nix/store/523ww5b85p1p8hizsdwxavrwn1h3hkrg-rustc-1.68.2.drv</code></li>
-<li><code>/nix/store/biwnydfgydy56xfpqvzgsrmhkpcfwpsw-texinfo-7.0.3.drv</code></li>
-<li><code>/nix/store/arp2jvr1zn3rm734dd6firgdd7vc4ry3-mpfr-4.2.0.drv</code></li>
-<li><code>/nix/store/qd7gdk7jsjby00s7ibq3z0yd8l936m8h-vim-9.0.1441.drv</code></li>
-<li><code>/nix/store/bza4cnr948sxkrfw46f58wvvmz5wlgbw-source.drv</code></li>
-<li><code>/nix/store/xpxy1zqmd0yj0hmc3m2png5vz8rr2vsg-libkrb5-1.20.1.drv</code></li>
-<li><code>/nix/store/wrj5vcbirbrs7rph2m98nmlld03mcq53-mdbook-0.4.28.drv</code></li>
-<li><code>/nix/store/bswyvf79xl4kpy1v5sm7ix4v4kfr5vzb-HTTP-Message-6.26.tar.gz.drv</code></li>
-<li><code>/nix/store/jpav1n17357magd1wr41k3ha98c1hknx-linux-6.1.26.drv</code></li>
-<li><code>/nix/store/vd3z1zr2pqbdn9q2899gahxmjqx26xik-linux-firmware-20230310.drv</code></li>
-<li><code>/nix/store/a58qnnpb7lwm58bh0az17fwaxxxgj30x-libmicrohttpd-0.9.71.drv</code></li>
-<li><code>/nix/store/883pwm8iiw82dzbz0f2nbr5wl0pc7f4w-libjpeg-turbo-2.1.4.drv</code></li>
-<li><code>/nix/store/19lbcsxhki56cb3bp3czjbabxjbk5ygh-neovim-unwrapped-0.9.0.drv</code></li>
+<li><code>/nix/store/69fcn76wwwywqvj74fizpn8vvpq1rd5n-linux-6.1.29.drv</code></li>
+<li><code>/nix/store/d5myx1qcxxxk4lh3nzw0sbnl46s5cijq-openresolv-3.12.0.tar.xz.drv</code></li>
+<li><code>/nix/store/991s764iv9kz6x940gh559galcns5lfa-dhcpcd-9.4.1.tar.xz.drv</code></li>
+<li><code>/nix/store/abjk43lcg6lgf4isjvwr26c7wd0gl3vh-mandoc-1.14.6.tar.gz.drv</code></li>
+<li><code>/nix/store/f5w6pvk5wb2abydsizf8bzam29d03nx7-lowdown-1.0.1.tar.gz.drv</code></li>
 </ul>
 
 <hr />
@@ -157,6 +128,6 @@ We can work together to write docs on how to use it.</small>
 
 <hr />
 
-<small>Generated at 2023-05-02 07:38:30.659406227 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
+<small>Generated at 2023-05-22 11:30:35.808003395 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
 <center><img style="max-width: 100px" src="https://nixos.org/logo/nixos-logo-only-hires.png" /></center>
 </body></html>
