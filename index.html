@@ -12,25 +12,16 @@
 body {
   padding: 3em;
 }
-#heading {
-  width: auto;
-  margin-left: auto;
-  margin-right: auto;
-}
-#logo {
-  height: 14em;
-}
 h1 {
-  font-size: 300%;
   color: #1e5b96ff;
 }
 </style>
 </head>
 <body>
-<table id="heading"><tr>
-<td><img id="logo" src="nixos-rb-logo.svg"></td>
-<td><h1>NixOS<br>Reproducible Builds</h1></td>
-</tr></table>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center">
+  <img id="logo" align="center" style="max-height:8em;" src="nixos-rb-logo.svg">
+  <h1>NixOS<br>Reproducible Builds</h1>
+</div>
 <p>
 When compiling from the same source on independent infrastructure
 yields bit-by-bit idential results, this gives confidence that
