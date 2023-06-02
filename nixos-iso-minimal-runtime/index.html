@@ -1,7 +1,8 @@
 <html>
 <head>
 <title>Is nixos.iso_minimal.x86_64-linux reproducible?</title>
-<meta name="description" content="nixos-unstable's nixos.iso_minimal.x86_64-linux build is 99.61% reproducible!" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="nixos-unstable's nixos.iso_minimal.x86_64-linux build is 99.81% reproducible!" />
 
 <!-- Twitter Card data -->
 <meta name="twitter:card" value="summary">
@@ -11,7 +12,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://reproducible.nixos.org/" />
 <meta property="og:image" content="https://nixos.org/logo/nixos-logo-only-hires.png" />
-<meta property="og:description" content="nixos-unstable's nixos.iso_minimal.x86_64-linux build is 99.61% reproducible!" />
+<meta property="og:description" content="nixos-unstable's nixos.iso_minimal.x86_64-linux build is 99.81% reproducible!" />
 <link rel="stylesheet" href="../styles/index.css">
 <style>
 body {
@@ -33,23 +34,23 @@ And to find out why a derivation is part of the build closure, use:
 <pre>
 git clone https://github.com/nixos/nixpkgs.git
 cd nixpkgs
-git checkout 3005f20ce0aaa58169cdee57c8aa12e5f1b6e1b3
+git checkout 4f53efe34b3a8877ac923b9350c874e3dcd5dc0a
 nix-store -q --tree $(nix-instantiate nixos/release-combined.nix -A nixos.iso_minimal.x86_64-linux)
 </pre>
 
-<h2>515 out of 517 (99.61%)</h2>
-<p>paths in the nixos.iso_minimal.x86_64-linux build closure are reproducible! 1 paths remained unchecked</p>
+<h2>517 out of 518 (99.81%)</h2>
+<p>paths in the nixos.iso_minimal.x86_64-linux build closure are reproducible! 0 paths remained unchecked</p>
 <h3>unreproduced paths</h3>
 <p>These derivations produced a different result compared to the official cache, revealing a reproducibility problem. See the <a href="https://github.com/orgs/NixOS/projects/30/views/1">Project</a> for progress on fixing those, or <a href="https://github.com/NixOS/nixpkgs/issues/new?assignees=&labels=0.kind%3A+enhancement%2C6.topic%3A+reproducible+builds&template=unreproducible_package.md&title=">add an issue</a> for those that are not tracked yet.</p>
 <ul>
-<li><code>/nix/store/x7h1y9s0x0wb4jhpn4j77mxdfmx6645g-python3-3.10.11.drv</code></li>
-<li><a href="./diff/b1f7ecfbe2df811be565785b57ce3e2518e7b86a5123298eb27b7d670ad787cc-bbf32e561f125f05bd53c994985cc65a0bec381532552d920a11a3f208076260.html">(diffoscope)</a> out</li>
+<li><code>/nix/store/fn405ijajmanbzxl5msfw318nilmsjyh-python3-3.10.11.drv</code></li>
+<li><a href="./diff/6b7475cd8c15f2c227e979f4a5ac208be18e9092ee9a78de246761ddf151fbc6-6a719613b6d233062c617d083350a6167f62e04ed5decd6e269c02c53ee08d56.html">(diffoscope)</a> out</li>
 </ul></li>
 </ul>
 <hr>
 <h3>unchecked paths</h3>
 <ul>
-<li><code>/nix/store/69fcn76wwwywqvj74fizpn8vvpq1rd5n-linux-6.1.29.drv</code></li>
+
 </ul>
 
 <hr />
@@ -118,6 +119,6 @@ We can work together to write docs on how to use it.</small>
 
 <hr />
 
-<small>Generated at 2023-05-22 09:15:18.078101715 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
+<small>Generated at 2023-06-02 08:58:22.289170066 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
 <center><img style="max-width: 100px" src="https://nixos.org/logo/nixos-logo-only-hires.png" /></center>
 </body></html>
