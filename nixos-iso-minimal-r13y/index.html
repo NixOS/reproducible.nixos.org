@@ -1,18 +1,18 @@
 <html>
 <head>
-<title>Is nixos.iso_minimal.x86_64-linux reproducible?</title>
+<title>Is nixos.<wbr>iso_minimal.<wbr>x86_64-linux reproducible?</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="nixos-unstable's nixos.iso_minimal.x86_64-linux build is 99.26% reproducible!" />
+<meta name="description" content="nixos-unstable's nixos.<wbr>iso_minimal.<wbr>x86_64-linux build is 99.26% reproducible!" />
 
 <!-- Twitter Card data -->
 <meta name="twitter:card" value="summary">
 
 <!-- Open Graph data -->
-<meta property="og:title" content="Is nixos.iso_minimal.x86_64-linux Reproducible?" />
+<meta property="og:title" content="Is nixos.<wbr>iso_minimal.<wbr>x86_64-linux Reproducible?" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://reproducible.nixos.org/" />
 <meta property="og:image" content="https://reproducible.nixos.org/nixos-rb-logo.png" />
-<meta property="og:description" content="nixos-unstable's nixos.iso_minimal.x86_64-linux build is 99.26% reproducible!" />
+<meta property="og:description" content="nixos-unstable's nixos.<wbr>iso_minimal.<wbr>x86_64-linux build is 99.26% reproducible!" />
 <link rel="stylesheet" href="../styles/index.css">
 <style>
 body {
@@ -21,58 +21,58 @@ body {
 </style>
 </head>
 <body>
-<h1>Is nixos.iso_minimal.x86_64-linux Reproducible?</h1>
-<i>Tracking the build closure for <code>nixos.iso_minimal.x86_64-linux</code> in the <code>nixos-unstable</code>
+<h1>Is nixos.<wbr>iso_minimal.<wbr>x86_64-linux Reproducible?</h1>
+<i>Tracking the build closure for <code>nixos.<wbr>iso_minimal.<wbr>x86_64-linux</code> in the <code>nixos-unstable</code>
     branch on <code>x86_64-linux</code>.</i>
 <p>
 To run the check build manually:
 <pre>
 nix-build /nix/store/???.drv --check --keep-failed
 </pre>
-<!--nix-build ./nixos/release-combined.nix -A nixos.iso_minimal.x86_64-linux-->
+<!--nix-build ./nixos/release-combined.nix -A nixos.<wbr>iso_minimal.<wbr>x86_64-linux-->
 And to find out why a derivation is part of the build closure, use:
 <pre>
 git clone https://github.com/nixos/nixpkgs.git
 cd nixpkgs
 git checkout d680ded26da5cf104dd2735a51e88d2d8f487b4d
-nix-store -q --tree $(nix-instantiate nixos/release-combined.nix -A nixos.iso_minimal.x86_64-linux)
+nix-store -q --tree $(nix-instantiate nixos/release-combined.nix -A nixos.<wbr>iso_minimal.<wbr>x86_64-linux)
 </pre>
 
 <h2>1882 out of 1896 (99.26%)</h2>
-<p>paths in the nixos.iso_minimal.x86_64-linux build closure are reproducible! 8 paths remained unchecked</p>
+<p>paths in the nixos.<wbr>iso_minimal.<wbr>x86_64-linux build closure are reproducible! 8 paths remained unchecked</p>
 <h3>unreproduced paths</h3>
 <p>These derivations produced a different result compared to the official cache, revealing a reproducibility problem. See the <a href="https://github.com/orgs/NixOS/projects/30/views/1">Project</a> for progress on fixing those, or <a href="https://github.com/NixOS/nixpkgs/issues/new?assignees=&labels=0.kind%3A+enhancement%2C6.topic%3A+reproducible+builds&template=unreproducible_package.md&title=">add an issue</a> for those that are not tracked yet.</p>
 <ul>
-<li><code>/nix/store/gbzvbvlr7kysnsjw6p83140mwpsw5ifh-glibc-locales-2.37-8.drv</code></li>
-<li><a href="./diff/cad20de2d6bf0504e1f34a2a0c048bd4c5e3f9639d60ebf6b1f2a2f8ccdc2120-721edb921b0462bc7957d62a98a0e30de513ee5228a739155ea181a0d43dff50.html">(diffoscope)</a> out</li>
+<li><a href="file:///nix/store/gbzvbvlr7kysnsjw6p83140mwpsw5ifh-glibc-locales-2.37-8.drv"><code>glibc-locales-2.37-8.drv</code></a>
+out <a href="./diff/cad20de2d6bf0504e1f34a2a0c048bd4c5e3f9639d60ebf6b1f2a2f8ccdc2120-721edb921b0462bc7957d62a98a0e30de513ee5228a739155ea181a0d43dff50.html">(diffoscope)</a>
 </ul></li>
-<li><code>/nix/store/llyz9n56q2myshvcg34lpabxiwni09i6-python3.10-bootstrapped-pip-23.0.1.drv</code></li>
-<li><a href="./diff/7b001d793b4f9109a57d4433824a5a680a0c549a3139e726568fc9615429b3c8-53ca4a3352fda7d90643f89ceb9dc439972e2757433021e67df75cdd070c4c5b.html">(diffoscope)</a> out</li>
+<li><a href="file:///nix/store/llyz9n56q2myshvcg34lpabxiwni09i6-python3.10-bootstrapped-pip-23.0.1.drv"><code>python3.10-bootstrapped-pip-23.0.1.drv</code></a>
+out <a href="./diff/7b001d793b4f9109a57d4433824a5a680a0c549a3139e726568fc9615429b3c8-53ca4a3352fda7d90643f89ceb9dc439972e2757433021e67df75cdd070c4c5b.html">(diffoscope)</a>
 </ul></li>
-<li><code>/nix/store/9vwq5a2p57qbc1m0b2jpzwffxkya2nl2-python3-3.10.12.drv</code></li>
-<li><a href="./diff/f68dfa519c8059855364330920195db34c64866edfbf0a8b45388ce980ffca01-4909d13d055837bf1f543718dc6401f97874898118fc314bc1e1ce077aef96f5.html">(diffoscope)</a> out</li>
+<li><a href="file:///nix/store/9vwq5a2p57qbc1m0b2jpzwffxkya2nl2-python3-3.10.12.drv"><code>python3-3.10.12.drv</code></a>
+out <a href="./diff/f68dfa519c8059855364330920195db34c64866edfbf0a8b45388ce980ffca01-4909d13d055837bf1f543718dc6401f97874898118fc314bc1e1ce077aef96f5.html">(diffoscope)</a>
 </ul></li>
-<li><code>/nix/store/khkglq08qd6kh7ib9a7vd7vpavg22gy0-python3.10-bootstrapped-pip-23.0.1.drv</code></li>
-<li><a href="./diff/94d0c78a220b8b1d4d32b417d9c94a5cae68f4e250e80ef0739643a57cadc08a-07f6e37e2c8e34c94313054815ff8113b492c3344a78b2c3ddf4c23d81e86e76.html">(diffoscope)</a> out</li>
+<li><a href="file:///nix/store/khkglq08qd6kh7ib9a7vd7vpavg22gy0-python3.10-bootstrapped-pip-23.0.1.drv"><code>python3.10-bootstrapped-pip-23.0.1.drv</code></a>
+out <a href="./diff/94d0c78a220b8b1d4d32b417d9c94a5cae68f4e250e80ef0739643a57cadc08a-07f6e37e2c8e34c94313054815ff8113b492c3344a78b2c3ddf4c23d81e86e76.html">(diffoscope)</a>
 </ul></li>
-<li><code>/nix/store/mjwi364gvissnqrq2n416s7z0f92gp74-grub-2.12-rc1.drv</code></li>
-<li><a href="./diff/e98563297b11d4f560e75793059a05e632714eb4427750c205c922d4f8c445d2-25506e74b5d051ebc8e9fb9ad7d1ecc5d2c770382aeffcb5ccb049c9963b87cf.html">(diffoscope)</a> out</li>
+<li><a href="file:///nix/store/mjwi364gvissnqrq2n416s7z0f92gp74-grub-2.12-rc1.drv"><code>grub-2.12-rc1.drv</code></a>
+out <a href="./diff/e98563297b11d4f560e75793059a05e632714eb4427750c205c922d4f8c445d2-25506e74b5d051ebc8e9fb9ad7d1ecc5d2c770382aeffcb5ccb049c9963b87cf.html">(diffoscope)</a>
 </ul></li>
-<li><code>/nix/store/d7rv3r1hr6cpn59ivvmx6w2n23lnm4xj-glibc-locales-2.37-8.drv</code></li>
-<li><a href="./diff/97da2d5d17f3a7615117f49d0ec103eb661638c4cb352a289ec085c898338433-bc06b6092257b2554aa8e77610d436ae9802f3af8f641435545f70effe1f1331.html">(diffoscope)</a> out</li>
+<li><a href="file:///nix/store/d7rv3r1hr6cpn59ivvmx6w2n23lnm4xj-glibc-locales-2.37-8.drv"><code>glibc-locales-2.37-8.drv</code></a>
+out <a href="./diff/97da2d5d17f3a7615117f49d0ec103eb661638c4cb352a289ec085c898338433-bc06b6092257b2554aa8e77610d436ae9802f3af8f641435545f70effe1f1331.html">(diffoscope)</a>
 </ul></li>
 </ul>
 <hr>
 <h3>unchecked paths</h3>
 <ul>
-<li><code>/nix/store/hxam70bz8v11pnh809av4lrq2kz969d6-unbound-1.17.1.drv</code></li>
-<li><code>/nix/store/9xczg8as5kf3nifp0mnz14v5vy05awr7-grub-2.12-rc1.drv</code></li>
-<li><code>/nix/store/17jf8sx50hwrb8mfdl5l2fs74pzack2r-nettle-3.9.1.drv</code></li>
-<li><code>/nix/store/2x63npgfm74q2v8y5hhzpqwchlv8nr5k-grub-locales.drv</code></li>
-<li><code>/nix/store/sy2qci9bp31q39jcspdwafpi9ccnl9xn-bind-9.18.17.drv</code></li>
-<li><code>/nix/store/12nlian0m20ng1p0mgar5788a1hm3zaq-rustc-1.71.1.drv</code></li>
-<li><code>/nix/store/l5y086ijfssagh7z4cxvr9v234hcxg87-linux-6.1.46.drv</code></li>
-<li><code>/nix/store/4px0kg1ljac8y21sp0g8gjlqkixc4536-libseccomp-2.5.4.drv</code></li>
+<li><a href="/nix/store/hxam70bz8v11pnh809av4lrq2kz969d6-unbound-1.17.1.drv"><code>unbound-1.17.1.drv</code></a></li>
+<li><a href="/nix/store/9xczg8as5kf3nifp0mnz14v5vy05awr7-grub-2.12-rc1.drv"><code>grub-2.12-rc1.drv</code></a></li>
+<li><a href="/nix/store/17jf8sx50hwrb8mfdl5l2fs74pzack2r-nettle-3.9.1.drv"><code>nettle-3.9.1.drv</code></a></li>
+<li><a href="/nix/store/2x63npgfm74q2v8y5hhzpqwchlv8nr5k-grub-locales.drv"><code>grub-locales.drv</code></a></li>
+<li><a href="/nix/store/sy2qci9bp31q39jcspdwafpi9ccnl9xn-bind-9.18.17.drv"><code>bind-9.18.17.drv</code></a></li>
+<li><a href="/nix/store/12nlian0m20ng1p0mgar5788a1hm3zaq-rustc-1.71.1.drv"><code>rustc-1.71.1.drv</code></a></li>
+<li><a href="/nix/store/l5y086ijfssagh7z4cxvr9v234hcxg87-linux-6.1.46.drv"><code>linux-6.1.46.drv</code></a></li>
+<li><a href="/nix/store/4px0kg1ljac8y21sp0g8gjlqkixc4536-libseccomp-2.5.4.drv"><code>libseccomp-2.5.4.drv</code></a></li>
 </ul>
 
 <hr />
@@ -141,6 +141,6 @@ We can work together to write docs on how to use it.</small>
 
 <hr />
 
-<small>Generated at 2023-08-21 15:48:59.356724875 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
+<small>Generated at 2023-08-21 21:42:36.347378579 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
 <center><img style="max-width: 100px" src="https://nixos.org/logo/nixos-logo-only-hires.png" /></center>
 </body></html>
