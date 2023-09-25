@@ -2,7 +2,7 @@
 <head>
 <title>Is nixos.<wbr>iso_minimal.<wbr>x86_64-linux reproducible?</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="nixos-unstable's nixos.<wbr>iso_minimal.<wbr>x86_64-linux build is 99.26% reproducible!" />
+<meta name="description" content="nixos-unstable's nixos.<wbr>iso_minimal.<wbr>x86_64-linux build is 98.90% reproducible!" />
 
 <!-- Twitter Card data -->
 <meta name="twitter:card" value="summary">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://reproducible.nixos.org/" />
 <meta property="og:image" content="https://reproducible.nixos.org/nixos-rb-logo.png" />
-<meta property="og:description" content="nixos-unstable's nixos.<wbr>iso_minimal.<wbr>x86_64-linux build is 99.26% reproducible!" />
+<meta property="og:description" content="nixos-unstable's nixos.<wbr>iso_minimal.<wbr>x86_64-linux build is 98.90% reproducible!" />
 <link rel="stylesheet" href="../styles/index.css">
 <style>
 body {
@@ -34,45 +34,62 @@ And to find out why a derivation is part of the build closure, use:
 <pre>
 git clone https://github.com/nixos/nixpkgs.git
 cd nixpkgs
-git checkout d680ded26da5cf104dd2735a51e88d2d8f487b4d
+git checkout e35dcc04a3853da485a396bdd332217d0ac9054f
 nix-store -q --tree $(nix-instantiate nixos/release-combined.nix -A nixos.<wbr>iso_minimal.<wbr>x86_64-linux)
 </pre>
 
-<h2>1882 out of 1896 (99.26%)</h2>
-<p>paths in the nixos.<wbr>iso_minimal.<wbr>x86_64-linux build closure are reproducible! 8 paths remained unchecked</p>
+<h2>1889 out of 1910 (98.90%)</h2>
+<p>paths in the nixos.<wbr>iso_minimal.<wbr>x86_64-linux build closure are reproducible! 10 paths remained unchecked</p>
 <h3>unreproduced paths</h3>
 <p>These derivations produced a different result compared to the official cache, revealing a reproducibility problem. See the <a href="https://github.com/orgs/NixOS/projects/30/views/1">Project</a> for progress on fixing those, or <a href="https://github.com/NixOS/nixpkgs/issues/new?assignees=&labels=0.kind%3A+enhancement%2C6.topic%3A+reproducible+builds&template=unreproducible_package.md&title=">add an issue</a> for those that are not tracked yet.</p>
 <ul>
-<li><a href="file:///nix/store/gbzvbvlr7kysnsjw6p83140mwpsw5ifh-glibc-locales-2.37-8.drv"><code>glibc-locales-2.37-8.drv</code></a>
-out <a href="./diff/cad20de2d6bf0504e1f34a2a0c048bd4c5e3f9639d60ebf6b1f2a2f8ccdc2120-721edb921b0462bc7957d62a98a0e30de513ee5228a739155ea181a0d43dff50.html">(diffoscope)</a>
+<li><a href="file:///nix/store/5c2mwbh7352533xjl7k5jpqb4gnp29bp-python3.10-bootstrap-packaging-23.1.drv"><code>python3.10-bootstrap-packaging-23.1.drv</code></a>
+out <a href="./diff/e6d1bcb944b13a331d2675cce2b9036c4c134a3f1000753cbf13952e9680cae2-e10cd52d122f9d3f6d311a00cd029dc7a3d36eb6c5f666052b737b97b421f437.html">(diffoscope)</a>
 </ul></li>
-<li><a href="file:///nix/store/llyz9n56q2myshvcg34lpabxiwni09i6-python3.10-bootstrapped-pip-23.0.1.drv"><code>python3.10-bootstrapped-pip-23.0.1.drv</code></a>
-out <a href="./diff/7b001d793b4f9109a57d4433824a5a680a0c549a3139e726568fc9615429b3c8-53ca4a3352fda7d90643f89ceb9dc439972e2757433021e67df75cdd070c4c5b.html">(diffoscope)</a>
+<li><a href="file:///nix/store/31xfj9n3hq6sfs7gs5gllv75rwq73by4-python3.10-bootstrap-packaging-23.1.drv"><code>python3.10-bootstrap-packaging-23.1.drv</code></a>
+out <a href="./diff/2ae3bc4c50dd122854b44e55a0a8a4bbc280b830710b94682468e3b762decd2e-c9cf8d93c6539fd670c60ffd7d55584529e977b044c977a779daa7e5c256d0f2.html">(diffoscope)</a>
 </ul></li>
-<li><a href="file:///nix/store/9vwq5a2p57qbc1m0b2jpzwffxkya2nl2-python3-3.10.12.drv"><code>python3-3.10.12.drv</code></a>
-out <a href="./diff/f68dfa519c8059855364330920195db34c64866edfbf0a8b45388ce980ffca01-4909d13d055837bf1f543718dc6401f97874898118fc314bc1e1ce077aef96f5.html">(diffoscope)</a>
+<li><a href="file:///nix/store/zylwcns6scgai14wr0j34k4gj84g1l5a-python3.10-bootstrap-tomli-2.0.1.drv"><code>python3.10-bootstrap-tomli-2.0.1.drv</code></a>
+out <a href="./diff/3ef0efae2074048b979be9668a92642163d093090e2c7b71d2a11c8012d08ff4-db238da9b4f811fd8a2f56d2a4b9e4ceec12d633bf82098ab1692c6210f3d565.html">(diffoscope)</a>
 </ul></li>
-<li><a href="file:///nix/store/khkglq08qd6kh7ib9a7vd7vpavg22gy0-python3.10-bootstrapped-pip-23.0.1.drv"><code>python3.10-bootstrapped-pip-23.0.1.drv</code></a>
-out <a href="./diff/94d0c78a220b8b1d4d32b417d9c94a5cae68f4e250e80ef0739643a57cadc08a-07f6e37e2c8e34c94313054815ff8113b492c3344a78b2c3ddf4c23d81e86e76.html">(diffoscope)</a>
+<li><a href="file:///nix/store/w9wzhvgnq92pcmaw384fcpgjyywjwxjz-python3.10-execnet-1.9.0.drv"><code>python3.10-execnet-1.9.0.drv</code></a>
+out <a href="./diff/2a669906543d349cda888153f6ea0914656a452added811303ace22d083dc005-8fa9fd4dd1904b08229477c260b0e5b9a439e58e80f323b4c890802b246bd113.html">(diffoscope)</a>
 </ul></li>
-<li><a href="file:///nix/store/mjwi364gvissnqrq2n416s7z0f92gp74-grub-2.12-rc1.drv"><code>grub-2.12-rc1.drv</code></a>
-out <a href="./diff/e98563297b11d4f560e75793059a05e632714eb4427750c205c922d4f8c445d2-25506e74b5d051ebc8e9fb9ad7d1ecc5d2c770382aeffcb5ccb049c9963b87cf.html">(diffoscope)</a>
+<li><a href="file:///nix/store/1mqpbgklcjy6mwqv2fxcvq6bw3f25hji-python3.10-bootstrap-tomli-2.0.1.drv"><code>python3.10-bootstrap-tomli-2.0.1.drv</code></a>
+out <a href="./diff/a32ef1fa8845b467fc097f6698b85fa86546e6eddf7b9a4175bfe425c457271d-591fee3bbc467f47518471dce00e41bd9e0ef7c50b906f4247f14d07a3030660.html">(diffoscope)</a>
 </ul></li>
-<li><a href="file:///nix/store/d7rv3r1hr6cpn59ivvmx6w2n23lnm4xj-glibc-locales-2.37-8.drv"><code>glibc-locales-2.37-8.drv</code></a>
-out <a href="./diff/97da2d5d17f3a7615117f49d0ec103eb661638c4cb352a289ec085c898338433-bc06b6092257b2554aa8e77610d436ae9802f3af8f641435545f70effe1f1331.html">(diffoscope)</a>
+<li><a href="file:///nix/store/dkn14caycwbf0j1a9ks377a7w5s1mwlv-python3.10-bootstrap-pyproject-hooks-1.0.0.drv"><code>python3.10-bootstrap-pyproject-hooks-1.0.0.drv</code></a>
+out <a href="./diff/500e242d3ce44375eba5085bed9191ba95342a04b9bdd4826b8d21f337839cb5-e227da2080a13720802c024c82a74da96e7f30bd17ee85d32c291edf3ad91eb0.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/32q72347gv2hi6yrfi9p06pk6fg53bwx-python3.10-bootstrap-build-0.10.0.drv"><code>python3.10-bootstrap-build-0.10.0.drv</code></a>
+out <a href="./diff/f2ac4fe3a9288309392ed212cd968125814f60810d8ff8086babbfe6eeeb3b27-50567789a65013c624a4f17622cb68f8013bd158221571e2a9f178a8dca47788.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/l4w8s1pd01l2x51c7va9b1xlg7g519s3-python3-3.10.12.drv"><code>python3-3.10.12.drv</code></a>
+out <a href="./diff/db1d8a10a5e7ee8b2ca5f992d06decbb1c31b96026796b0819c48fd1660c13c1-11913edc3ded5d5acd4be3c0e1e0f3fb06833472455ec7fa42f9f78243e9c6ce.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/zl5x5wjgh38r7qxaqjqa1ay1mwd37i3j-python3.10-bootstrap-pyproject-hooks-1.0.0.drv"><code>python3.10-bootstrap-pyproject-hooks-1.0.0.drv</code></a>
+out <a href="./diff/27b32b26bd98ae0a55c563e0e9413c819c351df796073827496018778d8279cf-c8c6caa03a377ba5d01b5ef2b1a6a28ba0e204f15812fec17c31a0940d725800.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/524d3n2d59qzwn90nrvwp67h0kwc2py9-asciidoc-10.2.0.drv"><code>asciidoc-10.2.0.drv</code></a>
+out <a href="./diff/94bd3bf33314298dfa0a95e8ec991afde5989678308c344c534013609c999148-77691dbdd18075e3a63e1b71fbf3da154fae8f1aedb7ae331cbdc8f4f361a5d2.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/2hbw8k8z1i8vsv973sd9aqd1cjyd6ml6-meson-1.2.0.drv"><code>meson-1.2.0.drv</code></a>
+out <a href="./diff/b02dab1b5024e5084390e9ca9543ee52b069136efc6a397fd0ec65eae191c3ec-290d066069962d45bea4d8e90d5242e7fcf1aa74a04a2341853b36e72b52f26d.html">(diffoscope)</a>
 </ul></li>
 </ul>
 <hr>
 <h3>unchecked paths</h3>
 <ul>
-<li><a href="/nix/store/hxam70bz8v11pnh809av4lrq2kz969d6-unbound-1.17.1.drv"><code>unbound-1.17.1.drv</code></a></li>
-<li><a href="/nix/store/9xczg8as5kf3nifp0mnz14v5vy05awr7-grub-2.12-rc1.drv"><code>grub-2.12-rc1.drv</code></a></li>
-<li><a href="/nix/store/17jf8sx50hwrb8mfdl5l2fs74pzack2r-nettle-3.9.1.drv"><code>nettle-3.9.1.drv</code></a></li>
-<li><a href="/nix/store/2x63npgfm74q2v8y5hhzpqwchlv8nr5k-grub-locales.drv"><code>grub-locales.drv</code></a></li>
-<li><a href="/nix/store/sy2qci9bp31q39jcspdwafpi9ccnl9xn-bind-9.18.17.drv"><code>bind-9.18.17.drv</code></a></li>
-<li><a href="/nix/store/12nlian0m20ng1p0mgar5788a1hm3zaq-rustc-1.71.1.drv"><code>rustc-1.71.1.drv</code></a></li>
-<li><a href="/nix/store/l5y086ijfssagh7z4cxvr9v234hcxg87-linux-6.1.46.drv"><code>linux-6.1.46.drv</code></a></li>
-<li><a href="/nix/store/4px0kg1ljac8y21sp0g8gjlqkixc4536-libseccomp-2.5.4.drv"><code>libseccomp-2.5.4.drv</code></a></li>
+<li><a href="/nix/store/0i3mblgjysmmdra8z0b1zlbqcplmh7al-net-tools-2.10.tar.xz.drv"><code>net-tools-2.10.tar.xz.drv</code></a></li>
+<li><a href="/nix/store/bc5g3sj726dpxgsfsik3wb3nvy9i68m6-tcp-wrappers-7.6.q-26.drv"><code>tcp-wrappers-7.6.q-26.drv</code></a></li>
+<li><a href="/nix/store/94k70s7y9l3rdp1l87l4ixl2hs263a2j-systemd-253.6.drv"><code>systemd-253.6.drv</code></a></li>
+<li><a href="/nix/store/vx9iwgqwc40mr7vi6s4bpkddjc1ywjqr-cargo-auditable-0.6.1.drv"><code>cargo-auditable-0.6.1.drv</code></a></li>
+<li><a href="/nix/store/hrm87rd2cb8bvmmmsvaylb3qi9yrrwiz-cargo-1.72.0.drv"><code>cargo-1.72.0.drv</code></a></li>
+<li><a href="/nix/store/7fkmws841ibw858ln50s3jsn7pijz3wy-cargo-auditable-0.6.1.drv"><code>cargo-auditable-0.6.1.drv</code></a></li>
+<li><a href="/nix/store/aqx76cx38g1l61sm5zplafwzd51qs6m2-grub-locales.drv"><code>grub-locales.drv</code></a></li>
+<li><a href="/nix/store/8yjr9lwsrnrhpp4nx6dnb0xfhc57z8nx-xorriso-1.5.7.drv"><code>xorriso-1.5.7.drv</code></a></li>
+<li><a href="/nix/store/vpjbl2chxfy97l9bc0fxj51rldp84qk2-cargo-1.72.0.drv"><code>cargo-1.72.0.drv</code></a></li>
+<li><a href="/nix/store/kf40g4prksay2l8an14sa2bfr4jindsc-musl-static-x86_64-unknown-linux-musl-1.2.3.drv"><code>musl-static-x86_64-unknown-linux-musl-1.2.3.drv</code></a></li>
 </ul>
 
 <hr />
@@ -141,6 +158,6 @@ We can work together to write docs on how to use it.</small>
 
 <hr />
 
-<small>Generated at 2023-08-21 21:42:36.347378579 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
+<small>Generated at 2023-09-25 09:30:09.227168926 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
 <center><img style="max-width: 100px" src="https://nixos.org/logo/nixos-logo-only-hires.png" /></center>
 </body></html>
