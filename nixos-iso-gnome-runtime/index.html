@@ -1,17 +1,18 @@
 <html>
 <head>
-<title>Is nixos.iso_gnome.x86_64-linux reproducible?</title>
-<meta name="description" content="nixos-unstable's nixos.iso_gnome.x86_64-linux build is 98.20% reproducible!" />
+<title>Is nixos.<wbr>iso_minimal.<wbr>x86_64-linux reproducible?</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="nixos-unstable's nixos.<wbr>iso_minimal.<wbr>x86_64-linux build is 99.63% reproducible!" />
 
 <!-- Twitter Card data -->
 <meta name="twitter:card" value="summary">
 
 <!-- Open Graph data -->
-<meta property="og:title" content="Is nixos.iso_gnome.x86_64-linux Reproducible?" />
+<meta property="og:title" content="Is nixos.<wbr>iso_minimal.<wbr>x86_64-linux Reproducible?" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://reproducible.nixos.org/" />
-<meta property="og:image" content="https://nixos.org/logo/nixos-logo-only-hires.png" />
-<meta property="og:description" content="nixos-unstable's nixos.iso_gnome.x86_64-linux build is 98.20% reproducible!" />
+<meta property="og:image" content="https://reproducible.nixos.org/nixos-rb-logo.png" />
+<meta property="og:description" content="nixos-unstable's nixos.<wbr>iso_minimal.<wbr>x86_64-linux build is 99.63% reproducible!" />
 <link rel="stylesheet" href="../styles/index.css">
 <style>
 body {
@@ -20,80 +21,36 @@ body {
 </style>
 </head>
 <body>
-<h1>Is nixos.iso_gnome.x86_64-linux Reproducible?</h1>
-<i>Tracking the build closure for <code>nixos.iso_gnome.x86_64-linux</code> in the <code>nixos-unstable</code>
+<h1>Is nixos.<wbr>iso_minimal.<wbr>x86_64-linux Reproducible?</h1>
+<i>Tracking the build closure for <code>nixos.<wbr>iso_minimal.<wbr>x86_64-linux</code> in the <code>nixos-unstable</code>
     branch on <code>x86_64-linux</code>.</i>
 <p>
 To run the check build manually:
 <pre>
 nix-build /nix/store/???.drv --check --keep-failed
 </pre>
-<!--nix-build ./nixos/release-combined.nix -A nixos.iso_gnome.x86_64-linux-->
+<!--nix-build ./nixos/release-combined.nix -A nixos.<wbr>iso_minimal.<wbr>x86_64-linux-->
 And to find out why a derivation is part of the build closure, use:
 <pre>
 git clone https://github.com/nixos/nixpkgs.git
 cd nixpkgs
-git checkout 3005f20ce0aaa58169cdee57c8aa12e5f1b6e1b3
-nix-store -q --tree $(nix-instantiate nixos/release-combined.nix -A nixos.iso_gnome.x86_64-linux)
+git checkout e35dcc04a3853da485a396bdd332217d0ac9054f
+nix-store -q --tree $(nix-instantiate nixos/release-combined.nix -A nixos.<wbr>iso_minimal.<wbr>x86_64-linux)
 </pre>
 
-<h2>1307 out of 1331 (98.20%)</h2>
-<p>paths in the nixos.iso_gnome.x86_64-linux build closure are reproducible! 12 paths remained unchecked</p>
+<h2>534 out of 536 (99.63%)</h2>
+<p>paths in the nixos.<wbr>iso_minimal.<wbr>x86_64-linux build closure are reproducible! 1 paths remained unchecked</p>
 <h3>unreproduced paths</h3>
 <p>These derivations produced a different result compared to the official cache, revealing a reproducibility problem. See the <a href="https://github.com/orgs/NixOS/projects/30/views/1">Project</a> for progress on fixing those, or <a href="https://github.com/NixOS/nixpkgs/issues/new?assignees=&labels=0.kind%3A+enhancement%2C6.topic%3A+reproducible+builds&template=unreproducible_package.md&title=">add an issue</a> for those that are not tracked yet.</p>
 <ul>
-<li><code>/nix/store/x7h1y9s0x0wb4jhpn4j77mxdfmx6645g-python3-3.10.11.drv</code></li>
-<li><a href="./diff/b1f7ecfbe2df811be565785b57ce3e2518e7b86a5123298eb27b7d670ad787cc-bbf32e561f125f05bd53c994985cc65a0bec381532552d920a11a3f208076260.html">(diffoscope)</a> out</li>
-</ul></li>
-<li><code>/nix/store/a1ahvq8wlbg0za20012w52lcf83axcxd-gnome-session-44.0.drv</code></li>
-<li><a href="./diff/b74beebfa9e1abd077dc4e436552c970227fef2bd13fc843a972869fad1199de-fc14ad7c817d7afd974b7eb5e183ee94cc194256977cade75c181ca0eedf1a5a.html">(diffoscope)</a> out</li>
-</ul></li>
-<li><code>/nix/store/djrzxxri1akqqbgqchfv5vl0wi8sbnbp-libtiff-4.5.0.drv</code></li>
-<li><a href="./diff/9a4a0ae2051a2b7cb72b8e016977a0a51514ee152afbbc3643384d987d199c20-e0d89c3c9c4c52083c726a2c0bdcc6166e48c9b11f23d08c7aa544e585050917.html">(diffoscope)</a> doc</li>
-</ul></li>
-<li><code>/nix/store/v98qcl29lvx9l6rmvapb377apyf9bd0i-phonenumber-8.12.37.drv</code></li>
-<li><a href="./diff/7ddb19aa29f63fea1a59cdd2cb1eb24de8cde46bf64ac0482156d3c1eb8e3c69-650df7d07ce6bafb84ef5e73e011b83cde8668f43030dfbd601c1a026b8b5a60.html">(diffoscope)</a> out</li>
-</ul></li>
-<li><code>/nix/store/r7hkknl7i9klwxmn8hc5hi7fl2xj3jff-pipewire-0.3.71.drv</code></li>
-<li><a href="./diff/afb85fa8a78bb3a8d4ad9c6c15ffdc43f950773277fb740913a8d7c899ae9356-10450ad30a9a80074d22027f05bf5579d7c6df44d13098aada9b4084a1b6eece.html">(diffoscope)</a> doc</li>
-</ul></li>
-<li><code>/nix/store/28cnhcwky2m2xzlrh7jdi7ac36sikjdw-libcamera-0.0.5.drv</code></li>
-<li><a href="./diff/b93c12ca5e9d12147eebda7d060bd3257478fb1114ec5974ba6ff69e8633cde8-8cf486c4b25735b7a150b26e4c6f3f75175c94c0f919c61992f3e107d6e3d7f1.html">(diffoscope)</a> out</li>
-</ul></li>
-<li><code>/nix/store/x1rcb92zx4sv35w96gdi1cq9v9bk86fs-gtk+-2.24.33.drv</code></li>
-<li><a href="./diff/071eb52aae5721002e592703d3b1c081a53ff97d65d781774e22d4061596b93f-8b3824cb410e49377624a268c076d21ab0bbd2d4c2f5aeb97a2c09f551448dd4.html">(diffoscope)</a> out</li>
-</ul></li>
-<li><code>/nix/store/0vf1wmicmkg00yx2wz1gw2r0clf17zq9-qtwayland-6.5.0.drv</code></li>
-<li><a href="./diff/95047be50ec8b7230180ab7de1bf41062a307f7b6543b8cd53ca9544af2aa468-8ed39fc61615876289c3c78b8fce6231b88f7d7a8d8f1a5e09d3d75be1054040.html">(diffoscope)</a> out</li>
-</ul></li>
-<li><code>/nix/store/7xj0hgy3xd9pjl3003aygfg2smbz0hmd-kio-5.106.0.drv</code></li>
-<li><a href="./diff/d6cfa1fccb489343ae93e55670cfc996026a1292ce13de2cc77c23967d8631c0-436c4bd110d478741efc57957679c7b256e5dc0470799f4ca29f810d2cef5467.html">(diffoscope)</a> out</li>
-</ul></li>
-<li><code>/nix/store/bsdzkb9vbh7s3a9mm751jjqcrwk7ys8c-gegl-0.4.44.drv</code></li>
-<li><a href="./diff/e8646a3227b23cab042223b5f89e02e2e82985110757a2f07ac630f5f74e8af8-34276fee8bd5e65f2d635654d6e8430f68a12e3ebc27ab53c0d908987d626e4a.html">(diffoscope)</a> dev</li>
-</ul></li>
-<li><code>/nix/store/10qfxwgf7212xgmm7z8lgv23sg283mlg-wireplumber-0.4.14.drv</code></li>
-<li><a href="./diff/85e2c8f621047d4a726e10cb3481061c6377fcb72b0b8bc494e375cb8ef7fd77-9d385bcc2c1feee838bb032cb33d9c921a85b435c68a2b5824a39fd60e9a841a.html">(diffoscope)</a> doc</li>
-</ul></li>
-<li><code>/nix/store/s0gpsymj49b6isbmsbs0lw20pkwvcv3r-libadwaita-1.3.2.drv</code></li>
-<li><a href="./diff/f8b2a036c1eb428ed9a0c8398289ee20c412ecdd6a4b8a94ac4c1f095deebff0-2b5fd3eadf9c8dba3d2600aa4c493bb644b6688b964cd1454d04c59e1100e3b7.html">(diffoscope)</a> out</li>
+<li><a href="file:///nix/store/l4w8s1pd01l2x51c7va9b1xlg7g519s3-python3-3.10.12.drv"><code>python3-3.10.12.drv</code></a>
+out <a href="./diff/db1d8a10a5e7ee8b2ca5f992d06decbb1c31b96026796b0819c48fd1660c13c1-11913edc3ded5d5acd4be3c0e1e0f3fb06833472455ec7fa42f9f78243e9c6ce.html">(diffoscope)</a>
 </ul></li>
 </ul>
 <hr>
 <h3>unchecked paths</h3>
 <ul>
-<li><code>/nix/store/y93sdycjycpy0089d9l31972wy6w3pwb-cantarell-fonts-0.303.1.drv</code></li>
-<li><code>/nix/store/q0wwwqkcaj78nc4hb5py0f2nrkwn3kfd-mesa-23.0.3.drv</code></li>
-<li><code>/nix/store/yydxc76ihva4i6dg7jzas65gdj1gmrc8-libopus-1.3.1.drv</code></li>
-<li><code>/nix/store/1cic9j3cjz56kq5nqmjy420438nv4pi3-gtkmm-3.24.7.drv</code></li>
-<li><code>/nix/store/99jjchb1n77i17q7rz1iz5fz4sksqgzy-qtbase-5.15.9.drv</code></li>
-<li><code>/nix/store/6kxamcfbr96y1cjdmvy3vs9ni332s829-qtdeclarative-6.5.0.drv</code></li>
-<li><code>/nix/store/arw7y5f4jwgdrargkk4w0cl6bwfdwy0n-protobuf-3.21.12.drv</code></li>
-<li><code>/nix/store/ybv1k1lz6w6zsvx8rffl39pngd7ys0m3-gfortran-12.2.0.drv</code></li>
-<li><code>/nix/store/r1nf07yvzx8yxxc20p100j2ka93dj5z7-qttools-5.15.9.drv</code></li>
-<li><code>/nix/store/fzx6naqfbq0ipwag1a0v5mq82wls1sxl-opencv-4.7.0.drv</code></li>
-<li><code>/nix/store/69fcn76wwwywqvj74fizpn8vvpq1rd5n-linux-6.1.29.drv</code></li>
-<li><code>/nix/store/1qcaq72xl66d2id7wb95ml1dqsjz56jr-spidermonkey-102.8.0.drv</code></li>
+<li><a href="/nix/store/94k70s7y9l3rdp1l87l4ixl2hs263a2j-systemd-253.6.drv"><code>systemd-253.6.drv</code></a></li>
 </ul>
 
 <hr />
@@ -162,6 +119,6 @@ We can work together to write docs on how to use it.</small>
 
 <hr />
 
-<small>Generated at 2023-05-22 15:18:37.866965332 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
+<small>Generated at 2023-09-25 09:54:09.055105114 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
 <center><img style="max-width: 100px" src="https://nixos.org/logo/nixos-logo-only-hires.png" /></center>
 </body></html>
