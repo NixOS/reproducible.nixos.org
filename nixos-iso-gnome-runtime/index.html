@@ -1,18 +1,18 @@
 <html>
 <head>
-<title>Is nixos.<wbr>iso_minimal.<wbr>x86_64-linux reproducible?</title>
+<title>Is nixos.<wbr>iso_gnome.<wbr>x86_64-linux reproducible?</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="nixos-unstable's nixos.<wbr>iso_minimal.<wbr>x86_64-linux build is 99.63% reproducible!" />
+<meta name="description" content="nixos-unstable's nixos.<wbr>iso_gnome.<wbr>x86_64-linux build is 99.19% reproducible!" />
 
 <!-- Twitter Card data -->
 <meta name="twitter:card" value="summary">
 
 <!-- Open Graph data -->
-<meta property="og:title" content="Is nixos.<wbr>iso_minimal.<wbr>x86_64-linux Reproducible?" />
+<meta property="og:title" content="Is nixos.<wbr>iso_gnome.<wbr>x86_64-linux Reproducible?" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://reproducible.nixos.org/" />
 <meta property="og:image" content="https://reproducible.nixos.org/nixos-rb-logo.png" />
-<meta property="og:description" content="nixos-unstable's nixos.<wbr>iso_minimal.<wbr>x86_64-linux build is 99.63% reproducible!" />
+<meta property="og:description" content="nixos-unstable's nixos.<wbr>iso_gnome.<wbr>x86_64-linux build is 99.19% reproducible!" />
 <link rel="stylesheet" href="../styles/index.css">
 <style>
 body {
@@ -21,36 +21,61 @@ body {
 </style>
 </head>
 <body>
-<h1>Is nixos.<wbr>iso_minimal.<wbr>x86_64-linux Reproducible?</h1>
-<i>Tracking the build closure for <code>nixos.<wbr>iso_minimal.<wbr>x86_64-linux</code> in the <code>nixos-unstable</code>
+<h1>Is nixos.<wbr>iso_gnome.<wbr>x86_64-linux Reproducible?</h1>
+<i>Tracking the build closure for <code>nixos.<wbr>iso_gnome.<wbr>x86_64-linux</code> in the <code>nixos-unstable</code>
     branch on <code>x86_64-linux</code>.</i>
 <p>
 To run the check build manually:
 <pre>
 nix-build /nix/store/???.drv --check --keep-failed
 </pre>
-<!--nix-build ./nixos/release-combined.nix -A nixos.<wbr>iso_minimal.<wbr>x86_64-linux-->
+<!--nix-build ./nixos/release-combined.nix -A nixos.<wbr>iso_gnome.<wbr>x86_64-linux-->
 And to find out why a derivation is part of the build closure, use:
 <pre>
 git clone https://github.com/nixos/nixpkgs.git
 cd nixpkgs
-git checkout e35dcc04a3853da485a396bdd332217d0ac9054f
-nix-store -q --tree $(nix-instantiate nixos/release-combined.nix -A nixos.<wbr>iso_minimal.<wbr>x86_64-linux)
+git checkout 54aac082a4d9bb5bbc5c4e899603abfb76a3f6d6
+nix-store -q --tree $(nix-instantiate nixos/release-combined.nix -A nixos.<wbr>iso_gnome.<wbr>x86_64-linux)
 </pre>
 
-<h2>534 out of 536 (99.63%)</h2>
-<p>paths in the nixos.<wbr>iso_minimal.<wbr>x86_64-linux build closure are reproducible! 1 paths remained unchecked</p>
+<h2>1339 out of 1350 (99.19%)</h2>
+<p>paths in the nixos.<wbr>iso_gnome.<wbr>x86_64-linux build closure are reproducible! 2 paths remained unchecked</p>
 <h3>unreproduced paths</h3>
 <p>These derivations produced a different result compared to the official cache, revealing a reproducibility problem. See the <a href="https://github.com/orgs/NixOS/projects/30/views/1">Project</a> for progress on fixing those, or <a href="https://github.com/NixOS/nixpkgs/issues/new?assignees=&labels=0.kind%3A+enhancement%2C6.topic%3A+reproducible+builds&template=unreproducible_package.md&title=">add an issue</a> for those that are not tracked yet.</p>
 <ul>
-<li><a href="file:///nix/store/l4w8s1pd01l2x51c7va9b1xlg7g519s3-python3-3.10.12.drv"><code>python3-3.10.12.drv</code></a>
-out <a href="./diff/db1d8a10a5e7ee8b2ca5f992d06decbb1c31b96026796b0819c48fd1660c13c1-11913edc3ded5d5acd4be3c0e1e0f3fb06833472455ec7fa42f9f78243e9c6ce.html">(diffoscope)</a>
+<li><a href="file:///nix/store/2iqgqpwfc50i352c77ss4pdz4k2cdgc8-qemu-host-cpu-only-8.1.3.drv"><code>qemu-host-cpu-only-8.1.3.drv</code></a>
+out <a href="./diff/af85f93675b5aa979ab5b6ce51ca5ba1d9648cbafe7ff6413210d515efe931ff-11751594aeb34399c50edafcc0910034217e7f2bc74997c6859d31fed1b82b88.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/wsl9f3qaygw66l0l2j0dbj7bhchm86zw-ibus-1.5.28.drv"><code>ibus-1.5.28.drv</code></a>
+out <a href="./diff/66ed536e806709e09726a302b08399952e7c3771236516f9bc99a0e9774b1e05-74b4291dfb1470ba3c940920d9ad25d5f1653563fe9d7d021426342addf6f223.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/qhvph7y8mcdd60937k9idx1gfvx9l8kb-gtk+-2.24.33.drv"><code>gtk+-2.24.33.drv</code></a>
+out <a href="./diff/96dbaeb879e459ff281ed2b63f9f8a7532f705dacc4f59d52887de510ba0b1a8-4108e244ef947776e1e8fa8fd41546425ece98fe2d79310c9602bd2f701d03ca.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/5x5n7f778lyxxq3zn2pzxajbdjpxj2wx-loupe-45.2.drv"><code>loupe-45.2.drv</code></a>
+out <a href="./diff/1e2f9a72aca89da6248593939b6a38d480ce19f6a604a7776fd089c9bd7c5c80-abd3b21881b27d395ef75c90b267ac26f32bce80e2bb7f375a572bf18e7215d4.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/5zsv1772i4zc9dlsq94pifdx57gr6w6s-phonenumber-8.12.37.drv"><code>phonenumber-8.12.37.drv</code></a>
+out <a href="./diff/1db837c65980b8973ef239d7ea3658299519b3d934cbb13fb8e819db8b7754e9-ccaa18dbd02a444df2b3c32ad15ebbb052ad3a7d31b33905c24e636cf98c0a1a.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/viqx6dwa05rzgv78agqs75ah8ijzikfs-wireplumber-0.4.17.drv"><code>wireplumber-0.4.17.drv</code></a>
+doc <a href="./diff/6cdb30b6256fcfab004f6dc3e073bdd9e80fd77d9ff0a673aad5335267a7371e-bdc3d6238673cf63310165756c3f4294bcd7494253f227ed203f2004553c0c27.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/an6yifns6kp32i8y90wphx7mzxs71iyd-jfsutils-1.1.15.drv"><code>jfsutils-1.1.15.drv</code></a>
+out <a href="./diff/f6324ec1d2bd8e7eb94aa170221be10b9f59702ddd8c6eda0190dcb70f82e850-bb3de609e45cb1278589282568f7b92cf577c1a69c6aad2efc16f013a94dcceb.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/9vcjifpwl1fqs0iyz4in9z529qz12rlj-libcamera-0.0.5.drv"><code>libcamera-0.0.5.drv</code></a>
+out <a href="./diff/6bc02e097608a8ae26e075bbc6fe774b2c68edf66363aa6f43353b96cd341696-7947c35d90ab1b68ada092c953306d206910dba783fa1ec5a2d84a0a2247e716.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/2x0sm29rf2h6wgyl6fcymbw87bxvpp9v-pipewire-1.0.0.drv"><code>pipewire-1.0.0.drv</code></a>
+doc <a href="./diff/1f94ef23aa9064bad6ef9a768dc4ade7615e03b16310ebaae6465643f3aae86b-5cea5bc75b287db1b30f4232aae2920949ccec4ec459113f3f2a342a62680bc1.html">(diffoscope)</a>
 </ul></li>
 </ul>
 <hr>
 <h3>unchecked paths</h3>
 <ul>
-<li><a href="/nix/store/94k70s7y9l3rdp1l87l4ixl2hs263a2j-systemd-253.6.drv"><code>systemd-253.6.drv</code></a></li>
+<li><a href="/nix/store/728bif3hwlz04hcmgmywk2azqnhdciha-cantarell-fonts-0.303.1.drv"><code>cantarell-fonts-0.303.1.drv</code></a></li>
+<li><a href="/nix/store/jq3hdxjmygh1ax5rqh0iq6h2ip8wqp4c-orc-0.4.34.drv"><code>orc-0.4.34.drv</code></a></li>
 </ul>
 
 <hr />
@@ -119,6 +144,6 @@ We can work together to write docs on how to use it.</small>
 
 <hr />
 
-<small>Generated at 2023-09-25 09:54:09.055105114 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
+<small>Generated at 2023-12-23 15:11:06.084502964 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
 <center><img style="max-width: 100px" src="https://nixos.org/logo/nixos-logo-only-hires.png" /></center>
 </body></html>
