@@ -1,18 +1,18 @@
 <html>
 <head>
-<title>Is nixos.iso_minimal.x86_64-linux reproducible?</title>
+<title>Is nixos.<wbr>iso_minimal.<wbr>x86_64-linux reproducible?</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="nixos-unstable's nixos.iso_minimal.x86_64-linux build is 99.43% reproducible!" />
+<meta name="description" content="nixos-unstable's nixos.<wbr>iso_minimal.<wbr>x86_64-linux build is 99.81% reproducible!" />
 
 <!-- Twitter Card data -->
 <meta name="twitter:card" value="summary">
 
 <!-- Open Graph data -->
-<meta property="og:title" content="Is nixos.iso_minimal.x86_64-linux Reproducible?" />
+<meta property="og:title" content="Is nixos.<wbr>iso_minimal.<wbr>x86_64-linux Reproducible?" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://reproducible.nixos.org/" />
 <meta property="og:image" content="https://reproducible.nixos.org/nixos-rb-logo.png" />
-<meta property="og:description" content="nixos-unstable's nixos.iso_minimal.x86_64-linux build is 99.43% reproducible!" />
+<meta property="og:description" content="nixos-unstable's nixos.<wbr>iso_minimal.<wbr>x86_64-linux build is 99.81% reproducible!" />
 <link rel="stylesheet" href="../styles/index.css">
 <style>
 body {
@@ -21,36 +21,30 @@ body {
 </style>
 </head>
 <body>
-<h1>Is nixos.iso_minimal.x86_64-linux Reproducible?</h1>
-<i>Tracking the build closure for <code>nixos.iso_minimal.x86_64-linux</code> in the <code>nixos-unstable</code>
+<h1>Is nixos.<wbr>iso_minimal.<wbr>x86_64-linux Reproducible?</h1>
+<i>Tracking the build closure for <code>nixos.<wbr>iso_minimal.<wbr>x86_64-linux</code> in the <code>nixos-unstable</code>
     branch on <code>x86_64-linux</code>.</i>
 <p>
 To run the check build manually:
 <pre>
 nix-build /nix/store/???.drv --check --keep-failed
 </pre>
-<!--nix-build ./nixos/release-combined.nix -A nixos.iso_minimal.x86_64-linux-->
+<!--nix-build ./nixos/release-combined.nix -A nixos.<wbr>iso_minimal.<wbr>x86_64-linux-->
 And to find out why a derivation is part of the build closure, use:
 <pre>
 git clone https://github.com/nixos/nixpkgs.git
 cd nixpkgs
-git checkout 5a2500a5e80cb462fe1cc45b26a9e5584eeabef1
-nix-store -q --tree $(nix-instantiate nixos/release-combined.nix -A nixos.iso_minimal.x86_64-linux)
+git checkout 54aac082a4d9bb5bbc5c4e899603abfb76a3f6d6
+nix-store -q --tree $(nix-instantiate nixos/release-combined.nix -A nixos.<wbr>iso_minimal.<wbr>x86_64-linux)
 </pre>
 
-<h2>521 out of 524 (99.43%)</h2>
-<p>paths in the nixos.iso_minimal.x86_64-linux build closure are reproducible! 0 paths remained unchecked</p>
+<h2>537 out of 538 (99.81%)</h2>
+<p>paths in the nixos.<wbr>iso_minimal.<wbr>x86_64-linux build closure are reproducible! 0 paths remained unchecked</p>
 <h3>unreproduced paths</h3>
 <p>These derivations produced a different result compared to the official cache, revealing a reproducibility problem. See the <a href="https://github.com/orgs/NixOS/projects/30/views/1">Project</a> for progress on fixing those, or <a href="https://github.com/NixOS/nixpkgs/issues/new?assignees=&labels=0.kind%3A+enhancement%2C6.topic%3A+reproducible+builds&template=unreproducible_package.md&title=">add an issue</a> for those that are not tracked yet.</p>
 <ul>
-<li><code>/nix/store/yyqz5anbb8dr7mfm4drf74xg86qq2ifd-grub-2.12-rc1.drv</code></li>
-<li><a href="./diff/5a2986926e58fb9aa2bb7c8f51b4f7fcf55b2976d695572736d85f01345384aa-fccc5f3bbef79f0963761d1a7ea94ec4048ef56c08e2b09af91015ae61b1a737.html">(diffoscope)</a> out</li>
-</ul></li>
-<li><code>/nix/store/d99q7y4i11ix32r8nyqxxv7kc1hkwghz-grub-2.12-rc1.drv</code></li>
-<li><a href="./diff/76610f85a7c73b54e1ec6fdee1982929a5391d7122f590d0cc7eeae4fee9f5c9-9ca84891f8328dd999d6e6373b10cb8018ab97814d9c28f00148901d5137577a.html">(diffoscope)</a> out</li>
-</ul></li>
-<li><code>/nix/store/21ldw2dp26xvv9iyxn9x77a8yh4waqz5-python3-3.10.12.drv</code></li>
-<li><a href="./diff/ada9afa26b7dd089898e8cbe82a9d097d177eb01e94fcae89047111eeab7598c-497c5b0baad3f5f4dc808d75f3c312237e57ba4eb51094f9f0c70c1ffd191d6b.html">(diffoscope)</a> out</li>
+<li><a href="file:///nix/store/an6yifns6kp32i8y90wphx7mzxs71iyd-jfsutils-1.1.15.drv"><code>jfsutils-1.1.15.drv</code></a>
+out <a href="./diff/f6324ec1d2bd8e7eb94aa170221be10b9f59702ddd8c6eda0190dcb70f82e850-bb3de609e45cb1278589282568f7b92cf577c1a69c6aad2efc16f013a94dcceb.html">(diffoscope)</a>
 </ul></li>
 </ul>
 <hr>
@@ -125,6 +119,6 @@ We can work together to write docs on how to use it.</small>
 
 <hr />
 
-<small>Generated at 2023-07-25 10:18:33.476833816 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
+<small>Generated at 2023-12-24 09:39:39.867262570 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
 <center><img style="max-width: 100px" src="https://nixos.org/logo/nixos-logo-only-hires.png" /></center>
 </body></html>
