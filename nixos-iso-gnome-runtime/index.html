@@ -2,7 +2,7 @@
 <head>
 <title>Is nixos.<wbr>iso_gnome.<wbr>x86_64-linux reproducible?</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="nixos-unstable's nixos.<wbr>iso_gnome.<wbr>x86_64-linux build is 99.03% reproducible!" />
+<meta name="description" content="nixos-unstable's nixos.<wbr>iso_gnome.<wbr>x86_64-linux build is 99.48% reproducible!" />
 
 <!-- Twitter Card data -->
 <meta name="twitter:card" value="summary">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://reproducible.nixos.org/" />
 <meta property="og:image" content="https://reproducible.nixos.org/nixos-rb-logo.png" />
-<meta property="og:description" content="nixos-unstable's nixos.<wbr>iso_gnome.<wbr>x86_64-linux build is 99.03% reproducible!" />
+<meta property="og:description" content="nixos-unstable's nixos.<wbr>iso_gnome.<wbr>x86_64-linux build is 99.48% reproducible!" />
 <link rel="stylesheet" href="../styles/index.css">
 <style>
 body {
@@ -34,46 +34,38 @@ And to find out why a derivation is part of the build closure, use:
 <pre>
 git clone https://github.com/nixos/nixpkgs.git
 cd nixpkgs
-git checkout 9b19f5e77dd906cb52dade0b7bd280339d2a1f3d
+git checkout 0e74ca98a74bc7270d28838369593635a5db3260
 nix-store -q --tree $(nix-instantiate nixos/release-combined.nix -A nixos.<wbr>iso_gnome.<wbr>x86_64-linux)
 </pre>
 
-<h2>1332 out of 1345 (99.03%)</h2>
-<p>paths in the nixos.<wbr>iso_gnome.<wbr>x86_64-linux build closure are reproducible! 6 paths remained unchecked</p>
+<h2>1327 out of 1334 (99.48%)</h2>
+<p>paths in the nixos.<wbr>iso_gnome.<wbr>x86_64-linux build closure are reproducible! 1 paths remained unchecked</p>
 <h3>unreproduced paths</h3>
 <p>These derivations produced a different result compared to the official cache, revealing a reproducibility problem. See the <a href="https://github.com/orgs/NixOS/projects/30/views/1">Project</a> for progress on fixing those, or <a href="https://github.com/NixOS/nixpkgs/issues/new?assignees=&labels=0.kind%3A+enhancement%2C6.topic%3A+reproducible+builds&template=unreproducible_package.md&title=">add an issue</a> for those that are not tracked yet.</p>
 <ul>
-<li><a href="file:///nix/store/ndkhky8zvbdc7ppalbqg5wscd0cb27kb-wireplumber-0.4.17.drv"><code>wireplumber-0.4.17.drv</code></a>
-doc <a href="./diff/c9ccf9b91faf66e5f3174e226e8a476ad7046b4d5bf15f2af3e0481c1338b614-a908ee10e5b46bdd597577ada2d6706bd3c0133786f3b86e2f45b04ec9f9e263.html">(diffoscope)</a>
+<li><a href="file:///nix/store/nkvr6jf5png32ylw7jsp1k799cnzsj13-wireplumber-0.4.17.drv"><code>wireplumber-0.4.17.drv</code></a>
+doc <a href="./diff/37f0633dc2395ea4dfb5c157639156be84d0ce801d1af478e68c087506700e60-681bacfe8599246e8fbfca213a8548d58b7d1e1d4a21d1d23de3e3699a0e4db6.html">(diffoscope)</a>
 </ul></li>
-<li><a href="file:///nix/store/qcac54nz4bhfmx94sc89hr5pxs28ddww-qemu-host-cpu-only-8.2.0.drv"><code>qemu-host-cpu-only-8.2.0.drv</code></a>
-out <a href="./diff/a8c7850d15db1d859adc22679ead7d7d00484dde2b5bd409714656d0c70ab1e7-eada47510d235801042a789c482f34acac64f36ee759a229a6a216f3b2e31df2.html">(diffoscope)</a>
+<li><a href="file:///nix/store/vkx2srall0p9q68hm73zpwq9cmv8pmjg-qemu-host-cpu-only-8.2.1.drv"><code>qemu-host-cpu-only-8.2.1.drv</code></a>
+out <a href="./diff/36186c73e7e0ee5e485093c030bd530d5f15a516fea817efa1b1259f011a736d-290200bbd84dcd696910f177318a09f68b1b5977a38305293367bd45ee572d96.html">(diffoscope)</a>
 </ul></li>
-<li><a href="file:///nix/store/xhgyjdwaidm73vydixz1hwr20mv5qws3-pipewire-1.0.0.drv"><code>pipewire-1.0.0.drv</code></a>
-doc <a href="./diff/5cb87c63c78de426e57c409236df5f162787c5cb614c9d9aa119cc8950992fc4-19c1939e4149585cfcd27724aa3d834fa4c39b23c049fafb4f4aff57f1bbe4db.html">(diffoscope)</a>
+<li><a href="file:///nix/store/8492hvqnw62pj8vdjcj6gkklfy3diy83-libcamera-0.2.0.drv"><code>libcamera-0.2.0.drv</code></a>
+out <a href="./diff/2af634cd880b442adc9b8836f56f605fccdbc7b5ac2f447705c99eeccbc0ad41-a8ef96adb4b28ed42047d36b9503ec572b1bc997d287224f0b551f98ca4d71c8.html">(diffoscope)</a>
 </ul></li>
-<li><a href="file:///nix/store/jbbzl0il9jyjcdv0zqd9fgv1vhlw1qia-phonenumber-8.12.37.drv"><code>phonenumber-8.12.37.drv</code></a>
-out <a href="./diff/888f03962a8ac95f9935c4b4742cc6b40eb7d15c270b862764471528d1fbb934-640dcfb66172b285b3dc1dd398207f874b7875673a21ad137c37aa220232a4b8.html">(diffoscope)</a>
+<li><a href="file:///nix/store/sdblv41w21b6kf9q17sggwhl985zhcxh-loupe-45.3.drv"><code>loupe-45.3.drv</code></a>
+out <a href="./diff/24d2e2e91b7e873fc467f66da14c78e77ced5365c15ed44fc555216ad2c3c0f1-4cfe78e0c230d69c4315ceccb75ade417bdbf341e8a9cbb45ef080fe9993cca5.html">(diffoscope)</a>
 </ul></li>
-<li><a href="file:///nix/store/f1zkac03vs9wp818m17prhfvyzs324xa-loupe-45.3.drv"><code>loupe-45.3.drv</code></a>
-out <a href="./diff/0d40b1d37a189318f097a1d9fffa2d78a4a2c994b9f118335952ea80a0ce1acf-fded06d6f59d02f3080fb9b8b826e7755f8b7f81362b8967f8bee2d2caa7fb97.html">(diffoscope)</a>
+<li><a href="file:///nix/store/r4k9ypsw6wjwvgrf3sdfj528awav2hsi-ibus-1.5.28.drv"><code>ibus-1.5.28.drv</code></a>
+out <a href="./diff/19c627ce6b563b03ea9b5e477a82fca5d8e7ac3e6f324cae0ac732ffe33a85e3-5b54ad8f6ee2a7ab0115cb64c83d33aa7dab91b8b08013484f75d6027508c72e.html">(diffoscope)</a>
 </ul></li>
-<li><a href="file:///nix/store/bk88zwab1lx7s48j2hgkg9jlc3rkwpck-libcamera-0.0.5.drv"><code>libcamera-0.0.5.drv</code></a>
-out <a href="./diff/ca6a6c175d00d0d339adf9e2936a13f8ed3022f5f962bb230a6f58f07e0c0952-77efcdf3af00279338cf4bfa507ce57839aa38153d631243eabb8728f1e741d5.html">(diffoscope)</a>
-</ul></li>
-<li><a href="file:///nix/store/ypmszf2zg8pyk6n1xa152k5psa2k6kk4-ibus-1.5.28.drv"><code>ibus-1.5.28.drv</code></a>
-out <a href="./diff/9a4f2bad3004924aaaf680ec1d54eb3a3b7d4fe0a3bc7153d4f93e28bb70a928-bed1a5952cd2279496919a09b1fba857eb2a0c4e9596113eeab9f9375860d405.html">(diffoscope)</a>
+<li><a href="file:///nix/store/n9jv4p740l3ba2nd4k4c3nvwj4r5p1sr-pipewire-1.0.3.drv"><code>pipewire-1.0.3.drv</code></a>
+doc <a href="./diff/d9be9bd859dc4101fcd3e9525b993c1722501d4e3e96c62d436f6519defe308a-086e1198ae843482d5958bc7527f434742b9ee6e52ab42bd93a6fb9cc60ecf84.html">(diffoscope)</a>
 </ul></li>
 </ul>
 <hr>
 <h3>unchecked paths</h3>
 <ul>
-<li><a href="/nix/store/2zyfvmgxp8afxkc97n2gpnqbkzrz08ir-cantarell-fonts-0.303.1.drv"><code>cantarell-fonts-0.303.1.drv</code></a></li>
-<li><a href="/nix/store/ar0kwdrjd880w1f3jbbygadak9qhshfp-xdg-desktop-portal-1.18.2.drv"><code>xdg-desktop-portal-1.18.2.drv</code></a></li>
-<li><a href="/nix/store/r39zp4yhcq4pa4rbpy4l41kmr96vni9v-spidermonkey-115.2.0.drv"><code>spidermonkey-115.2.0.drv</code></a></li>
-<li><a href="/nix/store/3wrdaxrpm8333assqixldvh60j8vpfz7-gst-plugins-good-1.22.8.drv"><code>gst-plugins-good-1.22.8.drv</code></a></li>
-<li><a href="/nix/store/wx45g16ny88v011gdpl9wgc2g712316n-linux-6.1.72.drv"><code>linux-6.1.72.drv</code></a></li>
-<li><a href="/nix/store/83lv0lyaixbcf1ak3nq93kk02mdb8kfs-folks-0.15.7.drv"><code>folks-0.15.7.drv</code></a></li>
+<li><a href="/nix/store/xl7wrr0l3b4nzrzwvimbw1z26rslyzk0-orc-0.4.34.drv"><code>orc-0.4.34.drv</code></a></li>
 </ul>
 
 <hr />
@@ -142,6 +134,6 @@ We can work together to write docs on how to use it.</small>
 
 <hr />
 
-<small>Generated at 2024-01-15 16:19:56.190082717 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
+<small>Generated at 2024-02-23 11:31:59.013712324 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
 <center><img style="max-width: 100px" src="https://nixos.org/logo/nixos-logo-only-hires.png" /></center>
 </body></html>
