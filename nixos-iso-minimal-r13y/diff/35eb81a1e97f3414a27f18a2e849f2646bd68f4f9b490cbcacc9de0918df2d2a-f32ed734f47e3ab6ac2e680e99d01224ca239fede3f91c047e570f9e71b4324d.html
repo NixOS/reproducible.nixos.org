@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/nix/store/pwp5ih0q2fjpnzdmpcxrqh6yl60b5v8n-diffoscope-287/bin/diffoscope --max-page-size=500000 --html - wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/A wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/B</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">6.51 KB</span></div>
+  <div><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/A</span> vs.</div>
+  <div id="top"><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/B</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">6.4 KB</span></div>
+    <div><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/A/share</span> vs.</div>
+    <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share"><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/B/share</span>
+      <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">6.29 KB</span></div>
+      <div><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/A/share/man</span> vs.</div>
+      <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man"><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/B/share/man</span>
+        <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man">¶</a>
+      </div>
+      </div>
+      <div class="difference">
+        <div class="diffheader">
+        <div class="diffcontrol diffcontrol-double">⊟</div>
+        <div><span class="diffsize">654 B</span></div>
+        <div><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/A/share/man/man1</span> vs.</div>
+        <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man-"><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/B/share/man/man1</span>
+          <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man-">¶</a>
+        </div>
+        </div>
+        <div class="difference">
+          <div class="diffheader">
+          <div class="diffcontrol diffcontrol-double">⊟</div>
+          <div><span class="diffsize">518 B</span></div>
+          <div><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/A/share/man/man1/unbound-host.1.gz</span> vs.</div>
+          <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-host.-.gz"><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/B/share/man/man1/unbound-host.1.gz</span>
+            <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-host.-.gz">¶</a>
+          </div>
+          </div>
+          <div class="difference">
+            <div class="diffheader">
+            <div class="diffcontrol">⊟</div>
+            <div><span class="diffsize">346 B</span></div>
+            <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-host.-.gz---unbound-host.-"><span class="source">unbound-host.1</span>
+              <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-host.-.gz---unbound-host.-">¶</a>
+            </div>
+            </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 8 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">.TH<span class="dp">·</span>&quot;unbound\-host&quot;<span class="dp">·</span>&quot;1&quot;<span class="dp">·</span>&quot;<del>Jan</del><span class="dp">·</span><del>27</del>,<span class="dp">·</span>2025&quot;<span class="dp">·</span>&quot;NLnet<span class="dp">·</span>Labs&quot;<span class="dp">·</span>&quot;unbound<span class="dp">·</span>1.22.0&quot;</td><td class="diffline">1 </td><td class="diffpresent">.TH<span class="dp">·</span>&quot;unbound\-host&quot;<span class="dp">·</span>&quot;1&quot;<span class="dp">·</span>&quot;<ins>Feb</ins><span class="dp">·</span><ins><span class="dp">·</span>8</ins>,<span class="dp">·</span>2025&quot;<span class="dp">·</span>&quot;NLnet<span class="dp">·</span>Labs&quot;<span class="dp">·</span>&quot;unbound<span class="dp">·</span>1.22.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">.\&quot;</td><td class="diffline">2 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>unbound-host.1<span class="dp">·</span>--<span class="dp">·</span>unbound<span class="dp">·</span>DNS<span class="dp">·</span>lookup<span class="dp">·</span>utility</td><td class="diffline">3 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>unbound-host.1<span class="dp">·</span>--<span class="dp">·</span>unbound<span class="dp">·</span>DNS<span class="dp">·</span>lookup<span class="dp">·</span>utility</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">.\&quot;</td><td class="diffline">4 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>Copyright<span class="dp">·</span>(c)<span class="dp">·</span>2007,<span class="dp">·</span>NLnet<span class="dp">·</span>Labs.<span class="dp">·</span>All<span class="dp">·</span>rights<span class="dp">·</span>reserved.</td><td class="diffline">5 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>Copyright<span class="dp">·</span>(c)<span class="dp">·</span>2007,<span class="dp">·</span>NLnet<span class="dp">·</span>Labs.<span class="dp">·</span>All<span class="dp">·</span>rights<span class="dp">·</span>reserved.</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">.\&quot;</td><td class="diffline">6 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>See<span class="dp">·</span>LICENSE<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>license.</td><td class="diffline">7 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>See<span class="dp">·</span>LICENSE<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>license.</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">.\&quot;</td><td class="diffline">8 </td><td class="diffpresent">.\&quot;</td></tr>
+</table>          </div>
+        </div>
+      </div>
+      <div class="difference">
+        <div class="diffheader">
+        <div class="diffcontrol diffcontrol-double">⊟</div>
+        <div><span class="diffsize">955 B</span></div>
+        <div><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/A/share/man/man3</span> vs.</div>
+        <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--1"><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/B/share/man/man3</span>
+          <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--1">¶</a>
+        </div>
+        </div>
+        <div class="difference">
+          <div class="diffheader">
+          <div class="diffcontrol diffcontrol-double">⊟</div>
+          <div><span class="diffsize">819 B</span></div>
+          <div><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/A/share/man/man3/libunbound.3.gz</span> vs.</div>
+          <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--libunbound.-.gz"><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/B/share/man/man3/libunbound.3.gz</span>
+            <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--libunbound.-.gz">¶</a>
+          </div>
+          </div>
+          <div class="difference">
+            <div class="diffheader">
+            <div class="diffcontrol">⊟</div>
+            <div><span class="diffsize">340 B</span></div>
+            <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--libunbound.-.gz---libunbound.-"><span class="source">libunbound.3</span>
+              <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--libunbound.-.gz---libunbound.-">¶</a>
+            </div>
+            </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 8 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">.TH<span class="dp">·</span>&quot;libunbound&quot;<span class="dp">·</span>&quot;3&quot;<span class="dp">·</span>&quot;<del>Jan</del><span class="dp">·</span><del>27</del>,<span class="dp">·</span>2025&quot;<span class="dp">·</span>&quot;NLnet<span class="dp">·</span>Labs&quot;<span class="dp">·</span>&quot;unbound<span class="dp">·</span>1.22.0&quot;</td><td class="diffline">1 </td><td class="diffpresent">.TH<span class="dp">·</span>&quot;libunbound&quot;<span class="dp">·</span>&quot;3&quot;<span class="dp">·</span>&quot;<ins>Feb</ins><span class="dp">·</span><ins><span class="dp">·</span>8</ins>,<span class="dp">·</span>2025&quot;<span class="dp">·</span>&quot;NLnet<span class="dp">·</span>Labs&quot;<span class="dp">·</span>&quot;unbound<span class="dp">·</span>1.22.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">.\&quot;</td><td class="diffline">2 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>libunbound.3<span class="dp">·</span>--<span class="dp">·</span>unbound<span class="dp">·</span>library<span class="dp">·</span>functions<span class="dp">·</span>manual</td><td class="diffline">3 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>libunbound.3<span class="dp">·</span>--<span class="dp">·</span>unbound<span class="dp">·</span>library<span class="dp">·</span>functions<span class="dp">·</span>manual</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">.\&quot;</td><td class="diffline">4 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>Copyright<span class="dp">·</span>(c)<span class="dp">·</span>2007,<span class="dp">·</span>NLnet<span class="dp">·</span>Labs.<span class="dp">·</span>All<span class="dp">·</span>rights<span class="dp">·</span>reserved.</td><td class="diffline">5 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>Copyright<span class="dp">·</span>(c)<span class="dp">·</span>2007,<span class="dp">·</span>NLnet<span class="dp">·</span>Labs.<span class="dp">·</span>All<span class="dp">·</span>rights<span class="dp">·</span>reserved.</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">.\&quot;</td><td class="diffline">6 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>See<span class="dp">·</span>LICENSE<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>license.</td><td class="diffline">7 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>See<span class="dp">·</span>LICENSE<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>license.</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">.\&quot;</td><td class="diffline">8 </td><td class="diffpresent">.\&quot;</td></tr>
+</table>          </div>
+          <div class="difference">
+            <div class="diffheader">
+            <div class="diffcontrol">⊟</div>
+            <div><span class="diffsize">311 B</span></div>
+            <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--libunbound.-.gz---stat---"><span class="source">stat {}</span>
+              <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--libunbound.-.gz---stat---">¶</a>
+            </div>
+            </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 7 lines modified</td><td colspan="2">Offset 1, 7 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>Size:<span class="dp">·</span>484<del>8</del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">»</span>      Blocks:<span class="dp">·</span>16<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>IO<span class="dp">·</span>Block:<span class="dp">·</span>4096<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>regular<span class="dp">·</span>file</td><td class="diffline">1 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>Size:<span class="dp">·</span>484<ins>7</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">»</span>      Blocks:<span class="dp">·</span>16<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>IO<span class="dp">·</span>Block:<span class="dp">·</span>4096<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>regular<span class="dp">·</span>file</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Device:<span class="dp">·</span>0,31<span class="dp">»</span>    Access:<span class="dp">·</span>(0644/-rw-r--r--)<span class="dp">·</span><span class="dp">·</span>Uid:<span class="dp">·</span>(<span class="dp">·</span>1000/thehedgehog)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Gid:<span class="dp">·</span>(<span class="dp">·</span><span class="dp">·</span>100/<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>users)</td><td class="diffline">2 </td><td class="diffpresent">Device:<span class="dp">·</span>0,31<span class="dp">»</span>    Access:<span class="dp">·</span>(0644/-rw-r--r--)<span class="dp">·</span><span class="dp">·</span>Uid:<span class="dp">·</span>(<span class="dp">·</span>1000/thehedgehog)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Gid:<span class="dp">·</span>(<span class="dp">·</span><span class="dp">·</span>100/<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>users)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">Modify:<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:01.000000000<span class="dp">·</span>+0000</td><td class="diffline">3 </td><td class="diffpresent">Modify:<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:01.000000000<span class="dp">·</span>+0000</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>          </div>
+        </div>
+      </div>
+      <div class="difference">
+        <div class="diffheader">
+        <div class="diffcontrol diffcontrol-double">⊟</div>
+        <div><span class="diffsize">645 B</span></div>
+        <div><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/A/share/man/man5</span> vs.</div>
+        <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--2"><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/B/share/man/man5</span>
+          <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--2">¶</a>
+        </div>
+        </div>
+        <div class="difference">
+          <div class="diffheader">
+          <div class="diffcontrol diffcontrol-double">⊟</div>
+          <div><span class="diffsize">509 B</span></div>
+          <div><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/A/share/man/man5/unbound.conf.5.gz</span> vs.</div>
+          <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound.conf.-.gz"><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/B/share/man/man5/unbound.conf.5.gz</span>
+            <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound.conf.-.gz">¶</a>
+          </div>
+          </div>
+          <div class="difference">
+            <div class="diffheader">
+            <div class="diffcontrol">⊟</div>
+            <div><span class="diffsize">337 B</span></div>
+            <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound.conf.-.gz---unbound.conf.-"><span class="source">unbound.conf.5</span>
+              <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound.conf.-.gz---unbound.conf.-">¶</a>
+            </div>
+            </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 8 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">.TH<span class="dp">·</span>&quot;unbound.conf&quot;<span class="dp">·</span>&quot;5&quot;<span class="dp">·</span>&quot;<del>Jan</del><span class="dp">·</span><del>27</del>,<span class="dp">·</span>2025&quot;<span class="dp">·</span>&quot;NLnet<span class="dp">·</span>Labs&quot;<span class="dp">·</span>&quot;unbound<span class="dp">·</span>1.22.0&quot;</td><td class="diffline">1 </td><td class="diffpresent">.TH<span class="dp">·</span>&quot;unbound.conf&quot;<span class="dp">·</span>&quot;5&quot;<span class="dp">·</span>&quot;<ins>Feb</ins><span class="dp">·</span><ins><span class="dp">·</span>8</ins>,<span class="dp">·</span>2025&quot;<span class="dp">·</span>&quot;NLnet<span class="dp">·</span>Labs&quot;<span class="dp">·</span>&quot;unbound<span class="dp">·</span>1.22.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">.\&quot;</td><td class="diffline">2 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>unbound.conf.5<span class="dp">·</span>--<span class="dp">·</span>unbound.conf<span class="dp">·</span>manual</td><td class="diffline">3 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>unbound.conf.5<span class="dp">·</span>--<span class="dp">·</span>unbound.conf<span class="dp">·</span>manual</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">.\&quot;</td><td class="diffline">4 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>Copyright<span class="dp">·</span>(c)<span class="dp">·</span>2007,<span class="dp">·</span>NLnet<span class="dp">·</span>Labs.<span class="dp">·</span>All<span class="dp">·</span>rights<span class="dp">·</span>reserved.</td><td class="diffline">5 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>Copyright<span class="dp">·</span>(c)<span class="dp">·</span>2007,<span class="dp">·</span>NLnet<span class="dp">·</span>Labs.<span class="dp">·</span>All<span class="dp">·</span>rights<span class="dp">·</span>reserved.</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">.\&quot;</td><td class="diffline">6 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>See<span class="dp">·</span>LICENSE<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>license.</td><td class="diffline">7 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>See<span class="dp">·</span>LICENSE<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>license.</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">.\&quot;</td><td class="diffline">8 </td><td class="diffpresent">.\&quot;</td></tr>
+</table>          </div>
+        </div>
+      </div>
+      <div class="difference">
+        <div class="diffheader">
+        <div class="diffcontrol diffcontrol-double">⊟</div>
+        <div><span class="diffsize">3.96 KB</span></div>
+        <div><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/A/share/man/man8</span> vs.</div>
+        <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--3"><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/B/share/man/man8</span>
+          <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--3">¶</a>
+        </div>
+        </div>
+        <div class="difference">
+          <div class="diffheader">
+          <div class="diffcontrol diffcontrol-double">⊟</div>
+          <div><span class="diffsize">856 B</span></div>
+          <div><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/A/share/man/man8/unbound-anchor.8.gz</span> vs.</div>
+          <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-anchor.-.gz"><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/B/share/man/man8/unbound-anchor.8.gz</span>
+            <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-anchor.-.gz">¶</a>
+          </div>
+          </div>
+          <div class="difference">
+            <div class="diffheader">
+            <div class="diffcontrol">⊟</div>
+            <div><span class="diffsize">369 B</span></div>
+            <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-anchor.-.gz---unbound-anchor.-"><span class="source">unbound-anchor.8</span>
+              <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-anchor.-.gz---unbound-anchor.-">¶</a>
+            </div>
+            </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 8 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">.TH<span class="dp">·</span>&quot;unbound-anchor&quot;<span class="dp">·</span>&quot;8&quot;<span class="dp">·</span>&quot;<del>Jan</del><span class="dp">·</span><del>27</del>,<span class="dp">·</span>2025&quot;<span class="dp">·</span>&quot;NLnet<span class="dp">·</span>Labs&quot;<span class="dp">·</span>&quot;unbound<span class="dp">·</span>1.22.0&quot;</td><td class="diffline">1 </td><td class="diffpresent">.TH<span class="dp">·</span>&quot;unbound-anchor&quot;<span class="dp">·</span>&quot;8&quot;<span class="dp">·</span>&quot;<ins>Feb</ins><span class="dp">·</span><ins><span class="dp">·</span>8</ins>,<span class="dp">·</span>2025&quot;<span class="dp">·</span>&quot;NLnet<span class="dp">·</span>Labs&quot;<span class="dp">·</span>&quot;unbound<span class="dp">·</span>1.22.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">.\&quot;</td><td class="diffline">2 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>unbound-anchor.8<span class="dp">·</span>--<span class="dp">·</span>unbound<span class="dp">·</span>anchor<span class="dp">·</span>maintenance<span class="dp">·</span>utility<span class="dp">·</span>manual</td><td class="diffline">3 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>unbound-anchor.8<span class="dp">·</span>--<span class="dp">·</span>unbound<span class="dp">·</span>anchor<span class="dp">·</span>maintenance<span class="dp">·</span>utility<span class="dp">·</span>manual</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">.\&quot;</td><td class="diffline">4 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>Copyright<span class="dp">·</span>(c)<span class="dp">·</span>2008,<span class="dp">·</span>NLnet<span class="dp">·</span>Labs.<span class="dp">·</span>All<span class="dp">·</span>rights<span class="dp">·</span>reserved.</td><td class="diffline">5 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>Copyright<span class="dp">·</span>(c)<span class="dp">·</span>2008,<span class="dp">·</span>NLnet<span class="dp">·</span>Labs.<span class="dp">·</span>All<span class="dp">·</span>rights<span class="dp">·</span>reserved.</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">.\&quot;</td><td class="diffline">6 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>See<span class="dp">·</span>LICENSE<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>license.</td><td class="diffline">7 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>See<span class="dp">·</span>LICENSE<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>license.</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">.\&quot;</td><td class="diffline">8 </td><td class="diffpresent">.\&quot;</td></tr>
+</table>          </div>
+          <div class="difference">
+            <div class="diffheader">
+            <div class="diffcontrol">⊟</div>
+            <div><span class="diffsize">311 B</span></div>
+            <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-anchor.-.gz---stat---"><span class="source">stat {}</span>
+              <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-anchor.-.gz---stat---">¶</a>
+            </div>
+            </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 7 lines modified</td><td colspan="2">Offset 1, 7 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>Size:<span class="dp">·</span>307<del>4</del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">»</span>      Blocks:<span class="dp">·</span>8<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>IO<span class="dp">·</span>Block:<span class="dp">·</span>4096<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>regular<span class="dp">·</span>file</td><td class="diffline">1 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>Size:<span class="dp">·</span>307<ins>1</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">»</span>      Blocks:<span class="dp">·</span>8<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>IO<span class="dp">·</span>Block:<span class="dp">·</span>4096<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>regular<span class="dp">·</span>file</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Device:<span class="dp">·</span>0,31<span class="dp">»</span>    Access:<span class="dp">·</span>(0644/-rw-r--r--)<span class="dp">·</span><span class="dp">·</span>Uid:<span class="dp">·</span>(<span class="dp">·</span>1000/thehedgehog)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Gid:<span class="dp">·</span>(<span class="dp">·</span><span class="dp">·</span>100/<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>users)</td><td class="diffline">2 </td><td class="diffpresent">Device:<span class="dp">·</span>0,31<span class="dp">»</span>    Access:<span class="dp">·</span>(0644/-rw-r--r--)<span class="dp">·</span><span class="dp">·</span>Uid:<span class="dp">·</span>(<span class="dp">·</span>1000/thehedgehog)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Gid:<span class="dp">·</span>(<span class="dp">·</span><span class="dp">·</span>100/<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>users)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">Modify:<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:01.000000000<span class="dp">·</span>+0000</td><td class="diffline">3 </td><td class="diffpresent">Modify:<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:01.000000000<span class="dp">·</span>+0000</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>          </div>
+        </div>
+        <div class="difference">
+          <div class="diffheader">
+          <div class="diffcontrol diffcontrol-double">⊟</div>
+          <div><span class="diffsize">872 B</span></div>
+          <div><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/A/share/man/man8/unbound-checkconf.8.gz</span> vs.</div>
+          <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-checkconf.-.gz"><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/B/share/man/man8/unbound-checkconf.8.gz</span>
+            <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-checkconf.-.gz">¶</a>
+          </div>
+          </div>
+          <div class="difference">
+            <div class="diffheader">
+            <div class="diffcontrol">⊟</div>
+            <div><span class="diffsize">379 B</span></div>
+            <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-checkconf.-.gz---unbound-checkconf.-"><span class="source">unbound-checkconf.8</span>
+              <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-checkconf.-.gz---unbound-checkconf.-">¶</a>
+            </div>
+            </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 8 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">.TH<span class="dp">·</span>&quot;unbound-checkconf&quot;<span class="dp">·</span>&quot;8&quot;<span class="dp">·</span>&quot;<del>Jan</del><span class="dp">·</span><del>27</del>,<span class="dp">·</span>2025&quot;<span class="dp">·</span>&quot;NLnet<span class="dp">·</span>Labs&quot;<span class="dp">·</span>&quot;unbound<span class="dp">·</span>1.22.0&quot;</td><td class="diffline">1 </td><td class="diffpresent">.TH<span class="dp">·</span>&quot;unbound-checkconf&quot;<span class="dp">·</span>&quot;8&quot;<span class="dp">·</span>&quot;<ins>Feb</ins><span class="dp">·</span><ins><span class="dp">·</span>8</ins>,<span class="dp">·</span>2025&quot;<span class="dp">·</span>&quot;NLnet<span class="dp">·</span>Labs&quot;<span class="dp">·</span>&quot;unbound<span class="dp">·</span>1.22.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">.\&quot;</td><td class="diffline">2 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>unbound-checkconf.8<span class="dp">·</span>--<span class="dp">·</span>unbound<span class="dp">·</span>configuration<span class="dp">·</span>checker<span class="dp">·</span>manual</td><td class="diffline">3 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>unbound-checkconf.8<span class="dp">·</span>--<span class="dp">·</span>unbound<span class="dp">·</span>configuration<span class="dp">·</span>checker<span class="dp">·</span>manual</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">.\&quot;</td><td class="diffline">4 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>Copyright<span class="dp">·</span>(c)<span class="dp">·</span>2007,<span class="dp">·</span>NLnet<span class="dp">·</span>Labs.<span class="dp">·</span>All<span class="dp">·</span>rights<span class="dp">·</span>reserved.</td><td class="diffline">5 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>Copyright<span class="dp">·</span>(c)<span class="dp">·</span>2007,<span class="dp">·</span>NLnet<span class="dp">·</span>Labs.<span class="dp">·</span>All<span class="dp">·</span>rights<span class="dp">·</span>reserved.</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">.\&quot;</td><td class="diffline">6 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>See<span class="dp">·</span>LICENSE<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>license.</td><td class="diffline">7 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>See<span class="dp">·</span>LICENSE<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>license.</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">.\&quot;</td><td class="diffline">8 </td><td class="diffpresent">.\&quot;</td></tr>
+</table>          </div>
+          <div class="difference">
+            <div class="diffheader">
+            <div class="diffcontrol">⊟</div>
+            <div><span class="diffsize">311 B</span></div>
+            <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-checkconf.-.gz---stat---"><span class="source">stat {}</span>
+              <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-checkconf.-.gz---stat---">¶</a>
+            </div>
+            </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 7 lines modified</td><td colspan="2">Offset 1, 7 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>Size:<span class="dp">·</span>69<del>9</del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">»</span>       Blocks:<span class="dp">·</span>8<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>IO<span class="dp">·</span>Block:<span class="dp">·</span>4096<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>regular<span class="dp">·</span>file</td><td class="diffline">1 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>Size:<span class="dp">·</span>69<ins>8</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">»</span>       Blocks:<span class="dp">·</span>8<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>IO<span class="dp">·</span>Block:<span class="dp">·</span>4096<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>regular<span class="dp">·</span>file</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Device:<span class="dp">·</span>0,31<span class="dp">»</span>    Access:<span class="dp">·</span>(0644/-rw-r--r--)<span class="dp">·</span><span class="dp">·</span>Uid:<span class="dp">·</span>(<span class="dp">·</span>1000/thehedgehog)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Gid:<span class="dp">·</span>(<span class="dp">·</span><span class="dp">·</span>100/<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>users)</td><td class="diffline">2 </td><td class="diffpresent">Device:<span class="dp">·</span>0,31<span class="dp">»</span>    Access:<span class="dp">·</span>(0644/-rw-r--r--)<span class="dp">·</span><span class="dp">·</span>Uid:<span class="dp">·</span>(<span class="dp">·</span>1000/thehedgehog)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Gid:<span class="dp">·</span>(<span class="dp">·</span><span class="dp">·</span>100/<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>users)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">Modify:<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:01.000000000<span class="dp">·</span>+0000</td><td class="diffline">3 </td><td class="diffpresent">Modify:<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:01.000000000<span class="dp">·</span>+0000</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>          </div>
+        </div>
+        <div class="difference">
+          <div class="diffheader">
+          <div class="diffcontrol diffcontrol-double">⊟</div>
+          <div><span class="diffsize">875 B</span></div>
+          <div><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/A/share/man/man8/unbound-control-setup.8.gz</span> vs.</div>
+          <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-control-setup.-.gz"><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/B/share/man/man8/unbound-control-setup.8.gz</span>
+            <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-control-setup.-.gz">¶</a>
+          </div>
+          </div>
+          <div class="difference">
+            <div class="diffheader">
+            <div class="diffcontrol">⊟</div>
+            <div><span class="diffsize">374 B</span></div>
+            <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-control-setup.-.gz---unbound-control-setup.-"><span class="source">unbound-control-setup.8</span>
+              <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-control-setup.-.gz---unbound-control-setup.-">¶</a>
+            </div>
+            </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 8 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">.TH<span class="dp">·</span>&quot;unbound-control&quot;<span class="dp">·</span>&quot;8&quot;<span class="dp">·</span>&quot;<del>Jan</del><span class="dp">·</span><del>27</del>,<span class="dp">·</span>2025&quot;<span class="dp">·</span>&quot;NLnet<span class="dp">·</span>Labs&quot;<span class="dp">·</span>&quot;unbound<span class="dp">·</span>1.22.0&quot;</td><td class="diffline">1 </td><td class="diffpresent">.TH<span class="dp">·</span>&quot;unbound-control&quot;<span class="dp">·</span>&quot;8&quot;<span class="dp">·</span>&quot;<ins>Feb</ins><span class="dp">·</span><ins><span class="dp">·</span>8</ins>,<span class="dp">·</span>2025&quot;<span class="dp">·</span>&quot;NLnet<span class="dp">·</span>Labs&quot;<span class="dp">·</span>&quot;unbound<span class="dp">·</span>1.22.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">.\&quot;</td><td class="diffline">2 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>unbound-control.8<span class="dp">·</span>--<span class="dp">·</span>unbound<span class="dp">·</span>remote<span class="dp">·</span>control<span class="dp">·</span>manual</td><td class="diffline">3 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>unbound-control.8<span class="dp">·</span>--<span class="dp">·</span>unbound<span class="dp">·</span>remote<span class="dp">·</span>control<span class="dp">·</span>manual</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">.\&quot;</td><td class="diffline">4 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>Copyright<span class="dp">·</span>(c)<span class="dp">·</span>2008,<span class="dp">·</span>NLnet<span class="dp">·</span>Labs.<span class="dp">·</span>All<span class="dp">·</span>rights<span class="dp">·</span>reserved.</td><td class="diffline">5 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>Copyright<span class="dp">·</span>(c)<span class="dp">·</span>2008,<span class="dp">·</span>NLnet<span class="dp">·</span>Labs.<span class="dp">·</span>All<span class="dp">·</span>rights<span class="dp">·</span>reserved.</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">.\&quot;</td><td class="diffline">6 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>See<span class="dp">·</span>LICENSE<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>license.</td><td class="diffline">7 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>See<span class="dp">·</span>LICENSE<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>license.</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">.\&quot;</td><td class="diffline">8 </td><td class="diffpresent">.\&quot;</td></tr>
+</table>          </div>
+          <div class="difference">
+            <div class="diffheader">
+            <div class="diffcontrol">⊟</div>
+            <div><span class="diffsize">311 B</span></div>
+            <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-control-setup.-.gz---stat---"><span class="source">stat {}</span>
+              <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-control-setup.-.gz---stat---">¶</a>
+            </div>
+            </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 7 lines modified</td><td colspan="2">Offset 1, 7 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>Size:<span class="dp">·</span>978<del>8</del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">»</span>      Blocks:<span class="dp">·</span>24<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>IO<span class="dp">·</span>Block:<span class="dp">·</span>4096<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>regular<span class="dp">·</span>file</td><td class="diffline">1 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>Size:<span class="dp">·</span>978<ins>6</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">»</span>      Blocks:<span class="dp">·</span>24<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>IO<span class="dp">·</span>Block:<span class="dp">·</span>4096<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>regular<span class="dp">·</span>file</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Device:<span class="dp">·</span>0,31<span class="dp">»</span>    Access:<span class="dp">·</span>(0644/-rw-r--r--)<span class="dp">·</span><span class="dp">·</span>Uid:<span class="dp">·</span>(<span class="dp">·</span>1000/thehedgehog)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Gid:<span class="dp">·</span>(<span class="dp">·</span><span class="dp">·</span>100/<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>users)</td><td class="diffline">2 </td><td class="diffpresent">Device:<span class="dp">·</span>0,31<span class="dp">»</span>    Access:<span class="dp">·</span>(0644/-rw-r--r--)<span class="dp">·</span><span class="dp">·</span>Uid:<span class="dp">·</span>(<span class="dp">·</span>1000/thehedgehog)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Gid:<span class="dp">·</span>(<span class="dp">·</span><span class="dp">·</span>100/<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>users)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">Modify:<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:01.000000000<span class="dp">·</span>+0000</td><td class="diffline">3 </td><td class="diffpresent">Modify:<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:01.000000000<span class="dp">·</span>+0000</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>          </div>
+        </div>
+        <div class="difference">
+          <div class="diffheader">
+          <div class="diffcontrol diffcontrol-double">⊟</div>
+          <div><span class="diffsize">851 B</span></div>
+          <div><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/A/share/man/man8/unbound-control.8.gz</span> vs.</div>
+          <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-control.-.gz"><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/B/share/man/man8/unbound-control.8.gz</span>
+            <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-control.-.gz">¶</a>
+          </div>
+          </div>
+          <div class="difference">
+            <div class="diffheader">
+            <div class="diffcontrol">⊟</div>
+            <div><span class="diffsize">362 B</span></div>
+            <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-control.-.gz---unbound-control.-"><span class="source">unbound-control.8</span>
+              <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-control.-.gz---unbound-control.-">¶</a>
+            </div>
+            </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 8 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">.TH<span class="dp">·</span>&quot;unbound-control&quot;<span class="dp">·</span>&quot;8&quot;<span class="dp">·</span>&quot;<del>Jan</del><span class="dp">·</span><del>27</del>,<span class="dp">·</span>2025&quot;<span class="dp">·</span>&quot;NLnet<span class="dp">·</span>Labs&quot;<span class="dp">·</span>&quot;unbound<span class="dp">·</span>1.22.0&quot;</td><td class="diffline">1 </td><td class="diffpresent">.TH<span class="dp">·</span>&quot;unbound-control&quot;<span class="dp">·</span>&quot;8&quot;<span class="dp">·</span>&quot;<ins>Feb</ins><span class="dp">·</span><ins><span class="dp">·</span>8</ins>,<span class="dp">·</span>2025&quot;<span class="dp">·</span>&quot;NLnet<span class="dp">·</span>Labs&quot;<span class="dp">·</span>&quot;unbound<span class="dp">·</span>1.22.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">.\&quot;</td><td class="diffline">2 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>unbound-control.8<span class="dp">·</span>--<span class="dp">·</span>unbound<span class="dp">·</span>remote<span class="dp">·</span>control<span class="dp">·</span>manual</td><td class="diffline">3 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>unbound-control.8<span class="dp">·</span>--<span class="dp">·</span>unbound<span class="dp">·</span>remote<span class="dp">·</span>control<span class="dp">·</span>manual</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">.\&quot;</td><td class="diffline">4 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>Copyright<span class="dp">·</span>(c)<span class="dp">·</span>2008,<span class="dp">·</span>NLnet<span class="dp">·</span>Labs.<span class="dp">·</span>All<span class="dp">·</span>rights<span class="dp">·</span>reserved.</td><td class="diffline">5 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>Copyright<span class="dp">·</span>(c)<span class="dp">·</span>2008,<span class="dp">·</span>NLnet<span class="dp">·</span>Labs.<span class="dp">·</span>All<span class="dp">·</span>rights<span class="dp">·</span>reserved.</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">.\&quot;</td><td class="diffline">6 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>See<span class="dp">·</span>LICENSE<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>license.</td><td class="diffline">7 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>See<span class="dp">·</span>LICENSE<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>license.</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">.\&quot;</td><td class="diffline">8 </td><td class="diffpresent">.\&quot;</td></tr>
+</table>          </div>
+          <div class="difference">
+            <div class="diffheader">
+            <div class="diffcontrol">⊟</div>
+            <div><span class="diffsize">311 B</span></div>
+            <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-control.-.gz---stat---"><span class="source">stat {}</span>
+              <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound-control.-.gz---stat---">¶</a>
+            </div>
+            </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 7 lines modified</td><td colspan="2">Offset 1, 7 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>Size:<span class="dp">·</span>978<del>8</del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">»</span>      Blocks:<span class="dp">·</span>24<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>IO<span class="dp">·</span>Block:<span class="dp">·</span>4096<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>regular<span class="dp">·</span>file</td><td class="diffline">1 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>Size:<span class="dp">·</span>978<ins>6</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">»</span>      Blocks:<span class="dp">·</span>24<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>IO<span class="dp">·</span>Block:<span class="dp">·</span>4096<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>regular<span class="dp">·</span>file</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Device:<span class="dp">·</span>0,31<span class="dp">»</span>    Access:<span class="dp">·</span>(0644/-rw-r--r--)<span class="dp">·</span><span class="dp">·</span>Uid:<span class="dp">·</span>(<span class="dp">·</span>1000/thehedgehog)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Gid:<span class="dp">·</span>(<span class="dp">·</span><span class="dp">·</span>100/<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>users)</td><td class="diffline">2 </td><td class="diffpresent">Device:<span class="dp">·</span>0,31<span class="dp">»</span>    Access:<span class="dp">·</span>(0644/-rw-r--r--)<span class="dp">·</span><span class="dp">·</span>Uid:<span class="dp">·</span>(<span class="dp">·</span>1000/thehedgehog)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Gid:<span class="dp">·</span>(<span class="dp">·</span><span class="dp">·</span>100/<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>users)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">Modify:<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:01.000000000<span class="dp">·</span>+0000</td><td class="diffline">3 </td><td class="diffpresent">Modify:<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:01.000000000<span class="dp">·</span>+0000</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>          </div>
+        </div>
+        <div class="difference">
+          <div class="diffheader">
+          <div class="diffcontrol diffcontrol-double">⊟</div>
+          <div><span class="diffsize">469 B</span></div>
+          <div><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/A/share/man/man8/unbound.8.gz</span> vs.</div>
+          <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound.-.gz"><span class="source">wdx4r84hsd6r27pw98ryw79xnwh006w1-unbound-1.22.0-man/B/share/man/man8/unbound.8.gz</span>
+            <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound.-.gz">¶</a>
+          </div>
+          </div>
+          <div class="difference">
+            <div class="diffheader">
+            <div class="diffcontrol">⊟</div>
+            <div><span class="diffsize">307 B</span></div>
+            <div id="wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound.-.gz---unbound.-"><span class="source">unbound.8</span>
+              <a class="anchor" href="#wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man---wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man----wdx-r--hsd-r--pw--ryw--xnwh---w--unbound--.--.--man-A-share-man-man--unbound.-.gz---unbound.-">¶</a>
+            </div>
+            </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 8 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">.TH<span class="dp">·</span>&quot;unbound&quot;<span class="dp">·</span>&quot;8&quot;<span class="dp">·</span>&quot;<del>Jan</del><span class="dp">·</span><del>27</del>,<span class="dp">·</span>2025&quot;<span class="dp">·</span>&quot;NLnet<span class="dp">·</span>Labs&quot;<span class="dp">·</span>&quot;unbound<span class="dp">·</span>1.22.0&quot;</td><td class="diffline">1 </td><td class="diffpresent">.TH<span class="dp">·</span>&quot;unbound&quot;<span class="dp">·</span>&quot;8&quot;<span class="dp">·</span>&quot;<ins>Feb</ins><span class="dp">·</span><ins><span class="dp">·</span>8</ins>,<span class="dp">·</span>2025&quot;<span class="dp">·</span>&quot;NLnet<span class="dp">·</span>Labs&quot;<span class="dp">·</span>&quot;unbound<span class="dp">·</span>1.22.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">.\&quot;</td><td class="diffline">2 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>unbound.8<span class="dp">·</span>--<span class="dp">·</span>unbound<span class="dp">·</span>manual</td><td class="diffline">3 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>unbound.8<span class="dp">·</span>--<span class="dp">·</span>unbound<span class="dp">·</span>manual</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">.\&quot;</td><td class="diffline">4 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>Copyright<span class="dp">·</span>(c)<span class="dp">·</span>2007,<span class="dp">·</span>NLnet<span class="dp">·</span>Labs.<span class="dp">·</span>All<span class="dp">·</span>rights<span class="dp">·</span>reserved.</td><td class="diffline">5 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>Copyright<span class="dp">·</span>(c)<span class="dp">·</span>2007,<span class="dp">·</span>NLnet<span class="dp">·</span>Labs.<span class="dp">·</span>All<span class="dp">·</span>rights<span class="dp">·</span>reserved.</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">.\&quot;</td><td class="diffline">6 </td><td class="diffpresent">.\&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>See<span class="dp">·</span>LICENSE<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>license.</td><td class="diffline">7 </td><td class="diffpresent">.\&quot;<span class="dp">·</span>See<span class="dp">·</span>LICENSE<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>license.</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">.\&quot;</td><td class="diffline">8 </td><td class="diffpresent">.\&quot;</td></tr>
+</table>          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 287
+</div>
+</body>
+</html>
+

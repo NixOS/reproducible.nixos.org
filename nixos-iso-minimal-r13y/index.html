@@ -2,7 +2,7 @@
 <head>
 <title>Is nixos.<wbr>iso_minimal.<wbr>x86_64-linux reproducible?</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="nixos-unstable's nixos.<wbr>iso_minimal.<wbr>x86_64-linux build is 99.84% reproducible!" />
+<meta name="description" content="nixos-unstable's nixos.<wbr>iso_minimal.<wbr>x86_64-linux build is 96.59% reproducible!" />
 
 <!-- Twitter Card data -->
 <meta name="twitter:card" value="summary">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://reproducible.nixos.org/" />
 <meta property="og:image" content="https://reproducible.nixos.org/nixos-rb-logo.png" />
-<meta property="og:description" content="nixos-unstable's nixos.<wbr>iso_minimal.<wbr>x86_64-linux build is 99.84% reproducible!" />
+<meta property="og:description" content="nixos-unstable's nixos.<wbr>iso_minimal.<wbr>x86_64-linux build is 96.59% reproducible!" />
 <link rel="stylesheet" href="../styles/index.css">
 <style>
 body {
@@ -34,23 +34,287 @@ And to find out why a derivation is part of the build closure, use:
 <pre>
 git clone https://github.com/nixos/nixpkgs.git
 cd nixpkgs
-git checkout 8dfad603247387df1df4826b8bea58efc5d012d8
+git checkout a79cfe0ebd24952b580b1cf08cd906354996d547
 nix-store -q --tree $(nix-instantiate nixos/release-combined.nix -A nixos.<wbr>iso_minimal.<wbr>x86_64-linux)
 </pre>
 
-<h2>1908 out of 1911 (99.84%)</h2>
-<p>paths in the nixos.<wbr>iso_minimal.<wbr>x86_64-linux build closure are reproducible! 3 paths remained unchecked</p>
+<h2>2551 out of 2641 (96.59%)</h2>
+<p>paths in the nixos.<wbr>iso_minimal.<wbr>x86_64-linux build closure are reproducible! 1 paths remained unchecked</p>
 <h3>unreproduced paths</h3>
 <p>These derivations produced a different result compared to the official cache, revealing a reproducibility problem. See the <a href="https://github.com/orgs/NixOS/projects/30/views/1">Project</a> for progress on fixing those, or <a href="https://github.com/NixOS/nixpkgs/issues/new?assignees=&labels=0.kind%3A+enhancement%2C6.topic%3A+reproducible+builds&template=unreproducible_package.md&title=">add an issue</a> for those that are not tracked yet.</p>
 <ul>
-
+<li><a href="file:///nix/store/d4jwbr0wg0ghyxzy3c0lxljb0w2zqb3h-jemalloc-5.3.0.drv"><code>jemalloc-5.3.0.drv</code></a>
+out <a href="./diff/5ea01c29ae595c8f9b70c61b5a76efb748420f6b6e5ab6feae91a71ad6f8cf4f-a96165486c0b286597838b945d594693ad4ec66316250dc7584e84ab32069177.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/ggxwsvddmnhgzp68xkh197x29d3yyi4x-unbound-1.22.0.drv"><code>unbound-1.22.0.drv</code></a>
+man <a href="./diff/35eb81a1e97f3414a27f18a2e849f2646bd68f4f9b490cbcacc9de0918df2d2a-f32ed734f47e3ab6ac2e680e99d01224ca239fede3f91c047e570f9e71b4324d.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/1r127wq05y0pm5gac8666n2vaw3lw6m7-gettext-0.22.5.drv"><code>gettext-0.22.5.drv</code></a>
+out <a href="./diff/9e9d9ef593bf95627955d8a5a062ec28c9bf6b1092f19993c49dd76c14de6f5e-3981fe1f88641dcf5945b1bfea6ede3a99ef6f54a89937c56f36b8483f2458d4.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/9n5hi4ckgcrw9arvagglwnj984wl6gmm-HUnit-1.6.2.0.drv"><code>HUnit-1.6.2.0.drv</code></a>
+out <a href="./diff/838c4693e0bfeecb627675fa433eb0177add5d815f7818dfd29449b6f756d3df-baaca08ef13a417c9c3986b4c13ffbde6f4bcb079c76bf5a67a1b085bf43b8e6.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/rcvdrnv738776b197r6h093hzssxzq77-doctest-0.22.6.drv"><code>doctest-0.22.6.drv</code></a>
+out <a href="./diff/347e85a1723bd992f63e618811157b124404353a562617b1c0390688f0182367-e3b77282a568bd1169afa61f5e24a7482673ec6eb1cc3a7f119cd43e873333bf.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/6klkmbs13lnx4qmp31zxl4ak9csmnqaa-hadrian-9.6.6.drv"><code>hadrian-9.6.6.drv</code></a>
+out <a href="./diff/549f189ad3c9175af4ff32feb5139fd63f5059867a55a5f16851891f7ed9cdb8-b244240dbabc6e5b67b701da3a37d97b72fafc8091943dd80f7206e1cafd60a2.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/asrlaqjx8zqgja4nvf3p0b4kmhpwhxzn-haskell-lexer-1.1.2.drv"><code>haskell-lexer-1.1.2.drv</code></a>
+out <a href="./diff/c5a7ee834b2e7675c809468168c8b4cfdc8c47f7ea46fcee3974d10e4240b623-71f64ce58a88dcead5ec5c7b47d91630d6a19c249c45a5235e5331b3716e4f1e.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/crplvgh2l838qpvsaaqa49lv6mf0402z-regex-base-0.94.0.2.drv"><code>regex-base-0.94.0.2.drv</code></a>
+out <a href="./diff/ab1951ad1278e0d9be5745c5973208d6c029659e6d95282ce1602f495c1177aa-3ff4271bf2025fe275191fd190ac62183d5633a769d503083e14b6df4e5755ac.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/llhvlyfn8ml4hmisfnvzcz54bkrpabb1-contravariant-1.5.5.drv"><code>contravariant-1.5.5.drv</code></a>
+out <a href="./diff/3aa7195b82737929092023ec21a399484a95df4e2ba7c0ea026413b7598c1eb0-c6d57c7c0ed56bbdc5f5604c9ae7643cac9e89975bfb106d2f85964088ccf56d.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/6879ay6n8ik284bxa2wvbwsdms6v5zg9-base-compat-batteries-0.13.1.drv"><code>base-compat-batteries-0.13.1.drv</code></a>
+out <a href="./diff/2bd2cf9fc5af095e7af04c44021255c487f724434a9171e47acaaa6c4c110277-1a0afbed76ea505a5a21edff9365cfa75040b427744773053c9be9bd62d7cd09.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/0zfzpckn93k8q36lsagb7q4yk1v4gbgc-tagged-0.8.8.drv"><code>tagged-0.8.8.drv</code></a>
+out <a href="./diff/1ce04c4f2d181a091979c69ec58d22bd0adfeb06a1d807fe7b5ba23c88ef6d7c-2099cbdacae1e8ecaf3934aa1505abaefdb8b1cedb03dc3d6dc952bbb27e9142.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/4fjwp2hm11qjgla1x6i91cclif8zf06h-indexed-traversable-0.1.4.drv"><code>indexed-traversable-0.1.4.drv</code></a>
+out <a href="./diff/44344bf26b8bfd169f824a6baade1f0b9ed819c56e24efd83fe7333096dc1b34-f347c06016a77b2ea5a85ff4c0e447b2ca2e471a351a501e1211d47487332e6d.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/vy0dlmcixy78d1dx1ig6m9wbapy6jra1-hspec-expectations-0.8.4.drv"><code>hspec-expectations-0.8.4.drv</code></a>
+out <a href="./diff/b7543aa0574fb00035e69fc6d82d3277c344660e69439d4dcfa3b6c395203c8a-fd9b14a85ee0990c3034b85de71bb673414d046ded297dce7145f17976426d83.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/k7vlnvwr9rjd8ljim4kzay9ip3jcd0kd-text-short-0.1.6.drv"><code>text-short-0.1.6.drv</code></a>
+out <a href="./diff/e9a60bba969be42ed50a18b5d33ddb728cf774178c7fde21ff77bdeb2a1b385e-078f2cf050511feb6d8f4dd34d6b2a86f8ec76eda49fc9641040aa6634535d06.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/z4ss4hgbxjmdsn51wm9w1bq1xfg8gqqa-generic-deriving-1.14.5.drv"><code>generic-deriving-1.14.5.drv</code></a>
+out <a href="./diff/a24bcd6afabcae38da893edf1991bcf2580a427cced7a82839fd92e8d48a0727-3e8ab6b1dd1a80a98d21aabec0274baa3af0969c536fd22047e92b78d869ab13.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/f85v1rg5bbi4k65vvw7bh5fhccl16kza-Diff-0.4.1.drv"><code>Diff-0.4.1.drv</code></a>
+out <a href="./diff/cf25a2526f7350fa3a607111850b1ce1bc1f6031830f55372ec10937346d28f0-2275949a4959d7f5f7df924d1f1d3e01ffc42d8bf7c48ce1e371502de125723d.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/swigsvl6s5zbkdj43vwhahm89jdz55fi-code-page-0.2.1.drv"><code>code-page-0.2.1.drv</code></a>
+out <a href="./diff/bca05ec2c6d72fc4f7191cbbc8b4792dd5f37e1d2cb70aaf4a5e63749762a9f9-2cdaeffcffb07113116563a7bfdbed30fcb8f1917e1b08d2226765f5d19b8092.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/8lhx6nv54kvcx6n2lwg35lisffl2hmnj-unliftio-core-0.2.1.0.drv"><code>unliftio-core-0.2.1.0.drv</code></a>
+out <a href="./diff/01329b62357a8e2a7d90d08633ddc0b8a757fddc701a63783663ed4f8b09f930-01650295054ee0762b7a13e07ac1a73124bada7ea3745cd4c455ebcd4d6a2316.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/5m2xmrggq83404pr750z0wq57r7q2893-splitmix-0.1.0.5.drv"><code>splitmix-0.1.0.5.drv</code></a>
+out <a href="./diff/5c03aecebad5606d454df201fda2b405f4207fa5f1ec2edebd357936d0cda1a9-db7403063346f5eaa6fb8d930173808957bb69e0e893b07f32bcfa54b9cfe657.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/2jk8d6750v1w6sbnd4c9i5fynz1s8vqk-tasty-inspection-testing-0.2.1.drv"><code>tasty-inspection-testing-0.2.1.drv</code></a>
+out <a href="./diff/acd717003c09e5d033189bcf43a9c86e2410b5814ed8e60b8c46d43f4ea0993f-8d49a6ff180eabf085a03563816b09540bd7b7846e0ea1a3462d3a70933388f3.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/qkr0s4crh6mk2j9pfw4jfzp76w4pn3vn-integer-logarithms-1.0.3.1.drv"><code>integer-logarithms-1.0.3.1.drv</code></a>
+out <a href="./diff/2ce68b515b90f3a912e51064b2c66ffd8d34d4447e084d5782ac1682965a5ac6-a2b5860b4ef79525eaeb45ac8aab0c2ffb5477300d8912c7e724d6795ec909b9.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/pqg6lv740sc9a2qvm3c678vnmczhr81l-these-1.2.1.drv"><code>these-1.2.1.drv</code></a>
+out <a href="./diff/3448dd35a38a9ebf0d0c8fd83cebbfff4998f4092051c88ec3bb0857f6d1dd97-78e1fe233c548ebe1ebe97bd15cecdadac95cd6dffec19f2e32bd6fc867f2d80.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/g9vkr8179pjlwa7k8mq446r020w67jqs-fgl-5.8.3.0.drv"><code>fgl-5.8.3.0.drv</code></a>
+out <a href="./diff/10e9576dec7a38f88b230ae49c240ec137f7a228ff363674550553febcd28a78-33d41a2c3c1fb52fee7b24e25b152a1bb00d1d6f5280dcb6fa8d6b385d714975.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/1xqxjmpm1xafvnb8gixss5246yy8s7a9-hashable-1.4.4.0.drv"><code>hashable-1.4.4.0.drv</code></a>
+out <a href="./diff/3057cc0de45aa6f12f42065dc0069fd6f913df8ca97776f42e62c40df9d8b0ee-2c2aa376e8e73faa4faefaa0bdc6873b5941d9311a1881ca6dd869e05ba9ff11.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/6m29aa5hcz0085dxzn6nv2kbnvnnrcqy-hspec-discover-2.11.10.drv"><code>hspec-discover-2.11.10.drv</code></a>
+out <a href="./diff/3ea49fc3bb98b3ccf7c81ada7f9387836241931eb0984861999de71060e98e43-da627e29958546554367e24bbc2793aae1af333a78a023bf441beae6e0d82958.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/xm17i7lw1igrz6xhdvh9ja5ncf8bhdk0-regex-posix-0.96.0.1.drv"><code>regex-posix-0.96.0.1.drv</code></a>
+out <a href="./diff/9a3a7d36fc62a3ac794fb1c6195d3376129a7670768494ea8f7a04358c0cf47d-7a5f4c378a34603499f798101a604ba6c8cb059de02aa5c7ca578c3e6a6bbb4a.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/dlfv0zxqp9pi5wb0qp8n2mpdh00lrx06-os-string-2.0.7.drv"><code>os-string-2.0.7.drv</code></a>
+out <a href="./diff/e0c9d131b939262a8b88baa2b8c4a2fd7d7ad4cec93dc6bb1f424a1e4183b25c-70d03b81fda40d11564f4bcc5ce3bb8198415f8582c484ac52e22fd7e9ca3643.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/ja0klfxbkz2lddfaa44az8d3n29d9swv-comonad-5.0.8.drv"><code>comonad-5.0.8.drv</code></a>
+out <a href="./diff/7504b6429796ff6e4212ab205073023d27bf2ad0a2261ffe72903bd787f0434e-39ea3d9c5a9625e6c12ca7a65a241b06a73bffc09aaaa9463b20702076f4b05e.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/q21lfid2hz9xaz687hxggzjbap4vsxy2-shake-0.19.8.drv"><code>shake-0.19.8.drv</code></a>
+out <a href="./diff/9f4ae21f272cbce24695baf0a8aa755fdf9ca6db21a489fcfb6cc6c7225620e1-a3d08803a594583e2eff3412314ccb40ccecc8492cee1c4c5fa71cf41ef9c211.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/516p6arnjsiilcd406xj0i31pifxfkxn-os-string-2.0.7.drv"><code>os-string-2.0.7.drv</code></a>
+out <a href="./diff/45ea5c4f186ddac74bad10cedc3085de8cae1a653b06e42ae94187d6425f0cfc-0a6237dc21340d9c873c987b4719ee3c06362921fc47277c85cb7b07ce03b1ed.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/1akw1cfbi6bl3644hk3v0h4cqlcgs55h-quickcheck-classes-base-0.6.2.0.drv"><code>quickcheck-classes-base-0.6.2.0.drv</code></a>
+out <a href="./diff/b2f059deb71d923788a2e70a670ac2b9ef0d59dedcd7177aa0b3f2e0cb0399ff-eaa46c51da3f4d89b861d55f537aa9a42c90ad722197561981b271c6871be23e.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/4k4pgjrycnpkrs8720vpsimgpb44mwk6-splitmix-0.1.0.5.drv"><code>splitmix-0.1.0.5.drv</code></a>
+out <a href="./diff/083e6f696abddf1b63716580e763c8d3d06680265141c8ec0a9f8605e9deeb1f-2042a0843932b699e8b4cf34af4d618e49cc9932f0d30f1a2e2c7659ec1e5c67.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/ga941389iapw3az77zfpi630ygkhf3qf-quickcheck-io-0.2.0.drv"><code>quickcheck-io-0.2.0.drv</code></a>
+out <a href="./diff/c491266de9235e7ad5b50a2e60a194acaad58044c0c1f0f6618fc2eeb70b4f09-25fe801a89654a6af0c64120b05690694ea7f27965753d70f6f58595e80c2cfd.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/hbfj4libyhcg6aqww994aks6xcsxjcg8-gettext-0.22.5.drv"><code>gettext-0.22.5.drv</code></a>
+out <a href="./diff/26d81cdf1fce24d484c49f307264889765de0cf9597267f5a9e835180a909f31-833329637ba7c3c713b3af203563f08878e20730c0bdd008af5ddba61ed7aa9d.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/383fvz7f9s66jgcd6akhk134z9szvkf1-smallcheck-1.2.1.1.drv"><code>smallcheck-1.2.1.1.drv</code></a>
+out <a href="./diff/55e286179ee6791543654ac66dd58240bb9ac81b12050eecd547474c63808ac3-8cc65811179c605674c8b7710bb29ca9cfa32e0c5c35fdda2e3ab663c905a719.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/d97s7jqwcnv4kmpcnxq2rmq3rlk4gx1z-OneTuple-0.4.2.drv"><code>OneTuple-0.4.2.drv</code></a>
+out <a href="./diff/75c063489240059bbf384056be15e7daa8478564ebfa9bef27424ba911b48c87-28837aaa5f889271bebd82d397709b85c3a4dd66f7068878bb47cb58c0044297.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/4zcgjqs0wj26fkkrvqzl14106xdp2b2g-attoparsec-0.14.4.drv"><code>attoparsec-0.14.4.drv</code></a>
+out <a href="./diff/b50ecb8f0c87a0ae045c38babfb7fa7939dac4070166a7a0979cb8072df53fd5-14f6e4fc92d98e1bc921bc8e4cccc4961fe63d8b9398303625ff82fb0543d0d3.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/39jrppgx1slxiarh9145dhwyf77j56k3-semigroupoids-6.0.1.drv"><code>semigroupoids-6.0.1.drv</code></a>
+out <a href="./diff/230b54f2f120827a6c35b9a6f6984ed814edca7ea91aecfaca6b6c98793f4fd8-c4f3d7d8bf32accb9762da832c7f4ce3dfdb7de61a5728a519a436ca2d5361cb.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/bmfbdh3kkj8b39nyr1dbngig2b2dfqsn-happy-1.20.1.1.drv"><code>happy-1.20.1.1.drv</code></a>
+out <a href="./diff/590e5fff6c7d7b7fd70c882299ca0d20e288e3b99513cf6051680d2e3ad08f08-ea63c8790da3bc3f7c867f5d2b3db5cc815c7d66fe7ddef181df740704de78d5.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/4dams7zfjrkrp1s7s2h5ghhywhhh98q5-optparse-applicative-0.18.1.0.drv"><code>optparse-applicative-0.18.1.0.drv</code></a>
+out <a href="./diff/3029fc683b45ed4e229f56d879fdbd00ca00302357a490a4813a44e81aa25e23-53f0022e4616cfa6c90e46bbea59e053d11c2c9ac1b2554a41e9fac36eb994b7.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/6jskbcvq2h6fxxn5wr02302c0y0h5qn1-tasty-golden-2.3.5.drv"><code>tasty-golden-2.3.5.drv</code></a>
+out <a href="./diff/5c1fa4d6a443374fce10dd3d680d047d3d35a6fd47f375ea248c8ebb2d4f53bd-45cca5d385d0a839d0ba467934ce01f8969a3947943d40656dc2a435359170bc.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/216z4rjrbrvwpyp2saxgvhsvrgw3r5h7-hscolour-1.25.drv"><code>hscolour-1.25.drv</code></a>
+out <a href="./diff/7fd5aa5997ef194572c5887cce18a217dbeaac883a3d42e773df4727aef8d77a-985d4539b636edcbaf41b8fb88daa940a62009128689bf172b20b7339d70198e.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/8bwgphr6ap3vm1fbvdf5a6l7p5mm8slr-ansi-terminal-1.0.2.drv"><code>ansi-terminal-1.0.2.drv</code></a>
+out <a href="./diff/15a6fe6df6d8eaacb27b7641f8c54f1a07432032103b66522331252095c57d63-572244b6f6d1d4cccafd79b881e0675ef62f1d19a850224f15ec9dff2b6f4b06.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/wisqps14ln43fpmlhcdv3597f9iaspxk-transformers-compat-0.7.2.drv"><code>transformers-compat-0.7.2.drv</code></a>
+out <a href="./diff/4922157f4986fa17be7b3dbaefc335fdff93b4f2e96cefab5ab3616289ecb318-48e9b63fd99a704a8c4626c1cdd4992adcdd47e83d59547f620b8c6e0bdcdd2e.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/rm5mzcmbmj4j351hhavbpia1yh751fy1-strict-0.5.drv"><code>strict-0.5.drv</code></a>
+out <a href="./diff/635ad5a00416583fd0d057f81f3425c139d0dcf20b835c247973d203cc5c1bca-b562e3c7b97a66abca0ae3aed0dfd65ab0eb769843262712b51ddb7fcb052755.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/zdj7cx2jzg55kzqhkxkmgika3plgqjxf-base-compat-0.13.1.drv"><code>base-compat-0.13.1.drv</code></a>
+out <a href="./diff/1d4354afa55e920a72b9eec594e573d1ee4a81e22009d07983a1f6274fb1329e-bc4b946e0aac1a70834e8195411d1bc3f6c622036494b9365d20ca9357e76190.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/ran131w2157ayzkymccx1jhnjrmcb66s-prettyprinter-ansi-terminal-1.1.3.drv"><code>prettyprinter-ansi-terminal-1.1.3.drv</code></a>
+out <a href="./diff/7530030b699f71e2d65fc32e1bab72a6248710d10d9d29d423fe4af48bf0bcb8-a8ff9d9088655978e1de0c575353eed2a48b6c67c6fd17c39ad842c5121a13e0.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/hvydn2dibs26kclhxcfq5s03nh194iyv-vector-0.13.1.0.drv"><code>vector-0.13.1.0.drv</code></a>
+out <a href="./diff/014e2effab0684b4c7b46857d46f8389fb3cfdd75fc7c8191fd1059cb0b740b5-5bdef1920ff324c0c0bab6c781d0c6900cb130506e891a8b694f0ea27c23ec6a.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/bb9ls369cx5jvl26ipj6syvjpjy2dif5-syb-0.7.2.4.drv"><code>syb-0.7.2.4.drv</code></a>
+out <a href="./diff/5d8660b205362f9aab7741522bcfd55c927a884bcd4bfca5932efdc850df91bd-8b633e62988f6beed79eb560390ae4078d09b384ae6886a3550257b98282c991.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/b2rphabm3fi8caxl536zvw54v112j73x-extra-1.7.16.drv"><code>extra-1.7.16.drv</code></a>
+out <a href="./diff/d0b651ad41447267c23a769b5afad820bd0c56bbfc5627f3787547e7fc44aa36-3f74667ede269949ec2b92eb668bbc240a2c9b94953d367d02761d95b8a81f0e.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/1clbqirixy6lqkrb64zhp370l7ljhhgw-colour-2.3.6.drv"><code>colour-2.3.6.drv</code></a>
+out <a href="./diff/9662c8f029413a0a23c1d85e1be4d1da1b0d9b2c0b8cc3a7de833e0006914885-a45c6006ca41b3791b7dec3ffc4e1756d67ac5d4ec63616a6530189e60641b8f.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/h80sq4jnyxpizm4ink9hgqac0npimly0-aeson-2.1.2.1.drv"><code>aeson-2.1.2.1.drv</code></a>
+out <a href="./diff/36524f6eb92e928794e55067b3acf60929f80e7dea0b22eb1729fd608e35c1ec-2fc2d44e051b80641885bd29a4bbd276c3931b98b8d56815c440c5101ace1354.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/q0m66vaz7aplfl7frkcv7bpwwi4x5y18-ghc-9.6.6.drv"><code>ghc-9.6.6.drv</code></a>
+doc <a href="./diff/579de7523685921c0e519c0adb06ec5ca1008aadb96b7cac52ab6f951a26d017-c0d99580275fd844d711db8a3d2c75767e794ef12045a44815f42a354c3a34fa.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/i8mdnl1ghg1ybf2b9sbcnnwvs4fib2lx-call-stack-0.4.0.drv"><code>call-stack-0.4.0.drv</code></a>
+out <a href="./diff/33e54e2d385f3a12f82e0ebdf01622178bc1c654cceef42f87f8732bbf421e0b-87bd322ab2c00152615a87fcb47fec01d3732244ebd2432877da76740d24334a.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/37m3b413nmsj62hb4xb85fp4gmlmdsrd-filepattern-0.1.3.drv"><code>filepattern-0.1.3.drv</code></a>
+out <a href="./diff/67973f28d03d8d8d7b560db37250adc7e0ea839a72c53385a6f2f9971304cd3d-fe7b417f41eee1c095d46b82210e6da04f73400e68061723b51bb0cbbd825b4a.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/nl7hji239vmzik132bxbr7i81ap0jb4f-hscolour-1.25.drv"><code>hscolour-1.25.drv</code></a>
+out <a href="./diff/a4c680dd09ca9781c134eea48f1085275b8f603f1889ef4192fb43dd87114609-3536696e747fbbbb5e684d7f80de60097ae9e4c3a9d4099d3f43343f1822d96f.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/f1x9rg4b9ximqngg7m4rxfkw8hdqixa8-case-insensitive-1.2.1.0.drv"><code>case-insensitive-1.2.1.0.drv</code></a>
+out <a href="./diff/f617ef0cd7ee17f87aabfca4a47e803fc310a316130227b5331fc8d3e3162bbf-d8e53b20378c357c11dc701649993a32031ade620983d4c7df9ca430fe60cfb5.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/iwsyqv2bv39kghjfcg6mas3pihb600hw-hspec-meta-2.11.10.drv"><code>hspec-meta-2.11.10.drv</code></a>
+out <a href="./diff/d70a9252fed28308be1ac92c641abadaea51d90e5d34f5468e07765209b88266-93b221d2db80279c74c63b08d389127f4410d13321f0bb9715c00edc54b64639.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/fm1d03zxb9p8whd8jhhhvsxqdrd7ifi7-tf-random-0.5.drv"><code>tf-random-0.5.drv</code></a>
+out <a href="./diff/b2e48030318724bde464aa9b1e1da6ee55f0c8626e7b1fcd6a65f5a95e707605-1d24dd904a9577e570e9bb1054846f753524d2e12d9f5ba3318cab4de75f6523.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/v4r012g6318cfmahdnzddjxsn5i8qrc4-prettyprinter-1.7.1.drv"><code>prettyprinter-1.7.1.drv</code></a>
+out <a href="./diff/59c5222200d10b1e085cd3cea02ef9fe4140380134f8332520a1a052ac5f88b5-89c69d28d904a095f452fb076c4dedaf203d0a324aef8c10a50dc362fe51ca44.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/r4hyjfi4pzcmfyrpb1ipdbiib5zijp3d-bifunctors-5.6.2.drv"><code>bifunctors-5.6.2.drv</code></a>
+out <a href="./diff/114f190ef50cb37c6f06335a93044368b08e1136cca15ff022b9ccf9a0b1971c-73bd15cd48e8034b250ab9160a540926c542e7f3f9133ca284f9c3580d74a3f6.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/jk38kjrm5b07qky782d2jxdyqshmr1ma-logging-facade-0.3.1.drv"><code>logging-facade-0.3.1.drv</code></a>
+out <a href="./diff/00bfb499e68d146144be5ae8505795ef74e8338cf1b472c13dafea9b0893c580-b01be3a5e25806bfd618b3b6638840c20c80568582db1105c90c9e08759cb747.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/9whnk0mlw17zwmsifafss6cjrfkwfxp7-th-abstraction-0.5.0.0.drv"><code>th-abstraction-0.5.0.0.drv</code></a>
+out <a href="./diff/8a4c1a911fcaab81a6ed9c1bb785f9a921ba78f24126d9d28a21a75d5a98ad77-04e68a74ff14a7dff3b81595755b6dfcc8bd93df2a73e0e30edaa144c9ca3f93.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/0pj2g14c99f3zr4lx1xy86p5zkrwaysa-utf8-string-1.0.2.drv"><code>utf8-string-1.0.2.drv</code></a>
+out <a href="./diff/96ca7a96b7c3e65ebf94161d673f94c93533e783cc83df41df1dddb521945d3f-2007dc7782a19094819e46a7833675ff5b1e991d9de63d43b0ec73db25f0096d.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/zabk4b0cpw1h8fmzyb5cddaq781pnjj5-tasty-1.4.3.drv"><code>tasty-1.4.3.drv</code></a>
+out <a href="./diff/7fb6820042cc5f5fd449a22eb4d6254855f4e6307f2feb9b9bfc7b7f3d3b0453-634f691d982f206db26f0e848588215911eb26595bbca70183825f1e909df10e.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/3r9kffzm063lmjrrwdgw7afglfbwhhax-quickcheck-instances-0.3.30.drv"><code>quickcheck-instances-0.3.30.drv</code></a>
+out <a href="./diff/a102c6268261ee41c947c7693df57f2ec0102384f1062b51b639e89fa0649a13-2b6efea16f85b4f87686d8f82074c5b3247a98285adab3cfcb6b6e673e368bee.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/3rgz9ak56fa38ssv5wipap3pj08hr18l-nanospec-0.2.2.drv"><code>nanospec-0.2.2.drv</code></a>
+out <a href="./diff/75f04abedf24d0810a6293efc84277704feec8fd38e35a69ffc1e2bf6522a5d3-78a2f2fa25e44b93e5785e6ce2b6eed78ff57d42473c6232fb40a40e082badae.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/gnvvqg05296lrli2mfw3pvzm47f8ygda-alex-3.4.0.1.drv"><code>alex-3.4.0.1.drv</code></a>
+out <a href="./diff/a21ac2c4d6086e1bc8dd2b50f11d1714ccd2d2087f51db2212ffbbe6650c0578-37b62ee25429c3ffc326e6b0f7c0ad15db6f0288b81783ede8e545bfbb161d53.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/27fmzc0jjzi5jm5srdyysb479iwjyf99-unordered-containers-0.2.20.drv"><code>unordered-containers-0.2.20.drv</code></a>
+out <a href="./diff/87e833460a6b2113b4d39187a5294255c97c1745716f2c232b3554d87f577d13-1f1bfe9811fd54ab7d1dd2574eecb9c845d645266e4b4187ae04cd53d7697ce4.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/jsankr4vnm7b81njx82p498dvxyhzwbm-ChasingBottoms-1.3.1.15.drv"><code>ChasingBottoms-1.3.1.15.drv</code></a>
+out <a href="./diff/22494f1b84703b959d7b4f9892b386eb835af0c3891a614cc9b0edfa91dd0b9d-5dbbe4fe5499374ee747f41340615c34e8d8565ce83afdf0e8324f02e612f4be.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/rprdcn6ypnzvk4f74m0135y9p80v5ny1-dlist-1.0.drv"><code>dlist-1.0.drv</code></a>
+out <a href="./diff/4ce4d7206e5cbe8892ab00742ff7399fe7d6c546ba4d1cfcd4fb16bd145d356e-1e6223f13cf4e7f199d9535ed2c94761a3c7116b71c0f5d45d9233437eb0a51a.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/d1hbpxpfq0jamsa6y4va3l40bgfgfwj2-QuickCheck-2.14.3.drv"><code>QuickCheck-2.14.3.drv</code></a>
+out <a href="./diff/a4bdb542aea6586e23bfc9a02426872b87240f1f122708fc22b1e150ee55b9eb-6b1f34ff7138dd411a23b655ed1d8465df9dd27cddf633d2d65ba69e0227a897.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/f3vkh3w011ldc2hr8hdw414zm2dhkkw9-regex-tdfa-1.3.2.2.drv"><code>regex-tdfa-1.3.2.2.drv</code></a>
+out <a href="./diff/611b3678f6ab956465e3d5df9f90c7ea0ae059387d748ce93a40b6a5d536bf21-9eac9a96f952a0376429f09ad2459840f7d31f11cea469085838bec8ac97cfb8.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/6qlrwlpa38772irhndq4sy7haifx063q-mockery-0.3.5.drv"><code>mockery-0.3.5.drv</code></a>
+out <a href="./diff/c1b1455ef87eadb63a0b2237a636139cb1ab55bfb87032bd09e4e4c0ac37a14f-b27d4eefc15303fe7bf6c14cbf09317d836ab54df2aab077431d3935fe280653.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/2jq30vi1lql9ajpfab3yd9rnyi3cb27d-typed-process-0.2.12.0.drv"><code>typed-process-0.2.12.0.drv</code></a>
+out <a href="./diff/4f43609ca1d35f1a2e6cd5f65aa167998ab9de0b6c793ba31532900fe1d1afa1-73d2e621f7d2276ed28578afbc2877903d71cc81ef99ef37b6fe178a7aecdd75.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/pd4l4qcilz48l050pmq83s0a29g15l0k-unordered-containers-0.2.20.drv"><code>unordered-containers-0.2.20.drv</code></a>
+out <a href="./diff/e608a28dbbcfe57aa7fe4fe3eca5cd45dde81290587fff933b2b71006655c110-84470e7decefdad7e2a728d59403d0bcee433e320338c3f01c459f7d23b5c394.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/wwbzbhmnq2jfbr0f4zp4l9xdzjp5gm76-hspec-2.11.10.drv"><code>hspec-2.11.10.drv</code></a>
+out <a href="./diff/92b28d4dee032e3def60ab6967de5fd48f8c6a5841413fb14881f90bc1f9d9e6-bf109fafbeb1d72b9d755d29730914060fe68f9a7ab2d468726933f3270575a6.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/07fr42qpzgg2rzn1wvyjpxbi8rd4v9yg-gettext-0.22.5.drv"><code>gettext-0.22.5.drv</code></a>
+out <a href="./diff/a6c5a76f32de595c184b90de594336a1197c1e3d6fe81863748a3b22f543e01e-6e13c1dae8186f5119f707a825d55b84279fc1a12c68be17e31b9848a89e510e.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/wd0rrg9fvksdw8yjfvjygnappfcfw8fq-xml-1.3.14.drv"><code>xml-1.3.14.drv</code></a>
+out <a href="./diff/456d90c6a0f46ac784dafb6ab24b7eb47a623342a312f67dae29f69b8ed8b45e-cd457b01765c6f75a311f296c1a7ac83c856f10118bba3f9518e26189ec27fa4.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/m10lhcng6czs46smhamr9x6pdagns6yf-time-compat-1.9.6.1.drv"><code>time-compat-1.9.6.1.drv</code></a>
+out <a href="./diff/df9f0a620720859fff13dd86fbcb7600e35c7890ec9ef9ea4bf98b8696e4d940-9f668c8c84076bc1ca380baae001806484a80308cd4268000d3adaa3ee1dff5a.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/0rxa4ig67wffp6pdz8rbjwgfrxvq3rck-test-framework-0.8.2.0.drv"><code>test-framework-0.8.2.0.drv</code></a>
+out <a href="./diff/2d925a306a2e8a9d35c7a18dd811f4b374989e627782c1c783fc0fdae8dc2c9f-6db8584734c6b96a2df10ef103d3cae836ab23df58874ed8a44fa8cc8ce9c5f7.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/1ka2yj62p4ksps86d0lcp0n3jas5ssr8-hscolour-1.25.drv"><code>hscolour-1.25.drv</code></a>
+out <a href="./diff/1bd485b3f4dc5d471cde72f66164a557512f2e1c991f01543652c546c4618fa3-72a1c54d35db48392c03f4eeaac1fd6906e2bea9d9169355df5c002bdc46d50a.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/bhcszfhy1vp3r257s3kwblsqhf6px36y-python3.12-cryptography-44.0.0.drv"><code>python3.12-cryptography-44.0.0.drv</code></a>
+dist <a href="./diff/c36b7d03aa492ab1f657f565698669f3d96edaa9538eaaf43dd45b695a6b9749-d0e92ccaa80ecfa5ac12bd782b993e709e58513d5f4c1003a3be436ad2e35eaf.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/qgz3mkgk65015p59xy0jvfqd3xfymymy-scientific-0.3.7.0.drv"><code>scientific-0.3.7.0.drv</code></a>
+out <a href="./diff/f736cb0c9f2f70b47202ea2cd84330be167346c20349831d5ad0ff29af183bdc-e1d3507461eb4c17746d73bbe258ec0b8bebbed1ecd706172c3153c0575240f2.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/r82m5vb0008cl82qn8bigsbrrw3abmak-primitive-0.8.0.0.drv"><code>primitive-0.8.0.0.drv</code></a>
+out <a href="./diff/046953c953030c2f324788b572b196b2f32e62e6a2b3c9b702a35921d15f3789-ba4cf0e47dac459d178fa591e7517032012b38c750d8d1abb846550acb101617.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/qklv02w1pqg291sr70496cm9hdcm63rd-hspec-core-2.11.10.drv"><code>hspec-core-2.11.10.drv</code></a>
+out <a href="./diff/f943b562b65f820c9c47c9be36ca23b5144efc0cf347efb1f498ed291049889d-cb38b78bbc605430a2359b3bfd66ad7d80214507a67a3c09e6ac9a59dfa9889a.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/5q1kp6978rvf5iv00x5q1d4b3f1dicx2-assoc-1.1.1.drv"><code>assoc-1.1.1.drv</code></a>
+out <a href="./diff/03275f1428a4ad15f6cc9a2c0e1814ddce261b424ceef6cc30bd5a35fd9a2b62-dedb4eefc8371b459dda9c6f548ecf22633b27ed7382986808985de20804d434.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/7iv8pzx9h9r2c0x2784r2dm4ir8s0bfn-semialign-1.3.1.drv"><code>semialign-1.3.1.drv</code></a>
+out <a href="./diff/a898134ca5a400dbd31635f298463064ea88732de5d5e54ed7ba5630a61acac7-f7b1c32cd53949f09029f9e4a433bec2cae6448d0bb4b3b422b9b60ac06acafc.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/a7r1y5qgbiy0ybcz38bkwan040wdkqsj-primitive-0.8.0.0.drv"><code>primitive-0.8.0.0.drv</code></a>
+out <a href="./diff/a981f835c82d1dfd631fbc12d14e3153676df389237897773fe1c0eab5b893d2-9bb4b8cd3150a63ace58f9c3ce1b4b2848b55d02e3efdb17c80d37cb42478444.html">(diffoscope)</a>
+</ul></li>
 </ul>
 <hr>
 <h3>unchecked paths</h3>
 <ul>
-<li><a href="/nix/store/vpyq74qd5xhkj186msrqk16agnqy4asw-aws-sdk-cpp-1.11.118.drv"><code>aws-sdk-cpp-1.11.118.drv</code></a></li>
-<li><a href="/nix/store/8jlb5c5hwsjn85g797wd7ncvq0fwkk5b-grub-locales.drv"><code>grub-locales.drv</code></a></li>
-<li><a href="/nix/store/iijz6isn3hf89x14l9331g2b9wpa7n9v-source.drv"><code>source.drv</code></a></li>
+<li><a href="/nix/store/jf8jp39jhqsz8fxqzk7851jzji41950r-tcp-wrappers_7.6.q-33.debian.tar.xz.drv"><code>tcp-wrappers_7.6.q-33.debian.tar.xz.drv</code></a></li>
 </ul>
 
 <hr />
@@ -119,6 +383,6 @@ We can work together to write docs on how to use it.</small>
 
 <hr />
 
-<small>Generated at 2023-10-23 13:25:25.564719863 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
+<small>Generated at 2025-02-09 11:01:58.013112992 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
 <center><img style="max-width: 100px" src="https://nixos.org/logo/nixos-logo-only-hires.png" /></center>
 </body></html>

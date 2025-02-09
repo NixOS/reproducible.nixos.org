@@ -2,7 +2,7 @@
 <head>
 <title>Is nixos.<wbr>iso_minimal.<wbr>x86_64-linux reproducible?</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="nixos-unstable's nixos.<wbr>iso_minimal.<wbr>x86_64-linux build is 99.81% reproducible!" />
+<meta name="description" content="nixos-unstable's nixos.<wbr>iso_minimal.<wbr>x86_64-linux build is 99.48% reproducible!" />
 
 <!-- Twitter Card data -->
 <meta name="twitter:card" value="summary">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://reproducible.nixos.org/" />
 <meta property="og:image" content="https://reproducible.nixos.org/nixos-rb-logo.png" />
-<meta property="og:description" content="nixos-unstable's nixos.<wbr>iso_minimal.<wbr>x86_64-linux build is 99.81% reproducible!" />
+<meta property="og:description" content="nixos-unstable's nixos.<wbr>iso_minimal.<wbr>x86_64-linux build is 99.48% reproducible!" />
 <link rel="stylesheet" href="../styles/index.css">
 <style>
 body {
@@ -34,17 +34,23 @@ And to find out why a derivation is part of the build closure, use:
 <pre>
 git clone https://github.com/nixos/nixpkgs.git
 cd nixpkgs
-git checkout 54aac082a4d9bb5bbc5c4e899603abfb76a3f6d6
+git checkout a79cfe0ebd24952b580b1cf08cd906354996d547
 nix-store -q --tree $(nix-instantiate nixos/release-combined.nix -A nixos.<wbr>iso_minimal.<wbr>x86_64-linux)
 </pre>
 
-<h2>537 out of 538 (99.81%)</h2>
+<h2>579 out of 582 (99.48%)</h2>
 <p>paths in the nixos.<wbr>iso_minimal.<wbr>x86_64-linux build closure are reproducible! 0 paths remained unchecked</p>
 <h3>unreproduced paths</h3>
 <p>These derivations produced a different result compared to the official cache, revealing a reproducibility problem. See the <a href="https://github.com/orgs/NixOS/projects/30/views/1">Project</a> for progress on fixing those, or <a href="https://github.com/NixOS/nixpkgs/issues/new?assignees=&labels=0.kind%3A+enhancement%2C6.topic%3A+reproducible+builds&template=unreproducible_package.md&title=">add an issue</a> for those that are not tracked yet.</p>
 <ul>
-<li><a href="file:///nix/store/an6yifns6kp32i8y90wphx7mzxs71iyd-jfsutils-1.1.15.drv"><code>jfsutils-1.1.15.drv</code></a>
-out <a href="./diff/f6324ec1d2bd8e7eb94aa170221be10b9f59702ddd8c6eda0190dcb70f82e850-bb3de609e45cb1278589282568f7b92cf577c1a69c6aad2efc16f013a94dcceb.html">(diffoscope)</a>
+<li><a href="file:///nix/store/d4jwbr0wg0ghyxzy3c0lxljb0w2zqb3h-jemalloc-5.3.0.drv"><code>jemalloc-5.3.0.drv</code></a>
+out <a href="./diff/5ea01c29ae595c8f9b70c61b5a76efb748420f6b6e5ab6feae91a71ad6f8cf4f-a96165486c0b286597838b945d594693ad4ec66316250dc7584e84ab32069177.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/ggxwsvddmnhgzp68xkh197x29d3yyi4x-unbound-1.22.0.drv"><code>unbound-1.22.0.drv</code></a>
+man <a href="./diff/35eb81a1e97f3414a27f18a2e849f2646bd68f4f9b490cbcacc9de0918df2d2a-f32ed734f47e3ab6ac2e680e99d01224ca239fede3f91c047e570f9e71b4324d.html">(diffoscope)</a>
+</ul></li>
+<li><a href="file:///nix/store/1r127wq05y0pm5gac8666n2vaw3lw6m7-gettext-0.22.5.drv"><code>gettext-0.22.5.drv</code></a>
+out <a href="./diff/9e9d9ef593bf95627955d8a5a062ec28c9bf6b1092f19993c49dd76c14de6f5e-3981fe1f88641dcf5945b1bfea6ede3a99ef6f54a89937c56f36b8483f2458d4.html">(diffoscope)</a>
 </ul></li>
 </ul>
 <hr>
@@ -119,6 +125,6 @@ We can work together to write docs on how to use it.</small>
 
 <hr />
 
-<small>Generated at 2023-12-24 09:39:39.867262570 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
+<small>Generated at 2025-02-09 01:28:04.980927393 UTC from <a href="https://codeberg.org/raboof/nix-reproducible-builds-report">https://codeberg.org/raboof/nix-reproducible-builds-report</a> (heavily based on <a href="https://github.com/grahamc/r13y.com">https://github.com/grahamc/r13y.com</a>).</small>
 <center><img style="max-width: 100px" src="https://nixos.org/logo/nixos-logo-only-hires.png" /></center>
 </body></html>
