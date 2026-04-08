@@ -1,3 +1,5 @@
+@import "route159.css"
+
 .asciinema-player-wrapper {
   position: relative;
   text-align: center;
@@ -2251,100 +2253,14 @@ body.-debug::after {
   src: url('./fonts/Roboto-Black.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'Overpass';
-  font-style: italic;
-  font-weight: 100;
-  src: url('./fonts/Overpass-ThinItalic.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Overpass';
-  font-style: italic;
-  font-weight: 200;
-  src: url('./fonts/Overpass-ExtraLightItalic.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Overpass';
-  font-style: italic;
-  font-weight: 300;
-  src: url('./fonts/Overpass-LightItalic.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Overpass';
-  font-style: italic;
-  font-weight: 400;
-  src: url('./fonts/Overpass-Italic.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Overpass';
-  font-style: italic;
-  font-weight: 600;
-  src: url('./fonts/Overpass-SemiBoldItalic.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Overpass';
-  font-style: italic;
-  font-weight: 700;
-  src: url('./fonts/Overpass-BoldItalic.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Overpass';
-  font-style: italic;
-  font-weight: 800;
-  src: url('./fonts/Overpass-ExtraBoldItalic.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Overpass';
-  font-style: italic;
-  font-weight: 900;
-  src: url('./fonts/Overpass-BlackItalic.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Overpass';
+  font-family: 'Route159';
+  src: url('./fonts/route159/Route159-Bold.eot');
+  src:
+    url('./fonts/route159/Route159-Bold.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/route159/Route159-Bold.woff') format('woff');
+  font-weight: bold;
   font-style: normal;
-  font-weight: 100;
-  src: url('./fonts/Overpass-Thin.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Overpass';
-  font-style: normal;
-  font-weight: 200;
-  src: url('./fonts/Overpass-ExtraLight.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Overpass';
-  font-style: normal;
-  font-weight: 300;
-  src: url('./fonts/Overpass-Light.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Overpass';
-  font-style: normal;
-  font-weight: 400;
-  src: url('./fonts/Overpass-Regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Overpass';
-  font-style: normal;
-  font-weight: 600;
-  src: url('./fonts/Overpass-SemiBold.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Overpass';
-  font-style: normal;
-  font-weight: 700;
-  src: url('./fonts/Overpass-Bold.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Overpass';
-  font-style: normal;
-  font-weight: 800;
-  src: url('./fonts/Overpass-ExtraBold.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Overpass';
-  font-style: normal;
-  font-weight: 900;
-  src: url('./fonts/Overpass-Black.ttf') format('truetype');
+  font-display: swap;
 }
 @font-face {
   font-family: 'Fira Mono';
@@ -2669,8 +2585,8 @@ hr {
   margin-bottom: 1rem;
 }
 h1 {
-  font-weight: 800;
-  font-family: "Overpass", serif;
+  font-weight: bold;
+  font-family: "Route159", serif;
   line-height: 110%;
   font-size: 250%;
   margin-bottom: 1rem;
@@ -2685,8 +2601,8 @@ h1:not(:first-child) {
   }
 }
 h2 {
-  font-weight: 800;
-  font-family: "Overpass", serif;
+  font-weight: bold;
+  font-family: "Route159", serif;
   line-height: 110%;
   margin-bottom: 1rem;
   font-size: 200%;
@@ -2702,8 +2618,8 @@ h2:not(:first-child) {
   }
 }
 h3 {
-  font-weight: 800;
-  font-family: "Overpass", serif;
+  font-weight: bold;
+  font-family: "Route159", serif;
   line-height: 110%;
   margin-bottom: 1rem;
   font-size: 150%;
@@ -2718,8 +2634,8 @@ h3:not(:first-child) {
   }
 }
 h4 {
-  font-weight: 800;
-  font-family: "Overpass", serif;
+  font-weight: bold;
+  font-family: "Route159", serif;
   line-height: 110%;
   margin-bottom: 1rem;
   font-size: 140%;
@@ -2734,8 +2650,8 @@ h4:not(:first-child) {
   }
 }
 h5 {
-  font-weight: 800;
-  font-family: "Overpass", serif;
+  font-weight: bold;
+  font-family: "Route159", serif;
   line-height: 110%;
   margin-bottom: 1rem;
   font-size: 130%;
@@ -2750,8 +2666,8 @@ h5:not(:first-child) {
   }
 }
 h6 {
-  font-weight: 800;
-  font-family: "Overpass", serif;
+  font-weight: bold;
+  font-family: "Route159", serif;
   line-height: 110%;
   margin-bottom: 1rem;
 }
@@ -3183,7 +3099,7 @@ body.-debug .columnar-layout:not(.-longform).-four > * {
   -ms-user-select: none;
   user-select: none;
   cursor: default;
-  font-family: "Overpass", serif;
+  font-family: "Route159", serif;
   font-weight: bold;
   font-size: 0.8em;
   vertical-align: text-bottom;
@@ -3228,8 +3144,8 @@ body.-debug .columnar-layout:not(.-longform).-four > * {
 .wide-banner {
   background-color: #f2f8fd;
   padding: 1rem;
-  font-weight: 800;
-  font-family: "Overpass", serif;
+  font-weight: bold;
+  font-family: "Route159", serif;
   color: #405D99;
 }
 .wide-banner:first-child {
@@ -3430,7 +3346,7 @@ body.-debug .choice-smorgasboard > * {
   padding: 1rem 0.5rem;
   border: 0.0625rem solid #5277c3;
   border-radius: 1.25rem;
-  font-family: "Overpass", serif;
+  font-family: "Route159", serif;
   font-weight: bold;
   line-height: 1.4;
   color: #405D99;
@@ -5177,7 +5093,7 @@ body.-debug .blog-categories > ul > * {
   background-color: #f2f8fd;
   padding: 1rem;
   font-weight: 800;
-  font-family: "Overpass", serif;
+  font-family: "Route159", serif;
   color: #405D99;
   margin-bottom: 3rem;
 }
@@ -8778,7 +8694,7 @@ div.docbook .informaltable td {
 }
 div.docbook h1 {
   font-weight: 800;
-  font-family: "Overpass", serif;
+  font-family: "Route159", serif;
   line-height: 110%;
   margin-bottom: 1rem;
   font-size: 200%;
@@ -8795,7 +8711,7 @@ div.docbook h1:not(:first-child) {
 }
 div.docbook h2 {
   font-weight: 800;
-  font-family: "Overpass", serif;
+  font-family: "Route159", serif;
   line-height: 110%;
   margin-bottom: 1rem;
   font-size: 150%;
@@ -8811,7 +8727,7 @@ div.docbook h2:not(:first-child) {
 }
 div.docbook h3 {
   font-weight: 800;
-  font-family: "Overpass", serif;
+  font-family: "Route159", serif;
   line-height: 110%;
   margin-bottom: 1rem;
   font-size: 140%;
@@ -8827,7 +8743,7 @@ div.docbook h3:not(:first-child) {
 }
 div.docbook h4 {
   font-weight: 800;
-  font-family: "Overpass", serif;
+  font-family: "Route159", serif;
   line-height: 110%;
   margin-bottom: 1rem;
   font-size: 130%;
@@ -8843,7 +8759,7 @@ div.docbook h4:not(:first-child) {
 }
 div.docbook .admonition-block > .title {
   font-weight: 800;
-  font-family: "Overpass", serif;
+  font-family: "Route159", serif;
   line-height: 110%;
   margin-bottom: 1rem;
   color: inherit;
